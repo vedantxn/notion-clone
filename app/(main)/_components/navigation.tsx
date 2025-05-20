@@ -6,7 +6,8 @@ import { ChevronsLeft,
           Plus, 
           PlusCircle, 
           Search, 
-          Settings } from "lucide-react";
+          Settings, 
+          Trash} from "lucide-react";
 import { usePathname } from "next/navigation";
 import React, { useEffect, 
                 useRef, 
@@ -18,6 +19,11 @@ import { api } from "@/convex/_generated/api";
 import { Item } from "./item";
 import { toast } from "sonner";
 import { DocumentList } from "./document-list";
+import {
+  Popover, 
+  PopoverContent, 
+  PopoverTrigger } from "@/components/ui/popover";
+import { TrashBox } from "./trash-box";
 
 export const Navigation = () => {
   const pathname = usePathname();
@@ -156,7 +162,22 @@ export const Navigation = () => {
             onClick={() => {}}          
           />
 
-          <Item onClick={handleCreate} label="New Document" icon={PlusCircle} />
+          <Item onClick={handleCreate}
+                label="New Document"
+                icon={PlusCircle} 
+          />
+
+          <Popover>
+            <PopoverTrigger className="w-full mt-4">
+              <Item label="Trash" 
+                    icon={Trash} />
+            </PopoverTrigger>
+
+            <PopoverContent className="w-72 p-0"
+                            side={isMobile ? "bottom" : "right"}>
+              <TrashBox />              
+            </PopoverContent>
+          </Popover>
         </div>
 
         <div className="mt-4">
