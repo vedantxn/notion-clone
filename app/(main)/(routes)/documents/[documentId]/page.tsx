@@ -4,7 +4,12 @@ interface Params {
   documentId: string;
 }
 
-const Page = async ({ params }: { params: Params }) => {
+type Props = {
+  params: Params;
+};
+
+// Mark as async to satisfy Next.js
+const Page = async ({ params }: Props) => {
   return <ClientDocumentPage documentId={params.documentId} />;
 };
 
