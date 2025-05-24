@@ -10,7 +10,7 @@ import {
 import {
     useCreateBlockNote
 } from "@blocknote/react";
-import "@blocknote/mantine/style.css";
+import "@blocknote/react/style.css";
 import { useTheme } from "next-themes"
 
 interface EditorProps {
