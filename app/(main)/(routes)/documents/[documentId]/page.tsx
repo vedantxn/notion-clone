@@ -4,7 +4,7 @@ interface Params {
   documentId: string;
 }
 
-const Page = ({ params }: { params: Params }) => {
+const Page = async ({ params }: { params: Params }) => {
   return <ClientDocumentPage documentId={params.documentId} />;
 };
 
