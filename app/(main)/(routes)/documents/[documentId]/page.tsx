@@ -7,15 +7,47 @@ import { Id } from "@/convex/_generated/dataModel";
 import { useMutation, useQuery } from "convex/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const Page = ({ params }: { params: { documentId: string } }) => {
-  const documentId = params.documentId as Id<"documents">;
-  const document = useQuery(api.documents.getById, { documentId });
+interface Params {
+  documentId: string;
+}
+
+const Page = async ({ params }: { params: Params }) => {
+  // You *cannot* use hooks in async functions,
+  // so move logic that uses hooks to a Client Component instead.
+
+  // So mark this component as Server Component,
+  // but since you have "use client", you might want to
+  // split your component between server + client parts.
+
+  // For now, your error is about typing,
+  // but Next.js expects page components to be sync
+  // when using 'use client'
+
+  // So: Either make this a Client Component and
+  // accept params as props typed as any or unknown,
+  // or remove "use client" and do data fetching here.
+
+  return <ClientDocumentPage documentId={params.documentId} />;
+};
+
+export default Page;
+
+// Client-side component
+"use client";
+import React from "react";
+
+interface ClientDocumentPageProps {
+  documentId: string;
+}
+
+export function ClientDocumentPage({ documentId }: ClientDocumentPageProps) {
+  const documentIdTyped = documentId as Id<"documents">;
+  const document = useQuery(api.documents.getById, { documentId: documentIdTyped });
   const update = useMutation(api.documents.update);
 
   const [content, setContent] = useState<string | null>(null);
   const initialized = useRef(false);
 
-  // Set initial content only once when document loads
   useEffect(() => {
     if (document && !initialized.current) {
       setContent(document.content || "");
@@ -23,28 +55,15 @@ const Page = ({ params }: { params: { documentId: string } }) => {
     }
   }, [document]);
 
-  const onChange = useCallback(
-    (newContent: string) => {
-      setContent(newContent);
+  const onChange = useCallback((newContent: string) => {
+    setContent(newContent);
+    if (document) {
+      update({ id: documentIdTyped, content: newContent });
+    }
+  }, [update, document, documentIdTyped]);
 
-      // Only trigger update if document is loaded
-      if (document) {
-        update({
-          id: documentId,
-          content: newContent,
-        });
-      }
-    },
-    [update, document, documentId]
-  );
-
-  if (document === undefined || content === null) {
-    return <div>Loading...</div>;
-  }
-
-  if (document === null) {
-    return <div>Document not found</div>;
-  }
+  if (document === undefined || content === null) return <div>Loading...</div>;
+  if (document === null) return <div>Document not found</div>;
 
   return (
     <div className="pb-40">
@@ -55,6 +74,4 @@ const Page = ({ params }: { params: { documentId: string } }) => {
       </div>
     </div>
   );
-};
-
-export default Page;
+}
