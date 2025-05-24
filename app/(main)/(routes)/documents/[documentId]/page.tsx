@@ -7,13 +7,7 @@ import { Id } from "@/convex/_generated/dataModel";
 import { useMutation, useQuery } from "convex/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-interface DocumentIdProps {
-  params: {
-    documentId: string;
-  };
-}
-
-const Page = ({ params }: DocumentIdProps) => {  // <--- changed from DocumentId to Page
+const Page = ({ params }: { params: { documentId: string } }) => {
   const documentId = params.documentId as Id<"documents">;
   const document = useQuery(api.documents.getById, { documentId });
   const update = useMutation(api.documents.update);
@@ -29,17 +23,20 @@ const Page = ({ params }: DocumentIdProps) => {  // <--- changed from DocumentId
     }
   }, [document]);
 
-  const onChange = useCallback((newContent: string) => {
-    setContent(newContent);
+  const onChange = useCallback(
+    (newContent: string) => {
+      setContent(newContent);
 
-    // Only trigger update if document is loaded
-    if (document) {
-      update({
-        id: documentId,
-        content: newContent
-      });
-    }
-  }, [update, document, documentId]);
+      // Only trigger update if document is loaded
+      if (document) {
+        update({
+          id: documentId,
+          content: newContent,
+        });
+      }
+    },
+    [update, document, documentId]
+  );
 
   if (document === undefined || content === null) {
     return <div>Loading...</div>;
@@ -60,4 +57,4 @@ const Page = ({ params }: DocumentIdProps) => {  // <--- changed from DocumentId
   );
 };
 
-export default Page;  // <--- also export as Page
+export default Page;
