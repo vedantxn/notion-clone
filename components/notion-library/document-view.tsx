@@ -34,11 +34,13 @@ import {
   HelpCircle,
   Globe,
   Check,
+  TableProperties,
 } from "lucide-react";
 import { Dropdown, MenuLabel, useClickOutside } from "./menu";
 import { PageEditor } from "./page-editor";
 import { WelcomePage } from "./welcome-page";
 import { TodoListPage } from "./todo-list-page";
+import { DatabasePage } from "./database-page";
 import { NotionAiMark } from "./icons";
 
 /**
@@ -54,7 +56,7 @@ export function DocumentView({
   onToggleFavorite,
 }: {
   title: string;
-  kind: "meeting" | "page";
+  kind: "meeting" | "page" | "database";
   heading?: string;
   favorited?: boolean;
   onToggleFavorite?: () => void;
@@ -79,7 +81,9 @@ export function DocumentView({
       {/* Top bar */}
       <div className="flex h-11 shrink-0 items-center justify-between px-3">
         <div className="flex items-center gap-1.5 text-[14px] text-[#5F5E59]">
-          {isWelcome ? (
+          {kind === "database" ? (
+            <TableProperties className="h-4 w-4 text-[#8A8985]" strokeWidth={1.8} />
+          ) : isWelcome ? (
             <span className="text-[15px] leading-none">👋</span>
           ) : isTodo ? (
             <ListChecks className="h-4 w-4 text-[#448361]" strokeWidth={2} />
@@ -167,7 +171,9 @@ export function DocumentView({
 
       {/* Content column — font / small-text applied here, cascading to the page */}
       <div className={"flex flex-1 flex-col " + (smallText ? "text-[15px]" : "")} style={{ fontFamily }}>
-        {kind === "meeting" ? (
+        {kind === "database" ? (
+          <DatabasePage fullWidth={fullWidth} />
+        ) : kind === "meeting" ? (
           <div className={"mx-auto w-full px-16 pt-16 " + (fullWidth ? "max-w-full" : "max-w-[900px]")}>
             <h1 className="text-[44px] font-bold leading-[1.1] text-[#B4B1AB]">{title}</h1>
             <MeetingCard heading={heading ?? "Meeting @Today"} />

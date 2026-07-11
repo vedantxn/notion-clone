@@ -12,6 +12,20 @@ import { AiChatPanel } from "@/components/notion-library/ai-chat-panel";
 import { NotionAiMark } from "@/components/notion-library/icons";
 import { PanelLeft } from "lucide-react";
 
+function FaceIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      {/* Left Eyebrow */}
+      <path d="M35 48 C37 42 45 42 47 48" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" />
+      {/* Right Eyebrow + Nose */}
+      <path d="M52 48 C54 41 64 41 66 48 M52 48 C51 52 50 60 50 67 L44 71" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Eyes */}
+      <circle cx="41" cy="52" r="3.5" fill="currentColor" />
+      <circle cx="59" cy="52" r="3.5" fill="currentColor" />
+    </svg>
+  );
+}
+
 const NOTION_FONT =
   'ui-sans-serif, -apple-system, system-ui, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"';
 
@@ -24,7 +38,7 @@ const PLACEHOLDER: Partial<Record<NavKey, { emoji: string; title: string }>> = {
   trash: { emoji: "🗑️", title: "Trash" },
 };
 
-export type OpenDoc = { title: string; kind: "meeting" | "page"; heading?: string };
+export type OpenDoc = { title: string; kind: "meeting" | "page" | "database"; heading?: string };
 
 export default function NotionLibraryPage() {
   const [nav, setNav] = useState<NavKey>("library");
@@ -158,7 +172,7 @@ export default function NotionLibraryPage() {
           className="fixed bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-black/[0.08] bg-white text-[#37352F] shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-transform hover:scale-105"
           aria-label="Notion AI"
         >
-          <NotionAiMark className="h-6 w-6" />
+          <FaceIcon className="h-[22px] w-[22px] text-[#2C2C2B]" />
         </button>
       )}
     </div>

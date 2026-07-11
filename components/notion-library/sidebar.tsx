@@ -31,15 +31,18 @@ import {
   EyeOff,
   Settings2,
   ChevronsLeft,
-  PenSquare,
-  Sparkles,
   Settings,
-  Users,
   LogOut,
   ArrowUpCircle,
   Mail,
   UserRoundPlus,
   Check,
+  MessageSquare,
+  Mic,
+  Database,
+  PenSquare,
+  X,
+  TableProperties,
 } from "lucide-react";
 import { Dropdown, MenuItem, MenuLabel, MenuSeparator, useClickOutside } from "./menu";
 import { TrashPopover } from "./trash-popover";
@@ -51,6 +54,20 @@ import { AddAccountModal } from "./add-account-modal";
 import { NewWorkspaceModal } from "./new-workspace-modal";
 import { NewAgentModal } from "./new-agent-modal";
 import { ChatPanel, MeetingsPanel, InboxPanel } from "./sidebar-panels";
+
+function FaceIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      {/* Left Eyebrow */}
+      <path d="M35 48 C37 42 45 42 47 48" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" />
+      {/* Right Eyebrow + Nose */}
+      <path d="M52 48 C54 41 64 41 66 48 M52 48 C51 52 50 60 50 67 L44 71" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Eyes */}
+      <circle cx="41" cy="52" r="3.5" fill="currentColor" />
+      <circle cx="59" cy="52" r="3.5" fill="currentColor" />
+    </svg>
+  );
+}
 
 type SidebarTab = "home" | "chat" | "meetings" | "inbox";
 
@@ -64,7 +81,8 @@ type NavKey =
   | "trash";
 
 /** Metadata for the known pages (icon / kind), used by Recents / Private / Favorites. */
-const PAGE_META: Record<string, { kind: "page" | "meeting"; heading?: string; icon: React.ReactNode }> = {
+const PAGE_META: Record<string, { kind: "page" | "meeting" | "database"; heading?: string; icon: React.ReactNode }> = {
+  "New database": { kind: "database", icon: <TableProperties className="h-[18px] w-[18px] text-[#5F5E59]" strokeWidth={1.8} /> },
   "New page": { kind: "page", icon: <FileText className="h-[18px] w-[18px]" strokeWidth={1.8} /> },
   "Welcome to Notion": { kind: "page", icon: <span className="text-[15px] leading-none">👋</span> },
   "To Do List": { kind: "page", icon: <span className="text-[15px] leading-none">✅</span> },
@@ -89,7 +107,7 @@ export function Sidebar({
 }: {
   active: NavKey;
   onNavigate: (key: NavKey, label: string) => void;
-  onOpenDoc: (doc: { title: string; kind: "meeting" | "page"; heading?: string }) => void;
+  onOpenDoc: (doc: { title: string; kind: "meeting" | "page" | "database"; heading?: string }) => void;
   activeDoc: string | null;
   onOpenChat: () => void;
   onOpenSearch: () => void;
@@ -109,6 +127,7 @@ export function Sidebar({
   const [newWsOpen, setNewWsOpen] = useState(false);
   const [newAgentOpen, setNewAgentOpen] = useState(false);
   const [tab, setTab] = useState<SidebarTab>("home");
+  const [openNewNoteMenu, setOpenNewNoteMenu] = useState(false);
   const [hiddenRecents, setHiddenRecents] = useState<Set<string>>(new Set());
   const [hiddenPages, setHiddenPages] = useState<Set<string>>(new Set());
   const trashPage = (title: string) => setHiddenPages((s) => new Set(s).add(title));
@@ -116,7 +135,9 @@ export function Sidebar({
   const favList = [...favorites].filter((t) => !hiddenPages.has(t));
   return (
     <div
-      className="shrink-0 overflow-hidden transition-[width] duration-200 ease-out"
+      className={`shrink-0 transition-[width] duration-200 ease-out ${
+        collapsed ? "overflow-hidden" : "overflow-visible"
+      }`}
       style={{ width: collapsed ? 0 : 270 }}
     >
     <aside className="relative flex h-dvh w-[270px] flex-col bg-[#F9F8F7] text-[#5F5E59] select-none">
@@ -264,8 +285,8 @@ export function Sidebar({
           </div>
           <div className="relative h-1 w-full rounded-full bg-black/[0.06]">
             <div className="h-1 w-[15%] rounded-full bg-[#2783DE]" />
-            <div className="absolute -top-[9px] left-[13%] flex h-[22px] w-[22px] items-center justify-center rounded-full bg-white text-[11px] shadow-[0_1px_3px_rgba(0,0,0,0.2)]">
-              🎋
+            <div className="absolute -top-[9px] left-[13%] flex h-[22px] w-[22px] items-center justify-center rounded-full bg-white shadow-[0_1px_3px_rgba(0,0,0,0.2)] text-black">
+              <FaceIcon className="h-3.5 w-3.5" />
             </div>
           </div>
         </div>
@@ -281,11 +302,12 @@ export function Sidebar({
           </SectionLabel>
           {(
             [
+              { title: "New database", kind: "database", icon: <TableProperties className="h-[18px] w-[18px] text-[#5F5E59]" strokeWidth={1.8} /> },
               { title: "New page", kind: "page", icon: <FileText className="h-[18px] w-[18px]" strokeWidth={1.8} /> },
               { title: "Welcome to Notion", kind: "page", icon: <span className="text-[15px] leading-none">👋</span> },
               { title: "@Today 4:07 AM", kind: "meeting", heading: "Meeting @Today", icon: <FileText className="h-[18px] w-[18px]" strokeWidth={1.8} /> },
               { title: "To Do List", kind: "page", icon: <span className="text-[15px] leading-none">✅</span> },
-            ] as { title: string; kind: "page" | "meeting"; heading?: string; icon: React.ReactNode }[]
+            ] as { title: string; kind: "page" | "meeting" | "database"; heading?: string; icon: React.ReactNode }[]
           )
             .filter((r) => !hiddenRecents.has(r.title) && !hiddenPages.has(r.title))
             .map((r) => (
@@ -360,10 +382,11 @@ export function Sidebar({
           </SectionLabel>
           {(
             [
+              { title: "New database", kind: "database", icon: <TableProperties className="h-[18px] w-[18px] text-[#5F5E59]" strokeWidth={1.8} /> },
               { title: "New page", kind: "page", icon: <FileText className="h-[18px] w-[18px]" strokeWidth={1.8} /> },
               { title: "Welcome to Notion", kind: "page", icon: <span className="text-[15px] leading-none">👋</span> },
               { title: "To Do List", kind: "page", icon: <span className="text-[15px] leading-none">✅</span> },
-            ] as { title: string; kind: "page" | "meeting"; heading?: string; icon: React.ReactNode }[]
+            ] as { title: string; kind: "page" | "meeting" | "database"; heading?: string; icon: React.ReactNode }[]
           )
             .filter((r) => !hiddenPages.has(r.title))
             .map((r) => (
@@ -419,22 +442,83 @@ export function Sidebar({
       </div>
 
       {/* Footer */}
-      <div className="flex items-center gap-2 px-3 pt-3 pb-6">
+      <div className="flex items-center gap-2 px-3 pt-3 pb-6 relative">
         <button
           onClick={onOpenChat}
-          className="flex h-10 flex-1 items-center justify-center gap-2 rounded-full border border-black/[0.08] bg-white text-[14px] font-medium text-[#2C2C2B] shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-colors hover:bg-black/[0.02]"
+          className="flex h-10 flex-1 items-center justify-center gap-2 rounded-full border border-black/[0.08] bg-white text-[14px] font-medium text-[#2C2C2B] shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-colors hover:bg-black/[0.02] pl-4"
         >
-          <Sparkles className="h-4 w-4 text-[#2C2C2B]" strokeWidth={1.8} />
+          <FaceIcon className="h-4 w-4 text-[#2C2C2B]" />
           New chat
-          <span className="text-[12px] text-[#9B9A97]">⌘O</span>
+          <span className="text-[12px] text-[#9B9A97] ml-auto pr-2">⌘O</span>
         </button>
-        <button
-          onClick={() => toast("New note")}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-black/[0.08] bg-white text-[#2C2C2B] shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-colors hover:bg-black/[0.02]"
-        >
-          <PenSquare className="h-[18px] w-[18px]" strokeWidth={1.8} />
-        </button>
+        <div className="relative">
+          <button
+            onClick={() => setOpenNewNoteMenu(!openNewNoteMenu)}
+            aria-label="New page options"
+            className={`flex h-10 w-10 items-center justify-center rounded-full border border-black/[0.08] text-[#2C2C2B] shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all ${
+              openNewNoteMenu ? "bg-black/[0.08] hover:bg-black/[0.12] scale-105" : "bg-white hover:bg-black/[0.02]"
+            }`}
+          >
+            {openNewNoteMenu ? (
+              <X className="h-4 w-4 text-[#2C2C2B]" strokeWidth={2} />
+            ) : (
+              <PenSquare className="h-[18px] w-[18px] text-[#2C2C2B]" strokeWidth={1.8} />
+            )}
+          </button>
+          
+          {openNewNoteMenu && (
+            <div className="absolute left-[-12px] bottom-12 z-50 mb-1 w-[200px] rounded-xl border border-black/[0.08] bg-white p-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.12)] text-[#37352F] text-[14px] select-none">
+              <button
+                onClick={() => {
+                  setOpenNewNoteMenu(false);
+                  onOpenDoc?.({ title: "New page", kind: "page" });
+                }}
+                className="flex h-9 w-full items-center gap-2.5 rounded-md px-2.5 text-left hover:bg-black/[0.04]"
+              >
+                <FileText className="h-[17px] w-[17px] text-[#5F5E59]" strokeWidth={1.8} />
+                <span className="font-medium text-[#2C2C2B]">Page</span>
+              </button>
+              <button
+                onClick={() => {
+                  setOpenNewNoteMenu(false);
+                  onOpenChat();
+                }}
+                className="flex h-9 w-full items-center gap-2.5 rounded-md px-2.5 text-left hover:bg-black/[0.04]"
+              >
+                <MessageSquare className="h-[17px] w-[17px] text-[#5F5E59]" strokeWidth={1.8} />
+                <span className="font-medium text-[#2C2C2B]">Chat</span>
+              </button>
+              <button
+                onClick={() => {
+                  setOpenNewNoteMenu(false);
+                  onOpenDoc?.({ title: "New AI meeting note", kind: "meeting", heading: "AI Meeting Notes" });
+                }}
+                className="flex h-9 w-full items-center gap-2.5 rounded-md px-2.5 text-left hover:bg-black/[0.04]"
+              >
+                <Mic className="h-[17px] w-[17px] text-[#5F5E59]" strokeWidth={1.8} />
+                <span className="font-medium text-[#2C2C2B]">AI Meeting Notes</span>
+              </button>
+              <button
+                onClick={() => {
+                  setOpenNewNoteMenu(false);
+                  onOpenDoc?.({ title: "New database", kind: "database" });
+                }}
+                className="flex h-9 w-full items-center gap-2.5 rounded-md px-2.5 text-left hover:bg-black/[0.04]"
+              >
+                <Database className="h-[17px] w-[17px] text-[#5F5E59]" strokeWidth={1.8} />
+                <span className="font-medium text-[#2C2C2B]">Database</span>
+              </button>
+            </div>
+          )}
+        </div>
       </div>
+
+      {openNewNoteMenu && (
+        <div 
+          className="fixed inset-0 z-40 bg-transparent" 
+          onClick={() => setOpenNewNoteMenu(false)}
+        />
+      )}
 
       {trashOpen && <TrashPopover onClose={() => setTrashOpen(false)} />}
       {helpOpen && (
