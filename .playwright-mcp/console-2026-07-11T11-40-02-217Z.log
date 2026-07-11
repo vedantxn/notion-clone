@@ -1,0 +1,41 @@
+[     335ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/home?spaceId=5df4fa69ff158181b9b50003b401470c:0
+[     455ms] [INFO] 2026-07-11T11:40:02.671Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     499ms] [WARNING]   WARN  [Statsig] Creating multiple Statsig clients with the same SDK key can lead to unexpected behavior. Multi-instance support requires different SDK keys. @ https://app.notion.com/_assets/99974-53a5f46c103d8b67.js:0
+[     566ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.so/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-56e3c8e504680cd6.js:37
+[     681ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-626e48b309bd5ba3.js:0
+[     771ms] [INFO] 2026-07-11T11:40:02.987Z [info] syncRecordValuesBatched: missingSpacePointerForNotionUserRequest {actor: Object, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1053ms] [INFO] 2026-07-11T11:40:03.269Z [info] premiumFeatureFramework: getPremiumFeatureAvailability {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1116ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1116ms] [INFO] 2026-07-11T11:40:03.333Z [error] eventTrailApiHelpers: trackFailure {error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1127ms] [INFO] 2026-07-11T11:40:03.344Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2170ms] [INFO] 2026-07-11T11:40:04.386Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2988ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[   21200ms] [INFO] 2026-07-11T11:40:23.416Z [info] onboardingHelpers: loadOnboardingData {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   21571ms] [INFO] 2026-07-11T11:40:23.788Z [info] onboardingHelpers: loadOnboardingData {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   21577ms] [INFO] 2026-07-11T11:40:23.793Z [info] onboardingHelpers: loadOnboardingData {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   21911ms] [INFO] 2026-07-11T11:40:24.128Z [info] onboardingHelpers: loadOnboardingData {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   31925ms] [INFO] 2026-07-11T11:40:34.142Z [info] transcriptionReadApiMembershipHelpers: transcriptionReadApiDeferredForMembership {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   31930ms] [INFO] 2026-07-11T11:40:34.147Z [warning] getSubscriptionDataStore: allowedCrossSpaceSubscriptionDataStoreRead {spaceId: 2dbc10b3-6256-8161-ba17-00032284b45f, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   36140ms] [INFO] 2026-07-11T11:40:38.357Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472

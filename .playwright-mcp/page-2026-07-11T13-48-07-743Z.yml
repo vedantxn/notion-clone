@@ -1,0 +1,83 @@
+- generic [active] [ref=f228e1]:
+  - region "Notifications alt+T"
+  - generic [ref=f228e2]:
+    - complementary [ref=f228e4]:
+      - generic [ref=f228e5]:
+        - button "🏠 Alex Morgan’s Space" [ref=f228e8]:
+          - generic [ref=f228e9]: 🏠
+          - generic [ref=f228e10]: Alex Morgan’s Space
+        - button "Close sidebar" [ref=f228e14]
+      - generic [ref=f228e18]:
+        - button "Home" [ref=f228e19]
+        - button "Chat" [ref=f228e23]
+        - button "Meetings" [ref=f228e26]
+        - button "Inbox" [ref=f228e30]
+        - button "Search" [ref=f228e34]
+      - generic [ref=f228e39]:
+        - generic [ref=f228e40]:
+          - generic [ref=f228e41]: Set up your workspace
+          - generic [ref=f228e42]: 🎋
+        - generic [ref=f228e45]: Agents
+        - button "New agent" [ref=f228e47] [cursor=pointer]
+        - generic [ref=f228e51]:
+          - generic [ref=f228e52]:
+            - generic [ref=f228e53]: Private
+            - generic [ref=f228e54]:
+              - button "Create a collection" [ref=f228e55]
+              - button "More options" [ref=f228e58]
+              - button "Add a page" [ref=f228e63]
+          - button "New page More Add a page inside" [ref=f228e65] [cursor=pointer]:
+            - generic [ref=f228e71]: New page
+            - generic [ref=f228e72]:
+              - button "More" [ref=f228e73]
+              - button "Add a page inside" [ref=f228e78]
+          - button "👋 Expand Welcome to Notion More Add a page inside" [ref=f228e215] [cursor=pointer]:
+            - generic [ref=f228e81]:
+              - generic [ref=f228e82]: 👋
+              - button "Expand" [ref=f228e216]
+            - generic [ref=f228e83]: Welcome to Notion
+            - generic [ref=f228e84]:
+              - button "More" [ref=f228e85]
+              - button "Add a page inside" [ref=f228e90]
+          - button "✅ To Do List More Add a page inside" [ref=f228e92] [cursor=pointer]:
+            - generic [ref=f228e93]: ✅
+            - generic [ref=f228e95]: To Do List
+            - generic [ref=f228e96]:
+              - button "More" [ref=f228e97]
+              - button "Add a page inside" [ref=f228e102]
+        - generic [ref=f228e104]:
+          - button "Library" [ref=f228e105] [cursor=pointer]
+          - button "Help" [ref=f228e110] [cursor=pointer]
+          - button "Trash" [ref=f228e118] [cursor=pointer]
+      - generic [ref=f228e124]:
+        - button "New chat ⌘O" [ref=f228e125]:
+          - text: New chat
+          - generic [ref=f228e128]: ⌘O
+        - button [ref=f228e129]
+    - main [ref=f228e134]:
+      - generic [ref=f228e135]:
+        - generic [ref=f228e136]:
+          - heading "Library" [level=1] [ref=f228e137]
+          - button "New page" [ref=f228e139]
+        - generic [ref=f228e140]:
+          - button [ref=f228e141]
+          - button [ref=f228e146]
+          - button [ref=f228e150]
+          - button [ref=f228e157]
+          - button [ref=f228e162]
+          - generic [ref=f228e168]:
+            - button "Filter" [ref=f228e170]
+            - button "Search" [ref=f228e173]
+            - button "Settings" [ref=f228e177]
+        - generic [ref=f228e182]:
+          - button "Page name" [ref=f228e183]
+          - button "Created by" [ref=f228e187]
+          - button "Source" [ref=f228e192]
+          - button "Last edited time" [ref=f228e195]
+          - button "Last visited time" [ref=f228e199]
+        - generic [ref=f228e203]:
+          - generic [ref=f228e206]: Your favorite pages will appear here
+          - generic [ref=f228e207]: Add pages to your favorites for quick access from anywhere in your workspace
+    - button "Notion AI" [ref=f228e208]
+  - alert [ref=f228e219]
+  - button "Open Next.js Dev Tools" [ref=f228e225] [cursor=pointer]

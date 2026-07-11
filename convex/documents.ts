@@ -2,10 +2,14 @@ import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 import { Doc, Id} from "./_generated/dataModel";
 
+// LOCAL PREVIEW BYPASS — no Clerk/JWT auth. Every request is treated as this
+// single fake user so the app is usable without signing in. Revert before deploy.
+const LOCAL_PREVIEW_USER_ID = "local-preview-user";
+
 export const archive = mutation({
     args: {id: v.id("documents")},
     handler: async (ctx, args) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -46,9 +50,10 @@ export const archive = mutation({
 
         const document = await ctx.db.patch(args.id, {
             isArchived: true,
-        }); 
+        });
 
-        recursiveArchive(args.id);
+        // Await so every nested descendant is archived and any error propagates.
+        await recursiveArchive(args.id);
 
         return document;
     }
@@ -59,7 +64,7 @@ export const getSidebar = query({
         parentDocument: v.optional(v.id("documents"))
     },
     handler: async (ctx, args) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -89,7 +94,7 @@ export const create = mutation ({
         parentDocument: v.optional(v.id("documents")),
     },
     handler:async (ctx, args) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -111,7 +116,7 @@ export const create = mutation ({
 
 export const getTrash = query({
     handler: async (ctx) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -138,7 +143,7 @@ export const restore = mutation({
     
     args: { id: v.id("documents") },
     handler: async (ctx, args) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -187,18 +192,22 @@ export const restore = mutation({
             }
         }
 
-        const document = await ctx.db.patch(args.id, options);
+        await ctx.db.patch(args.id, options);
 
-        recursiveRestore(args.id);
+        // Await so every nested descendant is restored and errors propagate.
+        await recursiveRestore(args.id);
 
-        return existingDocument
+        // Return the freshly-updated document, not the stale pre-update snapshot.
+        const document = await ctx.db.get(args.id);
+
+        return document;
     }
 });
 
 export const remove = mutation({
     args: { id: v.id("documents") },
     handler: async (ctx, args) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -216,15 +225,33 @@ export const remove = mutation({
             throw new Error("Unauthorized");
         }
 
-        const document = await ctx.db.delete(args.id);
+        // Recursively delete every descendant so no orphaned documents remain.
+        const recursiveDelete = async (documentId: Id<"documents">) => {
+            const children = await ctx.db
+                .query("documents")
+                .withIndex("by_user_parent", (q) =>
+                    q
+                        .eq("userId", userId)
+                        .eq("parentDocumentID", documentId)
+                )
+                .collect();
 
-        return document;
+            for (const child of children) {
+                await recursiveDelete(child._id);
+                await ctx.db.delete(child._id);
+            }
+        };
+
+        await recursiveDelete(args.id);
+        await ctx.db.delete(args.id);
+
+        return existingDocument;
     }
 });
 
 export const getSearch = query({
     handler: async (ctx) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -250,7 +277,7 @@ export const getSearch = query({
 export const getById = query({
     args: { documentId: v.id("documents") },
     handler: async (ctx, args) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
         
         const document = await ctx.db.get(args.documentId);
 
@@ -286,7 +313,7 @@ export const update = mutation({
         isPublished: v.optional(v.boolean()),
     },
     handler: async (ctx, args) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -317,7 +344,7 @@ export const update = mutation({
 export const removeIcon = mutation({
     args: { id: v.id("documents") },
     handler: async (ctx, args) => {
-        const identity = await ctx.auth.getUserIdentity();
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -337,6 +364,37 @@ export const removeIcon = mutation({
 
         const document = await ctx.db.patch(args.id, {
             icon: undefined,
+        });
+
+        return document;
+    }
+});
+
+export const removeCover = mutation({
+    args: { id: v.id("documents") },
+    handler: async (ctx, args) => {
+        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+
+        if (!identity) {
+            throw new Error("Not authenticated");
+        }
+
+        const userId = identity.subject;
+
+        const existingDocument = await ctx.db.get(args.id);
+
+        if (!existingDocument) {
+            throw new Error("Not found");
+        }
+
+        if (existingDocument.userId !== userId) {
+            throw new Error("Unauthorized");
+        }
+
+        const document = await ctx.db.patch(args.id, {
+            coverImage: undefined,
+            // Clear the legacy field too so removal is definitive.
+            converImage: undefined,
         });
 
         return document;

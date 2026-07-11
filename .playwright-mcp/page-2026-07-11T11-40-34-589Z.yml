@@ -1,0 +1,101 @@
+- generic [active] [ref=f170e1]:
+  - generic [ref=f170e84]:
+    - generic [ref=f170e86]:
+      - link [ref=f170e88] [cursor=pointer]:
+        - /url: "#main"
+      - navigation "Sidebar":
+        - generic [ref=f170e92]:
+          - generic [ref=f170e95]:
+            - generic [ref=f170e96]:
+              - button "A Abhishek Sharma’s Space Close sidebar" [ref=f170e820] [cursor=pointer]:
+                - generic [ref=f170e102]:
+                  - img "A" [ref=f170e821]
+                  - generic [ref=f170e108]: Abhishek Sharma’s Space
+                - button "Close sidebar" [ref=f170e115]
+              - generic [ref=f170e120]:
+                - tablist "Sidebar navigation" [ref=f170e121]:
+                  - tab "Home" [ref=f170e124] [cursor=pointer]
+                  - tab "Chat" [ref=f170e130] [cursor=pointer]
+                  - tab "Meetings" [selected] [ref=f170e136] [cursor=pointer]
+                  - tab "Inbox" [ref=f170e146] [cursor=pointer]
+                - button "Search" [ref=f170e152] [cursor=pointer]
+            - tabpanel "Meetings" [ref=f170e156]:
+              - generic [ref=f170e158]:
+                - generic [ref=f170e159]:
+                  - button "Upcoming" [expanded] [ref=f170e160] [cursor=pointer]
+                  - generic [ref=f170e823]:
+                    - progressbar [ref=f170e824]
+                    - progressbar [ref=f170e825]
+                  - generic [ref=f170e826]:
+                    - progressbar [ref=f170e827]
+                    - progressbar [ref=f170e828]
+                  - generic [ref=f170e829]:
+                    - progressbar [ref=f170e830]
+                    - progressbar [ref=f170e831]
+                  - generic [ref=f170e832]:
+                    - progressbar [ref=f170e833]
+                    - progressbar [ref=f170e834]
+                  - generic [ref=f170e835]:
+                    - progressbar [ref=f170e836]
+                    - progressbar [ref=f170e837]
+                - generic [ref=f170e182]:
+                  - generic [ref=f170e183]: Today
+                  - button "New AI meeting note" [ref=f170e185] [cursor=pointer]
+            - generic [ref=f170e209]:
+              - button "New chat" [ref=f170e211] [cursor=pointer]:
+                - generic [ref=f170e216]:
+                  - text: New chat
+                  - generic [ref=f170e217]: ⌘O
+              - button "New page" [ref=f170e222] [cursor=pointer]
+          - separator "Resize with left and right arrow keys" [ref=f170e228]
+      - generic [ref=f170e229]:
+        - banner [ref=f170e230]:
+          - generic [ref=f170e231]:
+            - generic [ref=f170e232]:
+              - generic [ref=f170e233]: Home is getting an update in our new sidebar redesign. Opt in to keep your pages, Notion AI, and meetings within reach.
+              - button "Learn more" [ref=f170e238] [cursor=pointer]
+            - button "Dismiss" [ref=f170e240] [cursor=pointer]
+          - toolbar [ref=f170e245]:
+            - button "Open menu" [ref=f170e250] [cursor=pointer]
+        - main [ref=f170e253]:
+          - generic [ref=f170e256]:
+            - generic [ref=f170e259]:
+              - generic: Good afternoon
+              - generic: Welcome home
+            - generic [ref=f170e262]:
+              - generic [ref=f170e263]: Recently visited
+              - button "New page" [ref=f170e348] [cursor=pointer]
+        - region [ref=f170e649]
+      - button "ai" [ref=f170e654] [cursor=pointer]:
+        - img "Notion AI face" [ref=f170e660]
+    - generic:
+      - dialog [ref=f170e781]:
+        - generic [ref=f170e786]:
+          - generic [ref=f170e787]:
+            - button "Go back to previous step" [disabled] [ref=f170e788]
+            - button "Close" [ref=f170e791] [cursor=pointer]
+          - generic [ref=f170e794]:
+            - generic [ref=f170e795]:
+              - generic [ref=f170e796]: Who else is on your team?
+              - generic [ref=f170e797]: Add your team members by email
+            - generic [ref=f170e799]:
+              - generic [ref=f170e838]:
+                - generic [ref=f170e839]:
+                  - generic [ref=f170e840]: Invite your team
+                  - generic [ref=f170e841]:
+                    - textbox "name@company.com" [ref=f170e844]
+                    - textbox "name@company.com" [ref=f170e847]
+                    - textbox "name@company.com" [ref=f170e850]
+                  - button "Add more or bulk invite" [ref=f170e851] [cursor=pointer]
+                - button "Copy invite link" [ref=f170e854] [cursor=pointer]
+                - generic:
+                  - separator
+              - button "Continue" [ref=f170e859] [cursor=pointer]
+      - dialog [ref=f170e865]:
+        - status "Getting ready…" [ref=f170e867]:
+          - status [ref=f170e871]:
+            - generic [ref=f170e872]: Loading...
+    - status [ref=f170e776]
+    - alert [ref=f170e777]
+  - iframe [ref=f170e778]:
+    

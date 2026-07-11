@@ -1,0 +1,110 @@
+[     192ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/home?spaceId=5df4fa69ff158181b9b50003b401470c:0
+[     231ms] [INFO] 2026-07-11T08:16:14.587Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-e09bc4ede749fbee.js:6
+[     255ms] [WARNING]   WARN  [Statsig] Creating multiple Statsig clients with the same SDK key can lead to unexpected behavior. Multi-instance support requires different SDK keys. @ https://app.notion.com/_assets/99974-53a5f46c103d8b67.js:0
+[     289ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.so/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-56e3c8e504680cd6.js:37
+[     420ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-626e48b309bd5ba3.js:0
+[     480ms] [INFO] 2026-07-11T08:16:14.837Z [info] syncRecordValuesBatched: missingSpacePointerForNotionUserRequest {actor: Object, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[     640ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[     641ms] [INFO] 2026-07-11T08:16:14.997Z [error] eventTrailApiHelpers: trackFailure {error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[     943ms] [INFO] 2026-07-11T08:16:15.299Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1682ms] [INFO] 2026-07-11T08:16:16.038Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1689ms] [INFO] 2026-07-11T08:16:16.045Z [info] premiumFeatureFramework: getPremiumFeatureAvailability {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1786ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[   17193ms] [INFO] 2026-07-11T08:16:31.549Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[  165581ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://app.notion.com/api/v3/ping:0
+[  165626ms] [INFO] 2026-07-11T08:18:59.982Z [error] useRegisterBrowserServiceWorker: browserServiceWorkerFetchError {error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[  391919ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://http-inputs-notion.splunkcloud.com/services/collector/raw:0
+[  391920ms] [ERROR] Failed to connect to splunk server TypeError: Failed to fetch (http-inputs-notion.splunkcloud.com)
+    at https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:475:9940
+    at Object.r (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:183893)
+    at n.pushAsync (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:188828) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[  865298ms] [INFO] 2026-07-11T08:30:39.653Z [info] premiumFeatureFramework: getPremiumFeatureAvailability {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[  865306ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://http-inputs-notion.splunkcloud.com/services/collector/raw:0
+[  865307ms] [ERROR] Failed to connect to splunk server TypeError: Failed to fetch (http-inputs-notion.splunkcloud.com)
+    at https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:475:9940
+    at Object.r (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:183893)
+    at n.pushAsync (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:188828) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[  900331ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[  960329ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1020333ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1080331ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1110300ms] [INFO] 2026-07-11T08:34:44.655Z [info] premiumFeatureFramework: getPremiumFeatureAvailability {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 1110313ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://http-inputs-notion.splunkcloud.com/services/collector/raw:0
+[ 1110313ms] [ERROR] Failed to connect to splunk server TypeError: Failed to fetch (http-inputs-notion.splunkcloud.com)
+    at https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:475:9940
+    at Object.r (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:183893)
+    at n.pushAsync (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:188828) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 1140335ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1154121ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://consumer.cloud.gist.build/api/v4/users?sessionId=502afe8e-8e4a-46ef-a9b1-b4f43e4833b0:0
+[ 1200329ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1260331ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1315306ms] [INFO] 2026-07-11T08:38:09.662Z [info] premiumFeatureFramework: getPremiumFeatureAvailability {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 1315319ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://http-inputs-notion.splunkcloud.com/services/collector/raw:0
+[ 1315320ms] [ERROR] Failed to connect to splunk server TypeError: Failed to fetch (http-inputs-notion.splunkcloud.com)
+    at https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:475:9940
+    at Object.r (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:183893)
+    at n.pushAsync (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:188828) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 1320331ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1360293ms] [INFO] 2026-07-11T08:38:54.649Z [info] premiumFeatureFramework: getPremiumFeatureAvailability {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 1360302ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://http-inputs-notion.splunkcloud.com/services/collector/raw:0
+[ 1360302ms] [ERROR] Failed to connect to splunk server TypeError: Failed to fetch (http-inputs-notion.splunkcloud.com)
+    at https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:475:9940
+    at Object.r (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:183893)
+    at n.pushAsync (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:188828) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 1380332ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1440327ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1500332ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1560346ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1620336ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1680331ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1740330ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1754554ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://consumer.cloud.gist.build/api/v4/users?sessionId=502afe8e-8e4a-46ef-a9b1-b4f43e4833b0:0
+[ 1800326ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1860332ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1920285ms] [INFO] 2026-07-11T08:48:14.640Z [info] premiumFeatureFramework: getPremiumFeatureAvailability {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 1920303ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://http-inputs-notion.splunkcloud.com/services/collector/raw:0
+[ 1920303ms] [ERROR] Failed to connect to splunk server TypeError: Failed to fetch (http-inputs-notion.splunkcloud.com)
+    at https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:475:9940
+    at Object.r (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:183893)
+    at n.pushAsync (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:188828) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 1920323ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 1980333ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2040326ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2100332ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2160333ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2220323ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2280330ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2340329ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2355054ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://consumer.cloud.gist.build/api/v4/users?sessionId=502afe8e-8e4a-46ef-a9b1-b4f43e4833b0:0
+[ 2370296ms] [INFO] 2026-07-11T08:55:44.651Z [info] premiumFeatureFramework: getPremiumFeatureAvailability {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 2370306ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://http-inputs-notion.splunkcloud.com/services/collector/raw:0
+[ 2370307ms] [ERROR] Failed to connect to splunk server TypeError: Failed to fetch (http-inputs-notion.splunkcloud.com)
+    at https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:475:9940
+    at Object.r (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:183893)
+    at n.pushAsync (https://app.notion.com/_assets/app-e09bc4ede749fbee.js:7:188828) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[ 2400325ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2460327ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2520337ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0
+[ 2580341ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://app.notion.com/api/v3/getAssetsJsonV2:0

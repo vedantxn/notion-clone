@@ -1,0 +1,31 @@
+[     221ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16383
+[  103687ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[  103715ms] [LOG] [Fast Refresh] done in 80ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[ 1218323ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[ 1218360ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[ 1240256ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[ 1240398ms] [ERROR] ./components/notion-library/document-view.tsx:95:10
+Ecmascript file had an error
+  93 |
+  94 | /** A real editable Notion-style page: editable title + editable body blocks. */
+> 95 | function PageEditor({ title }: { title: string }) {
+     |          ^^^^^^^^^^
+  96 |   return (
+  97 |     <div className="mx-auto w-full max-w-[720px] px-16 pt-16">
+  98 |       <h1
+
+the name `PageEditor` is defined multiple times @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:1225
+[ 1241578ms] [ERROR] ./components/notion-library/document-view.tsx:95:10
+Ecmascript file had an error
+  93 |
+  94 | /** A real editable Notion-style page: editable title + editable body blocks. */
+> 95 | function PageEditor({ title }: { title: string }) {
+     |          ^^^^^^^^^^
+  96 |   return (
+  97 |     <div className="mx-auto w-full max-w-[720px] px-16 pt-16">
+  98 |       <h1
+
+the name `PageEditor` is defined multiple times @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:1225
+[ 1241598ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[ 1268533ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[ 1268752ms] [LOG] [Fast Refresh] done in 254ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847

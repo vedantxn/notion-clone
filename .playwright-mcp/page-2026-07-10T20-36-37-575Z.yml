@@ -1,0 +1,278 @@
+- generic [ref=f29e1]:
+  - generic [ref=f29e84]:
+    - generic [ref=f29e86]:
+      - link [ref=f29e88] [cursor=pointer]:
+        - /url: "#main"
+      - navigation "Sidebar":
+        - generic [ref=f29e92]:
+          - generic [ref=f29e95]:
+            - generic [ref=f29e96]:
+              - button "🏠 Abhishek Sharma’s Space Close sidebar" [ref=f29e101] [cursor=pointer]:
+                - generic [ref=f29e102]:
+                  - generic [ref=f29e103]: 🏠
+                  - generic [ref=f29e108]: Abhishek Sharma’s Space
+                - button "Close sidebar" [ref=f29e115]
+              - generic [ref=f29e120]:
+                - tablist "Sidebar navigation" [ref=f29e121]:
+                  - tab "Home" [selected] [ref=f29e124] [cursor=pointer]
+                  - tab "Chat" [ref=f29e132] [cursor=pointer]
+                  - tab "Meetings" [ref=f29e138] [cursor=pointer]
+                  - tab "Inbox" [ref=f29e146] [cursor=pointer]
+                - button "Search" [ref=f29e152] [cursor=pointer]
+            - tabpanel "Home" [ref=f29e156]:
+              - generic [ref=f29e159]:
+                - button "Set up your workspace Dismiss setup guide 16.666666666666664" [ref=f29e162] [cursor=pointer]:
+                  - generic [ref=f29e163]:
+                    - generic [ref=f29e164]:
+                      - generic [ref=f29e165]: Set up your workspace
+                      - generic [ref=f29e166]:
+                        - generic:
+                          - button "Dismiss setup guide"
+                    - progressbar [ref=f29e168]:
+                      - generic [ref=f29e169]:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - img "Notion AI face"
+                              - img "duck accessory"
+                - generic [ref=f29e172]:
+                  - generic [ref=f29e173]:
+                    - generic [ref=f29e176] [cursor=pointer]:
+                      - button "Agents" [expanded] [ref=f29e177]
+                      - list "Agents" [ref=f29e183]:
+                        - button "New agent" [ref=f29e184]
+                    - generic [ref=f29e193] [cursor=pointer]:
+                      - button "Private" [expanded] [ref=f29e194]
+                      - tree "Private" [ref=f29e199]:
+                        - generic [ref=f29e201]:
+                          - treeitem "New page" [ref=f29e203]:
+                            - generic [ref=f29e204]:
+                              - img "Change page icon" [ref=f29e210]
+                              - generic [ref=f29e213]: New page
+                          - treeitem "Welcome to Notion" [ref=f29e216]:
+                            - generic [ref=f29e217]:
+                              - img "Change page icon" [ref=f29e225]: 👋
+                              - generic [ref=f29e226]: Welcome to Notion
+                          - treeitem "To Do List" [ref=f29e229]:
+                            - generic [ref=f29e230]:
+                              - img "Change page icon" [ref=f29e238]
+                              - generic [ref=f29e239]: To Do List
+                  - generic [ref=f29e242]:
+                    - button "Library" [ref=f29e244] [cursor=pointer]
+                    - button "Help, contact, more…" [ref=f29e253] [cursor=pointer]:
+                      - generic [ref=f29e254]: Help
+                    - button "Trash" [expanded] [ref=f29e264] [cursor=pointer]
+            - generic [ref=f29e272]:
+              - button "New chat" [ref=f29e274] [cursor=pointer]:
+                - generic [ref=f29e279]:
+                  - text: New chat
+                  - generic [ref=f29e280]: ⌘O
+              - button "New page" [ref=f29e285] [cursor=pointer]
+          - separator "Resize with left and right arrow keys" [ref=f29e291]
+      - generic [ref=f29e292]:
+        - banner [ref=f29e293]:
+          - generic [ref=f29e294]:
+            - generic [ref=f29e295]:
+              - generic [ref=f29e296]: Home is getting an update in our new sidebar redesign. Opt in to keep your pages, Notion AI, and meetings within reach.
+              - button "Learn more" [ref=f29e301] [cursor=pointer]
+            - button "Dismiss" [ref=f29e303] [cursor=pointer]
+          - toolbar [ref=f29e308]:
+            - button "Open menu" [ref=f29e313] [cursor=pointer]
+        - main [ref=f29e316]:
+          - generic [ref=f29e319]:
+            - generic [ref=f29e322]:
+              - generic: Good morning
+              - generic: Welcome home
+            - generic [ref=f29e325]:
+              - generic [ref=f29e326]: Recently visited
+              - generic [ref=f29e338]:
+                - link "To Do List A 1h ago" [ref=f29e340] [cursor=pointer]:
+                  - /url: /p/To-Do-List-3994fa69ff158066a408f30e673afc99?pvs=55
+                  - generic [ref=f29e345]:
+                    - generic [ref=f29e346]: To Do List
+                    - generic [ref=f29e348]:
+                      - generic [ref=f29e349]: A
+                      - generic [ref=f29e353]: 1h ago
+                - link "👋 Welcome to Notion A 1h ago" [ref=f29e355] [cursor=pointer]:
+                  - /url: /p/Welcome-to-Notion-3994fa69ff1580a98db5ef6767408aee?pvs=55
+                  - generic [ref=f29e356]: 👋
+                  - generic [ref=f29e360]:
+                    - generic [ref=f29e361]: Welcome to Notion
+                    - generic [ref=f29e363]:
+                      - generic [ref=f29e364]: A
+                      - generic [ref=f29e368]: 1h ago
+                - link "New page A 1h ago" [ref=f29e370] [cursor=pointer]:
+                  - /url: /p/3994fa69ff1580e2896eea18f645ffce?pvs=55
+                  - generic [ref=f29e380]:
+                    - generic [ref=f29e381]: New page
+                    - generic [ref=f29e383]:
+                      - generic [ref=f29e384]: A
+                      - generic [ref=f29e388]: 1h ago
+                - button "New page" [ref=f29e390] [cursor=pointer]
+            - generic [ref=f29e403]:
+              - generic [ref=f29e404]: Learn
+              - generic [ref=f29e416]:
+                - button "What is a block? 2m read" [ref=f29e418] [cursor=pointer]:
+                  - generic [ref=f29e420]:
+                    - generic [ref=f29e421]:
+                      - generic [ref=f29e422]: What is a block?
+                      - generic [ref=f29e423]: 2m read
+                    - checkbox [ref=f29e429]
+                - button "Create your first page 2m watch" [ref=f29e431] [cursor=pointer]:
+                  - generic [ref=f29e433]:
+                    - generic [ref=f29e434]:
+                      - generic [ref=f29e435]: Create your first page
+                      - generic [ref=f29e436]: 2m watch
+                    - checkbox [ref=f29e443]
+                - button "Create a subpage 2m read" [ref=f29e445] [cursor=pointer]:
+                  - generic [ref=f29e447]:
+                    - generic [ref=f29e448]:
+                      - generic [ref=f29e449]: Create a subpage
+                      - generic [ref=f29e450]: 2m read
+                    - checkbox [ref=f29e456]
+                - button "Customize & style your content 9m read" [ref=f29e458] [cursor=pointer]:
+                  - generic [ref=f29e460]:
+                    - generic [ref=f29e461]:
+                      - generic [ref=f29e462]: Customize & style your content
+                      - generic [ref=f29e463]: 9m read
+                    - checkbox [ref=f29e469]
+                - button "What is a database? 2m read" [ref=f29e471] [cursor=pointer]:
+                  - generic [ref=f29e473]:
+                    - generic [ref=f29e474]:
+                      - generic [ref=f29e475]: What is a database?
+                      - generic [ref=f29e476]: 2m read
+                    - checkbox [ref=f29e482]
+                - button "Create a database 3m read" [ref=f29e484] [cursor=pointer]:
+                  - generic [ref=f29e486]:
+                    - generic [ref=f29e487]:
+                      - generic [ref=f29e488]: Create a database
+                      - generic [ref=f29e489]: 3m read
+                    - checkbox [ref=f29e495]
+                - button "Start with a template 4m watch" [ref=f29e497] [cursor=pointer]:
+                  - generic [ref=f29e499]:
+                    - generic [ref=f29e500]:
+                      - generic [ref=f29e501]: Start with a template
+                      - generic [ref=f29e502]: 4m watch
+                    - checkbox [ref=f29e509]
+                - button "Share your work 2m read" [ref=f29e511] [cursor=pointer]:
+                  - generic [ref=f29e513]:
+                    - generic [ref=f29e514]:
+                      - generic [ref=f29e515]: Share your work
+                      - generic [ref=f29e516]: 2m read
+                    - checkbox [ref=f29e522]
+            - generic [ref=f29e524]:
+              - generic [ref=f29e525]: Upcoming events
+              - generic [ref=f29e534]:
+                - generic [ref=f29e536]:
+                  - generic [ref=f29e539]:
+                    - generic [ref=f29e540]: Connect AI Meeting Notes with your Calendar events
+                    - generic [ref=f29e541]: Join calls, transcribe audio, and summarize meetings all in Notion.
+                  - button "Connect Notion Calendar" [ref=f29e543] [cursor=pointer]
+                - generic [ref=f29e545]:
+                  - generic [ref=f29e546]:
+                    - generic [ref=f29e547]:
+                      - generic [ref=f29e548]: Today
+                      - generic [ref=f29e549]: Jul 11
+                    - generic [ref=f29e554]:
+                      - generic [ref=f29e555]:
+                        - generic [ref=f29e556]: Team standup
+                        - generic [ref=f29e557]: 9 AM ⸱ Office
+                      - generic [ref=f29e558]: Join and take notes
+                  - generic [ref=f29e564]:
+                    - generic [ref=f29e565]:
+                      - generic [ref=f29e566]: Sun
+                      - generic [ref=f29e567]: Jul 12
+                    - generic [ref=f29e573]:
+                      - generic [ref=f29e574]: Project check-in
+                      - generic [ref=f29e575]: 10 AM ⸱ Office
+            - generic [ref=f29e580]:
+              - generic [ref=f29e581]: Home views
+              - generic [ref=f29e592]:
+                - generic [ref=f29e594]:
+                  - generic [ref=f29e597]: Pin a database view to quickly access it from Home.
+                  - button "Select database" [ref=f29e600] [cursor=pointer]
+                - generic [ref=f29e602]:
+                  - generic [ref=f29e603]:
+                    - generic [ref=f29e604]: Activity
+                    - generic [ref=f29e605]: Status
+                  - generic [ref=f29e606]:
+                    - generic [ref=f29e608]: Wake up and freshen up
+                    - generic [ref=f29e609]: Done
+                  - generic [ref=f29e610]:
+                    - generic [ref=f29e612]: Have breakfast
+                    - generic [ref=f29e613]: In progress
+                  - generic [ref=f29e614]:
+                    - generic [ref=f29e616]: Work or study
+                    - generic [ref=f29e617]: Not started
+                  - generic [ref=f29e618]:
+                    - generic [ref=f29e620]: Have lunch
+                    - generic [ref=f29e621]: Not started
+                  - generic [ref=f29e622]:
+                    - generic [ref=f29e624]: Exercise
+                    - generic [ref=f29e625]: Not started
+            - generic [ref=f29e627]:
+              - generic [ref=f29e628]: Featured templates
+              - generic [ref=f29e640]:
+                - button "Life Wiki By Notion" [ref=f29e642] [cursor=pointer]:
+                  - generic [ref=f29e644]:
+                    - generic [ref=f29e645]: Life Wiki
+                    - generic [ref=f29e646]: By Notion
+                - button "Journal By Notion" [ref=f29e650] [cursor=pointer]:
+                  - generic [ref=f29e653]:
+                    - generic [ref=f29e654]: Journal
+                    - generic [ref=f29e655]: By Notion
+                - button "To-do List By Notion" [ref=f29e659] [cursor=pointer]:
+                  - generic [ref=f29e661]:
+                    - generic [ref=f29e662]: To-do List
+                    - generic [ref=f29e663]: By Notion
+                - button "Simple Budget By Notion" [ref=f29e667] [cursor=pointer]:
+                  - generic [ref=f29e669]:
+                    - generic [ref=f29e670]: Simple Budget
+                    - generic [ref=f29e671]: By Notion
+                - button "Travel planner By Notion" [ref=f29e675] [cursor=pointer]:
+                  - generic [ref=f29e677]:
+                    - generic [ref=f29e678]: Travel planner
+                    - generic [ref=f29e679]: By Notion
+                - button "Personal Mood Board By Notion" [ref=f29e683] [cursor=pointer]:
+                  - generic [ref=f29e686]:
+                    - generic [ref=f29e687]: Personal Mood Board
+                    - generic [ref=f29e688]: By Notion
+        - region [ref=f29e691]
+      - button "ai" [ref=f29e696] [cursor=pointer]:
+        - img "Notion AI face" [ref=f29e702]
+    - generic:
+      - dialog [ref=f29e710]:
+        - generic [ref=f29e711]:
+          - generic [ref=f29e713]:
+            - textbox "Search pages in Trash" [ref=f29e718]
+            - generic [ref=f29e719]:
+              - button "Last edited by" [expanded] [ref=f29e723] [cursor=pointer]
+              - button "In" [ref=f29e732] [cursor=pointer]
+              - button "Teamspaces" [ref=f29e741] [cursor=pointer]
+          - generic [ref=f29e748]: No results
+          - contentinfo [ref=f29e756]:
+            - generic [ref=f29e759]:
+              - generic [ref=f29e760]: Once a page has been in Trash for 30 days, it will be automatically deleted
+              - link [ref=f29e761] [cursor=pointer]:
+                - /url: https://www.notion.com/help/duplicate-delete-and-restore-content
+                - button "Help" [ref=f29e762]
+      - dialog [ref=f29e769]:
+        - generic [ref=f29e770]:
+          - generic [ref=f29e775]:
+            - generic [ref=f29e776]:
+              - generic [ref=f29e777]:
+                - generic [ref=f29e778]:
+                  - generic [ref=f29e779]: A
+                  - generic [ref=f29e784]: Abhishek Sharma
+                - button "Remove Item" [ref=f29e785] [cursor=pointer]
+              - textbox [active] [ref=f29e789]
+            - button [ref=f29e791] [cursor=pointer]
+          - generic [ref=f29e794]: No results found
+          - contentinfo
+    - status [ref=f29e703]
+    - alert [ref=f29e704]
+  - iframe [ref=f29e705]:
+    

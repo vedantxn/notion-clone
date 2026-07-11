@@ -1,0 +1,183 @@
+- generic [active] [ref=f232e1]:
+  - generic [ref=f232e84]:
+    - generic [ref=f232e86]:
+      - link [ref=f232e88] [cursor=pointer]:
+        - /url: "#main"
+      - navigation "Sidebar":
+        - generic [ref=f232e92]:
+          - generic [ref=f232e95]:
+            - generic [ref=f232e96]:
+              - button "🏠 Abhishek Sharma’s Space Close sidebar" [ref=f232e101] [cursor=pointer]:
+                - generic [ref=f232e102]:
+                  - generic [ref=f232e103]: 🏠
+                  - generic [ref=f232e108]: Abhishek Sharma’s Space
+                - button "Close sidebar" [ref=f232e115]
+              - generic [ref=f232e120]:
+                - tablist "Sidebar navigation" [ref=f232e121]:
+                  - tab "Home" [selected] [ref=f232e124] [cursor=pointer]
+                  - tab "Chat" [ref=f232e132] [cursor=pointer]
+                  - tab "Meetings" [ref=f232e138] [cursor=pointer]
+                  - tab "Inbox" [ref=f232e146] [cursor=pointer]
+                - button "Search" [ref=f232e152] [cursor=pointer]
+            - tabpanel "Home" [ref=f232e156]:
+              - generic [ref=f232e159]:
+                - button "Set up your workspace Dismiss setup guide 16.666666666666664" [ref=f232e162] [cursor=pointer]:
+                  - generic [ref=f232e163]:
+                    - generic [ref=f232e164]:
+                      - generic [ref=f232e165]: Set up your workspace
+                      - generic [ref=f232e166]:
+                        - generic:
+                          - button "Dismiss setup guide"
+                    - progressbar [ref=f232e168]:
+                      - generic [ref=f232e169]:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - img "Notion AI face"
+                              - img "duck accessory"
+                - generic [ref=f232e172]:
+                  - generic [ref=f232e173]:
+                    - generic [ref=f232e176] [cursor=pointer]:
+                      - button "Agents" [expanded] [ref=f232e177]
+                      - list "Agents" [ref=f232e183]:
+                        - button "New agent" [ref=f232e184]
+                    - generic [ref=f232e193] [cursor=pointer]:
+                      - button "Private" [expanded] [ref=f232e194]
+                      - tree "Private" [ref=f232e199]:
+                        - generic [ref=f232e201]:
+                          - treeitem "@Today 4:07 AM" [ref=f232e203]:
+                            - generic [ref=f232e204]:
+                              - img "Change page icon" [ref=f232e210]
+                              - generic [ref=f232e214]: "@Today 4:07 AM"
+                          - treeitem "New page" [ref=f232e217]:
+                            - generic [ref=f232e218]:
+                              - img "Change page icon" [ref=f232e224]
+                              - generic [ref=f232e227]: New page
+                          - treeitem "Welcome to Notion" [ref=f232e230]:
+                            - generic [ref=f232e231]:
+                              - img "Change page icon" [ref=f232e239]: 👋
+                              - generic [ref=f232e240]: Welcome to Notion
+                          - treeitem "To Do List" [ref=f232e243]:
+                            - generic [ref=f232e244]:
+                              - generic [ref=f232e246]:
+                                - button "Open" [ref=f232e534]
+                                - img "Change page icon" [ref=f232e252]
+                              - generic [ref=f232e253]: To Do List
+                              - generic [ref=f232e539]:
+                                - button "Delete, duplicate, and more…" [ref=f232e541]
+                                - button "Add a page inside" [ref=f232e545]
+                  - generic [ref=f232e256]:
+                    - button "Library" [ref=f232e258] [cursor=pointer]
+                    - button "Help, contact, more…" [ref=f232e267] [cursor=pointer]:
+                      - generic [ref=f232e268]: Help
+                    - button "Trash" [ref=f232e278] [cursor=pointer]
+            - generic [ref=f232e286]:
+              - button "New chat" [ref=f232e288] [cursor=pointer]:
+                - generic [ref=f232e293]:
+                  - text: New chat
+                  - generic [ref=f232e294]: ⌘O
+              - button "New page" [ref=f232e299] [cursor=pointer]
+          - separator "Resize with left and right arrow keys" [ref=f232e305]
+      - generic [ref=f232e306]:
+        - banner [ref=f232e307]:
+          - generic [ref=f232e310]:
+            - generic [ref=f232e311]:
+              - button "👋 Welcome to Notion" [ref=f232e313] [cursor=pointer]:
+                - generic [ref=f232e314]: 👋
+                - generic [ref=f232e317]: Welcome to Notion
+              - button "Private" [ref=f232e319] [cursor=pointer]
+            - generic [ref=f232e326]:
+              - button "Edited 19h ago" [ref=f232e331] [cursor=pointer]
+              - button "Share" [ref=f232e334] [cursor=pointer]
+              - button "Copy link" [ref=f232e341] [cursor=pointer]
+              - button "Favorite" [ref=f232e347] [cursor=pointer]
+              - button "Actions" [ref=f232e352] [cursor=pointer]
+        - main [ref=f232e355]:
+          - group [ref=f232e358]:
+            - generic [ref=f232e360]:
+              - generic [ref=f232e363]:
+                - generic:
+                  - button "👋 Change page icon" [ref=f232e365] [cursor=pointer]:
+                    - generic [ref=f232e366]: 👋
+                  - generic [ref=f232e368]:
+                    - button "Add cover"
+                    - button "Add comment"
+                - textbox [ref=f232e372]:
+                  - /placeholder: New page
+              - generic [ref=f232e374]:
+                - generic [ref=f232e378]:
+                  - checkbox "Create an account with Notion" [checked] [ref=f232e384] [cursor=pointer]
+                  - textbox [ref=f232e387]:
+                    - /placeholder: To-do
+                - generic [ref=f232e391]:
+                  - checkbox "Download the desktop app to unlock offline mode and take Notion with you wherever you go" [ref=f232e394] [cursor=pointer]
+                  - textbox [ref=f232e397]:
+                    - /placeholder: To-do
+                    - link "Download the desktop app" [ref=f232e398] [cursor=pointer]:
+                      - /url: https://notion.so/dynamic-download/desktop
+                - generic [ref=f232e402]:
+                  - checkbox "Start building with Notion Agent . Tell it what you’re here to do, and Agent will create it for you in seconds." [ref=f232e405] [cursor=pointer]
+                  - textbox [ref=f232e408]:
+                    - /placeholder: To-do
+                    - img "nosey" [ref=f232e410]
+                - generic [ref=f232e414]:
+                  - checkbox "Click anywhere below and type / to see what you can create – headers, tables, to-do’s, etc." [ref=f232e417] [cursor=pointer]
+                  - generic [ref=f232e418]:
+                    - textbox [ref=f232e420]:
+                      - /placeholder: To-do
+                      - generic [ref=f232e421]: /
+                    - generic [ref=f232e425]:
+                      - checkbox "Type /page to add a new page and nest anything, anywhere" [ref=f232e428] [cursor=pointer]
+                      - textbox [ref=f232e431]:
+                        - /placeholder: To-do
+                        - generic [ref=f232e432]: /page
+                - generic [ref=f232e436]:
+                  - checkbox "Find, organize, and add new pages using the sidebar to the left 👈" [ref=f232e439] [cursor=pointer]
+                  - generic [ref=f232e440]:
+                    - textbox [ref=f232e442]:
+                      - /placeholder: To-do
+                    - generic [ref=f232e446]:
+                      - checkbox "Check out the To Do List we added for you with more tips and tricks to best use Notion" [ref=f232e449] [cursor=pointer]
+                      - textbox [ref=f232e452]:
+                        - /placeholder: To-do
+                    - generic [ref=f232e456]:
+                      - checkbox "Make a new page and type /meet to capture meeting notes and thoughts effortlessly" [ref=f232e459] [cursor=pointer]
+                      - generic [ref=f232e460]:
+                        - textbox [ref=f232e462]:
+                          - /placeholder: To-do
+                          - generic [ref=f232e463]: /meet
+                        - generic [ref=f232e467]:
+                          - checkbox "Afterwards, find all your meetings in one place in the Meetings tab" [ref=f232e470] [cursor=pointer]
+                          - textbox [ref=f232e473]:
+                            - /placeholder: To-do
+                            - link "Meetings tab" [ref=f232e474] [cursor=pointer]:
+                              - /url: https://www.notion.so/meet
+                - generic [ref=f232e478]:
+                  - button "Close" [expanded] [ref=f232e480] [cursor=pointer]
+                  - generic [ref=f232e483]:
+                    - textbox [ref=f232e485]:
+                      - /placeholder: Toggle
+                    - generic [ref=f232e487]:
+                      - generic [ref=f232e491]:
+                        - generic [ref=f232e492]: •
+                        - textbox [ref=f232e496]:
+                          - /placeholder: List
+                          - img "templates-outline" [ref=f232e498]
+                      - generic [ref=f232e502]:
+                        - generic [ref=f232e503]: •
+                        - textbox [ref=f232e507]:
+                          - /placeholder: List
+                          - link "Notion Academy" [ref=f232e508] [cursor=pointer]:
+                            - /url: https://academy.notion.com/?utm_campaign=gsqw
+                - textbox [ref=f232e514]:
+                  - /placeholder: " "
+        - region [ref=f232e516]
+      - button "ai" [ref=f232e521] [cursor=pointer]:
+        - img "Notion AI face" [ref=f232e527]
+    - status [ref=f232e528]
+    - alert [ref=f232e529]
+  - iframe [ref=f232e530]:
+    

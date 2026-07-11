@@ -1,0 +1,55 @@
+- generic [ref=f52e1]:
+  - region "Notifications alt+T"
+  - generic [ref=f52e2]:
+    - complementary [ref=f52e3]:
+      - button "🏠 Alex Morgan’s Space" [ref=f52e6]:
+        - generic [ref=f52e7]: 🏠
+        - generic [ref=f52e8]: Alex Morgan’s Space
+      - generic [ref=f52e12]:
+        - button "Home" [ref=f52e13]
+        - button "Chat" [ref=f52e17]
+        - button "Meetings" [ref=f52e20]
+        - button "Inbox" [ref=f52e24]
+        - button "Search" [ref=f52e28]
+      - generic [ref=f52e165]:
+        - generic [ref=f52e168]: You’re all caught up
+        - generic [ref=f52e169]:
+          - button "Edit filter" [active] [ref=f52e170]
+          - generic [ref=f52e180]:
+            - generic [ref=f52e181]: Filter
+            - button "Unread & read" [ref=f52e182]
+            - button "Unread" [ref=f52e190]
+            - button "Archived" [ref=f52e197]
+            - button "All workspace updates" [ref=f52e203]
+      - generic [ref=f52e80]:
+        - button "New chat ⌘O" [ref=f52e81]:
+          - text: New chat
+          - generic [ref=f52e84]: ⌘O
+        - button [ref=f52e85]
+    - main [ref=f52e89]:
+      - generic [ref=f52e90]:
+        - generic [ref=f52e91]:
+          - heading "Library" [level=1] [ref=f52e92]
+          - button "New page" [ref=f52e94]
+        - generic [ref=f52e95]:
+          - button [ref=f52e96]
+          - button [ref=f52e101]
+          - button [ref=f52e105]
+          - button [ref=f52e112]
+          - button [ref=f52e117]
+          - generic [ref=f52e123]:
+            - button "Filter" [ref=f52e125]
+            - button "Search" [ref=f52e128]
+            - button "Settings" [ref=f52e132]
+        - generic [ref=f52e137]:
+          - button "Page name" [ref=f52e138]
+          - button "Created by" [ref=f52e142]
+          - button "Source" [ref=f52e147]
+          - button "Last edited time" [ref=f52e150]
+          - button "Last visited time" [ref=f52e154]
+        - generic [ref=f52e158]:
+          - generic [ref=f52e161]: Your favorite pages will appear here
+          - generic [ref=f52e162]: Add pages to your favorites for quick access from anywhere in your workspace
+    - button "Notion AI" [ref=f52e163]: 🎋
+  - alert [ref=f52e164]
+  - button "Open Next.js Dev Tools" [ref=f52e176] [cursor=pointer]

@@ -3,14 +3,13 @@
 import { useScrollTop } from "@/hooks/use-scroll-top";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
-import { useConvexAuth } from "convex/react";
-import { SignInButton, UserButton } from "@clerk/clerk-react";
+import { SignInButton, UserButton } from "@/lib/fake-clerk";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/spinner";
 import Link  from "next/link";
 
 export const Navbar = () => {
-    const { isAuthenticated, isLoading} = useConvexAuth();
+    const { isAuthenticated, isLoading } = { isAuthenticated: true, isLoading: false }; // LOCAL PREVIEW BYPASS
     const scrollTop = useScrollTop();
 
     return (

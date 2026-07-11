@@ -1,0 +1,18 @@
+[     694ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16383
+[  408748ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[  409192ms] Error: useLayoutEffect is not defined
+    at FixedMenu (http://localhost:3000/_next/static/chunks/components_notion-library_sidebar_tsx_89529c39._.js?id=%255Bproject%255D%252Fcomponents%252Fnotion-library%252Fsidebar.tsx+%255Bapp-client%255D+%2528ecmascript%2529:1016:5)
+    at PageMenu (http://localhost:3000/_next/static/chunks/components_notion-library_sidebar_tsx_89529c39._.js:1053:214)
+    at Row (http://localhost:3000/_next/static/chunks/components_notion-library_sidebar_tsx_89529c39._.js:1794:223)
+    at Sidebar (http://localhost:3000/_next/static/chunks/components_notion-library_sidebar_tsx_89529c39._.js:719:243)
+    at NotionLibraryPage (http://localhost:3000/_next/static/chunks/app_notion-library_page_tsx_fee4ad1b._.js:189:215)
+    at ClientPageRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_1a6ee436._.js:2061:50)
+[  409192ms] [LOG] [Fast Refresh] done in 464ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[  418066ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[  418490ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:15317
+[  418555ms] [LOG] [Fast Refresh] done in 523ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[  418741ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[  418759ms] [LOG] [Fast Refresh] done in 119ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[  419178ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16383
+[  419490ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[  419564ms] [LOG] [Fast Refresh] done in 174ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847

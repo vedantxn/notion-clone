@@ -1,0 +1,62 @@
+[     609ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/p/5df4fa69ff158181b9b50003b401470c?assetsVersion=23.13.20260711.0723&clientBuildTarget=client:0
+[     910ms] [INFO] 2026-07-11T12:31:45.958Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     989ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.so/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-56e3c8e504680cd6.js:37
+[    1111ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-626e48b309bd5ba3.js:0
+[    1187ms] [INFO] 2026-07-11T12:31:46.236Z [info] syncRecordValuesBatched: missingSpacePointerForNotionUserRequest {actor: Object, data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[    1224ms] [INFO] 2026-07-11T12:31:46.273Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[    1583ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1583ms] [INFO] 2026-07-11T12:31:46.631Z [error] eventTrailApiHelpers: trackFailure {error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1661ms] [INFO] 2026-07-11T12:31:46.709Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1856ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://app.notion.com/api/v3/getPageVisitors:0
+[    1857ms] [ERROR] HttpRequestError: Received HTTP 400
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async Module.s (https://app.notion.com/_assets/14574-ad090fded962fe90.js:1:5261) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2011ms] [INFO] 2026-07-11T12:31:47.059Z [error] appActions: publicPageMissingSpaceId {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2015ms] [INFO] 2026-07-11T12:31:47.063Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2023ms] [INFO] 2026-07-11T12:31:47.072Z [info] pageError: pageError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2047ms] [INFO] 2026-07-11T12:31:47.095Z [info] syncRecordValuesBatched: recordPointerMissingSpaceId {actor: Object, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2070ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://app.notion.com/api/v3/recordPageExit:0
+[    2071ms] [ERROR] HttpRequestError: Received HTTP 400
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2809ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://app.notion.com/api/v3/recordPageVisit:0
+[    2812ms] [ERROR] HttpRequestError: Received HTTP 400
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async d (https://app.notion.com/_assets/14574-ad090fded962fe90.js:1:6737)
+    at async Module.o (https://app.notion.com/_assets/14574-ad090fded962fe90.js:1:4510)
+    at async p (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:182:239351) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2828ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[    3045ms] [INFO] 2026-07-11T12:31:48.093Z [info] messageStoreInternals: messageStoreEnd {team: no-team-specified, error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    3051ms] [INFO] 2026-07-11T12:31:48.100Z [error] messageStore.internals.sendRequest: MessageStoreRequestFailed {team: editor, error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    3959ms] [INFO] 2026-07-11T12:31:49.007Z [info] messageStoreInternals: messageStoreEnd {team: no-team-specified, error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    3961ms] [WARNING] WebSocket connection to 'wss://msgstore-001.app.notion.com/primus-v8/?sessionId=25f3332c-94a9-4562-aeac-448c581414c7&_primuscb=PzHAPUA&EIO=4&transport=websocket&sid=0ECNJvb42pyyUjEuAbnU&t=PzHAPYu&b64=1' failed: WebSocket is closed before the connection is established. @ https://app.notion.com/_assets/7102-8df8aeac05d209cc.js:0

@@ -1,0 +1,199 @@
+- generic [ref=f261e1]:
+  - generic [ref=f261e4]:
+    - generic [ref=f261e10]:
+      - link [ref=f261e12] [cursor=pointer]:
+        - /url: "#main"
+      - navigation "Sidebar":
+        - generic [ref=f261e16]:
+          - generic [ref=f261e19]:
+            - generic [ref=f261e20]:
+              - button "🏠 Abhishek Sharma’s Space Close sidebar" [ref=f261e25] [cursor=pointer]:
+                - generic [ref=f261e26]:
+                  - generic [ref=f261e27]: 🏠
+                  - generic [ref=f261e32]: Abhishek Sharma’s Space
+                - button "Close sidebar" [ref=f261e39]
+              - generic [ref=f261e44]:
+                - tablist "Sidebar navigation" [ref=f261e45]:
+                  - tab "Home" [selected] [ref=f261e48] [cursor=pointer]
+                  - tab "Chat" [ref=f261e56] [cursor=pointer]
+                  - tab "Meetings" [ref=f261e62] [cursor=pointer]
+                  - tab "Inbox" [ref=f261e70] [cursor=pointer]
+                - button "Search" [ref=f261e76] [cursor=pointer]
+            - tabpanel "Home" [ref=f261e80]:
+              - generic [ref=f261e83]:
+                - button "Set up your workspace Dismiss setup guide 16.666666666666664" [ref=f261e86] [cursor=pointer]:
+                  - generic [ref=f261e87]:
+                    - generic [ref=f261e88]:
+                      - generic [ref=f261e89]: Set up your workspace
+                      - generic [ref=f261e90]:
+                        - generic:
+                          - button "Dismiss setup guide"
+                    - progressbar [ref=f261e92]:
+                      - generic [ref=f261e93]:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - img "Notion AI face"
+                              - img "duck accessory"
+                - generic [ref=f261e96]:
+                  - generic [ref=f261e97]:
+                    - generic [ref=f261e101] [cursor=pointer]:
+                      - button "Recents" [expanded] [ref=f261e102]
+                      - tree "Recents" [ref=f261e107]:
+                        - treeitem "New page" [ref=f261e109]:
+                          - generic [ref=f261e110]:
+                            - img "Change page icon" [ref=f261e116]
+                            - generic [ref=f261e119]: New page
+                        - treeitem "To Do List" [ref=f261e122]:
+                          - generic [ref=f261e123]:
+                            - img "Change page icon" [ref=f261e131]
+                            - generic [ref=f261e132]: To Do List
+                        - treeitem "Welcome to Notion" [ref=f261e135]:
+                          - generic [ref=f261e136]:
+                            - img "Change page icon" [ref=f261e144]: 👋
+                            - generic [ref=f261e145]: Welcome to Notion
+                        - treeitem "New page" [ref=f261e148]:
+                          - generic [ref=f261e149]:
+                            - img "Change page icon" [ref=f261e155]
+                            - generic [ref=f261e158]: New page
+                        - treeitem "New page" [ref=f261e161]:
+                          - generic [ref=f261e162]:
+                            - img "Change page icon" [ref=f261e168]
+                            - generic [ref=f261e171]: New page
+                        - treeitem "@Today 4:07 AM" [ref=f261e174]:
+                          - generic [ref=f261e175]:
+                            - img "Change page icon" [ref=f261e181]
+                            - generic [ref=f261e185]: "@Today 4:07 AM"
+                        - treeitem "Welcome to Notion" [ref=f261e188]
+                    - generic [ref=f261e202] [cursor=pointer]:
+                      - button "Favorites" [expanded] [ref=f261e203]
+                      - tree "Favorites" [ref=f261e208]:
+                        - treeitem "To Do List" [ref=f261e212]:
+                          - generic [ref=f261e213]:
+                            - img "Change page icon" [ref=f261e221]
+                            - generic [ref=f261e222]: To Do List
+                    - generic [ref=f261e226] [cursor=pointer]:
+                      - button "Agents" [expanded] [ref=f261e227]
+                      - list "Agents" [ref=f261e233]:
+                        - button "New agent" [ref=f261e234]
+                    - generic [ref=f261e243] [cursor=pointer]:
+                      - button "Private" [expanded] [ref=f261e244]
+                      - tree "Private" [ref=f261e249]:
+                        - generic [ref=f261e251]:
+                          - treeitem "New page" [ref=f261e253]:
+                            - generic [ref=f261e254]:
+                              - img "Change page icon" [ref=f261e260]
+                              - generic [ref=f261e263]: New page
+                          - treeitem "New page" [ref=f261e266]:
+                            - generic [ref=f261e267]:
+                              - img "Change page icon" [ref=f261e273]
+                              - generic [ref=f261e276]: New page
+                          - treeitem "@Today 4:07 AM" [ref=f261e279]:
+                            - generic [ref=f261e280]:
+                              - img "Change page icon" [ref=f261e286]
+                              - generic [ref=f261e290]: "@Today 4:07 AM"
+                          - treeitem "New page" [ref=f261e293]:
+                            - generic [ref=f261e294]:
+                              - img "Change page icon" [ref=f261e300]
+                              - generic [ref=f261e303]: New page
+                          - treeitem "Welcome to Notion" [ref=f261e306]:
+                            - generic [ref=f261e307]:
+                              - img "Change page icon" [ref=f261e315]: 👋
+                              - generic [ref=f261e316]: Welcome to Notion
+                          - treeitem "To Do List" [ref=f261e319]:
+                            - generic [ref=f261e320]:
+                              - img "Change page icon" [ref=f261e328]
+                              - generic [ref=f261e329]: To Do List
+                  - generic [ref=f261e332]:
+                    - button "Library" [ref=f261e334] [cursor=pointer]
+                    - button "Help, contact, more…" [ref=f261e343] [cursor=pointer]:
+                      - generic [ref=f261e344]: Help
+                    - button "Trash" [ref=f261e354] [cursor=pointer]
+            - generic [ref=f261e362]:
+              - button "New chat" [ref=f261e364] [cursor=pointer]:
+                - generic [ref=f261e369]:
+                  - text: New chat
+                  - generic [ref=f261e370]: ⌘O
+              - button "New page" [ref=f261e375] [cursor=pointer]
+          - separator "Resize with left and right arrow keys" [ref=f261e381]
+      - generic [ref=f261e382]:
+        - banner [ref=f261e383]:
+          - generic [ref=f261e386]:
+            - generic [ref=f261e387]:
+              - button "New page" [ref=f261e389] [cursor=pointer]
+              - button "Private" [ref=f261e392] [cursor=pointer]
+            - generic [ref=f261e399]:
+              - button "Edited 59m ago" [ref=f261e502] [cursor=pointer]
+              - button "Share" [expanded] [ref=f261e407] [cursor=pointer]
+              - button "Copy link" [ref=f261e414] [cursor=pointer]
+              - button "Favorite" [ref=f261e420] [cursor=pointer]
+              - button "Actions" [ref=f261e425] [cursor=pointer]
+        - main [ref=f261e428]:
+          - group [ref=f261e431]:
+            - generic [ref=f261e433]:
+              - generic [ref=f261e436]:
+                - generic [ref=f261e437]:
+                  - button "Add icon"
+                  - button "Add cover"
+                  - button "Add comment"
+                - textbox [ref=f261e441]:
+                  - /placeholder: New page
+              - generic [ref=f261e442]:
+                - generic:
+                  - generic:
+                    - menu:
+                      - generic [ref=f261e445]:
+                        - generic [ref=f261e446]: Get started with
+                        - generic [ref=f261e448] [cursor=pointer]:
+                          - generic [ref=f261e449]: Ask AI
+                          - generic [ref=f261e453]: AI Meeting Notes
+                          - generic [ref=f261e461]: Database
+                          - generic [ref=f261e467]: Form
+                          - generic [ref=f261e474]: Templates
+        - region [ref=f261e489]
+      - button "ai" [ref=f261e494] [cursor=pointer]:
+        - img "Notion AI face" [ref=f261e500]
+    - generic:
+      - dialog [ref=f261e506]:
+        - generic [ref=f261e507]:
+          - generic [ref=f261e509]:
+            - tablist [ref=f261e511]:
+              - tab "Share" [selected] [ref=f261e513] [cursor=pointer]
+              - tab "Publish" [ref=f261e516] [cursor=pointer]
+            - generic [ref=f261e518]:
+              - generic [ref=f261e520]:
+                - textbox "Email or group, separated by commas" [active] [ref=f261e527]
+                - button "Share" [ref=f261e528] [cursor=pointer]
+              - button "A Abhishek Sharma (You) abhisheksharma67185@gmail.com Full access" [ref=f261e534] [cursor=pointer]:
+                - generic [ref=f261e535]:
+                  - generic [ref=f261e536]: A
+                  - generic [ref=f261e541]:
+                    - generic [ref=f261e542]: Abhishek Sharma (You)
+                    - generic [ref=f261e548]: abhisheksharma67185@gmail.com
+                  - button "Full access" [ref=f261e552]
+              - generic [ref=f261e557]:
+                - generic [ref=f261e558]: General access
+                - button [ref=f261e560] [cursor=pointer]:
+                  - button "Only people invited" [ref=f261e569]
+              - generic [ref=f261e573]:
+                - link [ref=f261e574] [cursor=pointer]:
+                  - /url: https://www.notion.com/help/sharing-and-permissions
+                  - button "Learn about sharing" [ref=f261e575]
+                - button "Copy link" [ref=f261e582] [cursor=pointer]
+          - contentinfo
+      - dialog [ref=f261e589]:
+        - generic [ref=f261e590]:
+          - generic [ref=f261e591]:
+            - generic [ref=f261e592]: Import contacts from Google, Slack, or Microsoft
+            - button "Close tooltip" [ref=f261e630] [cursor=pointer]
+          - generic [ref=f261e633]: Collaborate faster by importing contacts from your favorite tools.
+          - generic [ref=f261e635]:
+            - button "Not now" [ref=f261e636] [cursor=pointer]
+            - button "Get started" [ref=f261e637] [cursor=pointer]
+    - status [ref=f261e8]
+    - alert [ref=f261e9]
+  - iframe [ref=f261e501]:
+    

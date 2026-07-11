@@ -1,6 +1,6 @@
 "use client";
 
-import { useUser,SignOutButton } from "@clerk/clerk-react";
+import { useUser,SignOutButton } from "@/lib/fake-clerk";
 import { ChevronsLeftRight } from "lucide-react";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { DropdownMenu,
@@ -19,7 +19,7 @@ export const UserItems = () => {
             <DropdownMenuTrigger asChild>
                 <div role="button" className="flex items-center text-sm p-3 w-full hover:bg-primary/5">
                     <div className="gap-x-2 items-center flex max-w-[150px]">
-                        <Avatar className="h- w-10">
+                        <Avatar className="h-10 w-10">
                             <AvatarImage src={user?.imageUrl} alt="User" />
                         </Avatar>
                         <span className="text-start font-medium line-clamp-1">

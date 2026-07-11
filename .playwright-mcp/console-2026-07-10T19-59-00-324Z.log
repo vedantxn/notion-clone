@@ -1,0 +1,34 @@
+[     336ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/library/favorites?spaceId=5df4fa69ff158181b9b50003b401470c:0
+[     403ms] [WARNING]   WARN  [Statsig] Creating multiple Statsig clients with the same SDK key can lead to unexpected behavior. Multi-instance support requires different SDK keys. @ https://app.notion.com/_assets/2370-12344820e9a70455.js:0
+[     431ms] [INFO] 2026-07-10T19:59:00.754Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-b388f4b328155ee9.js:6
+[     504ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.so/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-7b5760af358455f6.js:37
+[     829ms] [INFO] 2026-07-10T19:59:01.152Z [info] syncRecordValuesBatched: missingSpacePointerForNotionUserRequest {actor: Object, data: Object} @ https://app.notion.com/_assets/app-b388f4b328155ee9.js:6
+[     844ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/transport-support-1f878d5b73af338b.js:0
+[     845ms] [INFO] 2026-07-10T19:59:01.168Z [error] eventTrailApiHelpers: trackFailure {error: Object} @ https://app.notion.com/_assets/app-b388f4b328155ee9.js:6
+[     851ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-fdd49f68fddce51f.js:0
+[     949ms] [INFO] 2026-07-10T19:59:01.272Z [info] transcriptionReadApiMembershipHelpers: transcriptionReadApiDeferredForMembership {data: Object} @ https://app.notion.com/_assets/app-b388f4b328155ee9.js:6
+[    1933ms] [INFO] 2026-07-10T19:59:02.256Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/8741-0c4e7eebf2fa7c94.js:472
+[    2402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[    2964ms] [WARNING] [Sprig] - Disregarding empty attribute / value provided @ https://app.notion.com/_assets/8741-0c4e7eebf2fa7c94.js:472

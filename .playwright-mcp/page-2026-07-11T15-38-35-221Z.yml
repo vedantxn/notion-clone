@@ -1,0 +1,187 @@
+- generic [ref=f253e1]:
+  - generic [ref=f253e4]:
+    - generic [ref=f253e10]:
+      - link [ref=f253e12] [cursor=pointer]:
+        - /url: "#main"
+      - navigation "Sidebar":
+        - generic [ref=f253e16]:
+          - generic [ref=f253e19]:
+            - generic [ref=f253e20]:
+              - button "🏠 Abhishek Sharma’s Space Close sidebar" [ref=f253e25] [cursor=pointer]:
+                - generic [ref=f253e26]:
+                  - generic [ref=f253e27]: 🏠
+                  - generic [ref=f253e32]: Abhishek Sharma’s Space
+                - button "Close sidebar" [ref=f253e39]
+              - generic [ref=f253e44]:
+                - tablist "Sidebar navigation" [ref=f253e45]:
+                  - tab "Home" [selected] [ref=f253e48] [cursor=pointer]
+                  - tab "Chat" [ref=f253e56] [cursor=pointer]
+                  - tab "Meetings" [ref=f253e62] [cursor=pointer]
+                  - tab "Inbox" [ref=f253e70] [cursor=pointer]
+                - button "Search" [ref=f253e76] [cursor=pointer]
+            - tabpanel "Home" [ref=f253e80]:
+              - generic [ref=f253e83]:
+                - button "Set up your workspace Dismiss setup guide 16.666666666666664" [ref=f253e86] [cursor=pointer]:
+                  - generic [ref=f253e87]:
+                    - generic [ref=f253e88]:
+                      - generic [ref=f253e89]: Set up your workspace
+                      - generic [ref=f253e90]:
+                        - generic:
+                          - button "Dismiss setup guide"
+                    - progressbar [ref=f253e92]:
+                      - generic [ref=f253e93]:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - img "Notion AI face"
+                              - img "duck accessory"
+                - generic [ref=f253e96]:
+                  - generic [ref=f253e97]:
+                    - generic [ref=f253e101] [cursor=pointer]:
+                      - button "Recents" [expanded] [ref=f253e102]
+                      - tree "Recents" [ref=f253e107]:
+                        - treeitem "New page" [ref=f253e109]:
+                          - generic [ref=f253e110]:
+                            - img "Change page icon" [ref=f253e116]
+                            - generic [ref=f253e119]: New page
+                        - treeitem "New page" [ref=f253e122]:
+                          - generic [ref=f253e123]:
+                            - img "Change page icon" [ref=f253e129]
+                            - generic [ref=f253e132]: New page
+                        - treeitem "New page" [ref=f253e135]:
+                          - generic [ref=f253e136]:
+                            - img "Change page icon" [ref=f253e142]
+                            - generic [ref=f253e145]: New page
+                        - treeitem "@Today 4:07 AM" [ref=f253e148]:
+                          - generic [ref=f253e149]:
+                            - img "Change page icon" [ref=f253e155]
+                            - generic [ref=f253e159]: "@Today 4:07 AM"
+                        - treeitem "To Do List" [ref=f253e162]:
+                          - generic [ref=f253e163]:
+                            - img "Change page icon" [ref=f253e171]
+                            - generic [ref=f253e172]: To Do List
+                        - treeitem "Welcome to Notion" [ref=f253e175]
+                    - generic [ref=f253e188] [cursor=pointer]:
+                      - button "Agents" [expanded] [ref=f253e189]
+                      - list "Agents" [ref=f253e195]:
+                        - button "New agent" [ref=f253e196]
+                    - generic [ref=f253e205] [cursor=pointer]:
+                      - button "Private" [expanded] [ref=f253e206]
+                      - tree "Private" [ref=f253e211]:
+                        - generic [ref=f253e213]:
+                          - treeitem "New page" [ref=f253e215]:
+                            - generic [ref=f253e216]:
+                              - img "Change page icon" [ref=f253e222]
+                              - generic [ref=f253e225]: New page
+                          - treeitem "New page" [ref=f253e228]:
+                            - generic [ref=f253e229]:
+                              - img "Change page icon" [ref=f253e235]
+                              - generic [ref=f253e238]: New page
+                          - treeitem "@Today 4:07 AM" [ref=f253e241]:
+                            - generic [ref=f253e242]:
+                              - img "Change page icon" [ref=f253e248]
+                              - generic [ref=f253e252]: "@Today 4:07 AM"
+                          - treeitem "New page" [ref=f253e255]:
+                            - generic [ref=f253e256]:
+                              - img "Change page icon" [ref=f253e262]
+                              - generic [ref=f253e265]: New page
+                          - treeitem "Welcome to Notion" [ref=f253e268]:
+                            - generic [ref=f253e269]:
+                              - img "Change page icon" [ref=f253e277]: 👋
+                              - generic [ref=f253e278]: Welcome to Notion
+                          - treeitem "To Do List" [ref=f253e281]:
+                            - generic [ref=f253e282]:
+                              - img "Change page icon" [ref=f253e290]
+                              - generic [ref=f253e291]: To Do List
+                  - generic [ref=f253e294]:
+                    - button "Library" [ref=f253e296] [cursor=pointer]
+                    - button "Help, contact, more…" [ref=f253e305] [cursor=pointer]:
+                      - generic [ref=f253e306]: Help
+                    - button "Trash" [ref=f253e316] [cursor=pointer]
+            - generic [ref=f253e324]:
+              - button "New chat" [ref=f253e326] [cursor=pointer]:
+                - generic [ref=f253e331]:
+                  - text: New chat
+                  - generic [ref=f253e332]: ⌘O
+              - button "New page" [ref=f253e337] [cursor=pointer]
+          - separator "Resize with left and right arrow keys" [ref=f253e343]
+      - generic [ref=f253e344]:
+        - banner [ref=f253e345]:
+          - generic [ref=f253e348]:
+            - generic [ref=f253e349]:
+              - button "New page" [ref=f253e351] [cursor=pointer]
+              - button "Private" [ref=f253e354] [cursor=pointer]
+            - generic [ref=f253e361]:
+              - button "Edited 41m ago" [ref=f253e366] [cursor=pointer]
+              - button "Share" [ref=f253e369] [cursor=pointer]
+              - button "Copy link" [ref=f253e376] [cursor=pointer]
+              - button "Favorite" [ref=f253e382] [cursor=pointer]
+              - button "Actions" [ref=f253e387] [cursor=pointer]
+        - main [ref=f253e390]:
+          - group [ref=f253e393]:
+            - generic [ref=f253e395]:
+              - generic [ref=f253e398]:
+                - generic [ref=f253e399]:
+                  - button "Add icon"
+                  - button "Add cover"
+                  - button "Add comment"
+                - textbox [ref=f253e403]:
+                  - /placeholder: New page
+              - generic [ref=f253e404]:
+                - generic:
+                  - generic:
+                    - menu:
+                      - generic [ref=f253e407]:
+                        - generic [ref=f253e408]: Get started with
+                        - generic [ref=f253e410] [cursor=pointer]:
+                          - generic [ref=f253e411]: Ask AI
+                          - generic [ref=f253e415]: AI Meeting Notes
+                          - generic [ref=f253e423]: Database
+                          - generic [ref=f253e429]: Form
+                          - generic [ref=f253e436]: Templates
+        - region [ref=f253e451]
+      - button "ai" [ref=f253e456] [cursor=pointer]:
+        - img "Notion AI face" [ref=f253e462]
+    - dialog [ref=f253e466]:
+      - generic [ref=f253e467]:
+        - generic [ref=f253e468]:
+          - menu [active] [ref=f253e469]:
+            - generic [ref=f253e470]:
+              - generic [ref=f253e471]: Page
+              - menuitem "Add to Favorites" [ref=f253e474] [cursor=pointer]
+            - generic [ref=f253e482]:
+              - menuitem "Copy link" [ref=f253e484] [cursor=pointer]
+              - menuitem "Duplicate ⌘D" [ref=f253e494] [cursor=pointer]:
+                - generic [ref=f253e495]:
+                  - generic [ref=f253e500]: Duplicate
+                  - generic [ref=f253e502]: ⌘D
+              - menuitem "Rename ⌘⇧R" [ref=f253e504] [cursor=pointer]:
+                - generic [ref=f253e505]:
+                  - generic [ref=f253e511]: Rename
+                  - generic [ref=f253e513]: ⌘⇧R
+              - menuitem "Move to ⌘⇧P" [ref=f253e515] [cursor=pointer]:
+                - generic [ref=f253e516]:
+                  - generic [ref=f253e521]: Move to
+                  - generic [ref=f253e523]: ⌘⇧P
+              - menuitem "Move to Trash" [ref=f253e525] [cursor=pointer]
+            - menuitem "Turn into wiki" [ref=f253e537] [cursor=pointer]
+            - generic [ref=f253e545]:
+              - menuitem "Open in new tab ⌘⇧↵" [ref=f253e547] [cursor=pointer]:
+                - generic [ref=f253e548]:
+                  - generic [ref=f253e553]: Open in new tab
+                  - generic [ref=f253e555]: ⌘⇧↵
+              - menuitem "Open in side peek ⌥Click" [ref=f253e557] [cursor=pointer]:
+                - generic [ref=f253e558]:
+                  - generic [ref=f253e564]: Open in side peek
+                  - generic [ref=f253e566]: ⌥Click
+          - generic [ref=f253e574]:
+            - generic [ref=f253e575]: Last edited by Abhishek Sharma
+            - generic [ref=f253e576]: Today at 12:17 AM
+        - contentinfo
+    - status [ref=f253e8]
+    - alert [ref=f253e9]
+  - iframe [ref=f253e577]:
+    

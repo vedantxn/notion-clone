@@ -1,0 +1,48 @@
+- generic [ref=f9e1]:
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=f9e190]:
+        - generic [ref=f9e191]: Opened Trash
+  - generic [ref=f9e2]:
+    - complementary [ref=f9e3]:
+      - button "🏠 Abhishek Sharma’s Space" [ref=f9e6]:
+        - generic [ref=f9e7]: 🏠
+        - generic [ref=f9e8]: Abhishek Sharma’s Space
+      - generic [ref=f9e12]:
+        - button "Home" [ref=f9e13]
+        - generic [ref=f9e17]:
+          - button "Chat" [ref=f9e18]
+          - button "Meeting notes" [ref=f9e21]
+          - button "Inbox" [ref=f9e25]
+          - button "Search" [ref=f9e29]
+      - generic [ref=f9e33]:
+        - generic [ref=f9e34]:
+          - generic [ref=f9e35]: Set up your workspace
+          - generic [ref=f9e36]: 🎋
+        - generic [ref=f9e39]: Agents
+        - button "New agent" [ref=f9e40]
+        - generic [ref=f9e44]:
+          - generic [ref=f9e45]: Private
+          - button "New page" [ref=f9e46]
+          - button "👋 Welcome to Notion" [ref=f9e52]:
+            - generic [ref=f9e53]: 👋
+            - generic [ref=f9e55]: Welcome to Notion
+          - button "✅ To Do List" [ref=f9e56]:
+            - generic [ref=f9e57]: ✅
+            - generic [ref=f9e59]: To Do List
+        - generic [ref=f9e60]:
+          - button "Library" [ref=f9e61]
+          - button "Help" [ref=f9e66]
+          - button "Trash" [active] [ref=f9e74]
+      - generic [ref=f9e80]:
+        - button "New chat ⌘O" [ref=f9e81]:
+          - text: New chat
+          - generic [ref=f9e84]: ⌘O
+        - button [ref=f9e85]
+    - main [ref=f9e193]:
+      - generic [ref=f9e194]: 🗑️
+      - generic [ref=f9e195]: Trash
+      - generic [ref=f9e196]: This is the Trash page.
+    - button "Notion AI" [ref=f9e159]: 🎋
+  - alert [ref=f9e180]
+  - button "Open Next.js Dev Tools" [ref=f9e186] [cursor=pointer]

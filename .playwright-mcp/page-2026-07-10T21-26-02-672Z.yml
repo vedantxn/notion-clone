@@ -1,0 +1,48 @@
+- generic [ref=f50e1]:
+  - region "Notifications alt+T"
+  - generic [ref=f50e2]:
+    - complementary [ref=f50e3]:
+      - button "🏠 Alex Morgan’s Space" [ref=f50e6]:
+        - generic [ref=f50e7]: 🏠
+        - generic [ref=f50e8]: Alex Morgan’s Space
+      - generic [ref=f50e12]:
+        - button "Home" [ref=f50e13]
+        - button "Chat" [ref=f50e17]
+        - button "Meetings" [ref=f50e20]
+        - button "Inbox" [active] [ref=f50e24]
+        - button "Search" [ref=f50e28]
+      - generic [ref=f50e235]:
+        - generic [ref=f50e238]: You’re all caught up
+        - button "Edit filter" [ref=f50e239]
+      - generic [ref=f50e80]:
+        - button "New chat ⌘O" [ref=f50e81]:
+          - text: New chat
+          - generic [ref=f50e84]: ⌘O
+        - button [ref=f50e85]
+    - main [ref=f50e89]:
+      - generic [ref=f50e90]:
+        - generic [ref=f50e91]:
+          - heading "Library" [level=1] [ref=f50e92]
+          - button "New page" [ref=f50e94]
+        - generic [ref=f50e95]:
+          - button [ref=f50e96]
+          - button [ref=f50e101]
+          - button [ref=f50e105]
+          - button [ref=f50e112]
+          - button [ref=f50e117]
+          - generic [ref=f50e123]:
+            - button "Filter" [ref=f50e125]
+            - button "Search" [ref=f50e128]
+            - button "Settings" [ref=f50e132]
+        - generic [ref=f50e137]:
+          - button "Page name" [ref=f50e138]
+          - button "Created by" [ref=f50e142]
+          - button "Source" [ref=f50e147]
+          - button "Last edited time" [ref=f50e150]
+          - button "Last visited time" [ref=f50e154]
+        - generic [ref=f50e158]:
+          - generic [ref=f50e161]: Your favorite pages will appear here
+          - generic [ref=f50e162]: Add pages to your favorites for quick access from anywhere in your workspace
+    - button "Notion AI" [ref=f50e163]: 🎋
+  - alert [ref=f50e164]
+  - button "Open Next.js Dev Tools" [ref=f50e192] [cursor=pointer]

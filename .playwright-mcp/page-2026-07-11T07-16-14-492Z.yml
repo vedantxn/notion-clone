@@ -1,0 +1,158 @@
+- generic [ref=f121e1]:
+  - region "Notifications alt+T"
+  - generic [ref=f121e2]:
+    - complementary [ref=f121e3]:
+      - button "🏠 Alex Morgan’s Space" [ref=f121e6]:
+        - generic [ref=f121e7]: 🏠
+        - generic [ref=f121e8]: Alex Morgan’s Space
+      - generic [ref=f121e12]:
+        - button "Home" [ref=f121e13]
+        - button "Chat" [ref=f121e17]
+        - button "Meetings" [ref=f121e20]
+        - button "Inbox" [ref=f121e24]
+        - button "Search" [ref=f121e28]
+      - generic [ref=f121e33]:
+        - generic [ref=f121e34]:
+          - generic [ref=f121e35]: Set up your workspace
+          - generic [ref=f121e36]: 🎋
+        - generic [ref=f121e39]: Agents
+        - button "New agent" [ref=f121e40]
+        - generic [ref=f121e44]:
+          - generic [ref=f121e45]: Private
+          - button "New page" [ref=f121e46]
+          - button "👋 Welcome to Notion" [ref=f121e52]:
+            - generic [ref=f121e53]: 👋
+            - generic [ref=f121e55]: Welcome to Notion
+          - button "✅ To Do List" [ref=f121e56]:
+            - generic [ref=f121e57]: ✅
+            - generic [ref=f121e59]: To Do List
+        - generic [ref=f121e60]:
+          - button "Library" [ref=f121e61]
+          - button "Help" [ref=f121e66]
+          - button "Trash" [ref=f121e74]
+      - generic [ref=f121e80]:
+        - button "New chat ⌘O" [ref=f121e81]:
+          - text: New chat
+          - generic [ref=f121e84]: ⌘O
+        - button [ref=f121e85]
+      - generic [ref=f121e206]:
+        - generic [ref=f121e207]:
+          - generic [ref=f121e208]:
+            - generic [ref=f121e209]: Account
+            - button "A Alex Morgan" [ref=f121e210]:
+              - generic [ref=f121e211]: A
+              - text: Alex Morgan
+            - button [ref=f121e213]
+            - button [ref=f121e216]
+            - button [ref=f121e221]
+          - generic [ref=f121e226]:
+            - generic [ref=f121e227]: Workspace
+            - button [ref=f121e228]
+            - button [ref=f121e233]
+            - button [ref=f121e240]
+          - generic [ref=f121e245]:
+            - generic [ref=f121e246]: Features
+            - button [active] [ref=f121e247]
+            - button [ref=f121e252]
+            - button [ref=f121e256]
+            - button [ref=f121e263]
+            - button [ref=f121e268]
+          - generic [ref=f121e273]:
+            - generic [ref=f121e274]: Admin
+            - button [ref=f121e275]
+          - generic [ref=f121e281]:
+            - generic [ref=f121e282]: Access & billing
+            - button [ref=f121e283]
+        - generic [ref=f121e288]:
+          - button "Close" [ref=f121e289]
+          - generic [ref=f121e420]:
+            - heading "Notion AI" [level=1] [ref=f121e421]
+            - paragraph [ref=f121e422]: Choose how you want to use AI features and manage AI connectors
+            - generic [ref=f121e423]:
+              - button "General" [ref=f121e424]
+              - button "AI connectors" [ref=f121e425]
+              - button "Meeting notes" [ref=f121e426]
+            - generic [ref=f121e427]:
+              - heading "Workspace settings" [level=2] [ref=f121e428]
+              - generic [ref=f121e430]:
+                - generic [ref=f121e431]:
+                  - generic [ref=f121e432]: Share data to improve Notion AI
+                  - generic [ref=f121e433]:
+                    - text: Help improve Notion AI by allowing data from this workspace to be shared with Notion. By enabling the Learning and Early Access Program you are agreeing to the LEAP Terms.
+                    - button "Learn more" [ref=f121e434]
+                - button "Toggle" [ref=f121e435]
+            - generic [ref=f121e437]:
+              - generic [ref=f121e438]:
+                - heading "Personalization" [level=2] [ref=f121e439]
+                - paragraph [ref=f121e440]: Pick a name and an accessory for your Notion AI
+                - button "Personalize" [ref=f121e441]
+              - generic [ref=f121e445]: 🦆
+            - generic [ref=f121e460]:
+              - heading "Instructions" [level=2] [ref=f121e461]
+              - paragraph [ref=f121e462]: Instructions allow you to customize how your Agent works and interacts with you
+              - button "Add instructions" [ref=f121e463]
+            - generic [ref=f121e467]:
+              - heading "Skills" [level=2] [ref=f121e468]
+              - paragraph [ref=f121e469]:
+                - text: Skills are common tasks that AI can complete. Use them by @-mentioning the skill’s name in a chat with Agent, or via the menu that appears when you select text in a page.
+                - button "Learn more" [ref=f121e470]
+              - button "Add a skill" [ref=f121e471]
+              - generic [ref=f121e473]: Created by me
+              - generic [ref=f121e474]:
+                - generic [ref=f121e475]:
+                  - generic [ref=f121e476]: ✍️
+                  - generic [ref=f121e477]: Improve writing
+                  - generic [ref=f121e478]: AI
+                  - button "Open page" [ref=f121e479]
+                - generic [ref=f121e480]:
+                  - generic [ref=f121e481]: ✅
+                  - generic [ref=f121e482]: Proofread
+                  - generic [ref=f121e483]: AI
+                  - button "Open page" [ref=f121e484]
+                - generic [ref=f121e485]:
+                  - generic [ref=f121e486]: 💡
+                  - generic [ref=f121e487]: Explain
+                  - generic [ref=f121e488]: AI
+                  - button "Open page" [ref=f121e489]
+                - generic [ref=f121e490]:
+                  - generic [ref=f121e491]: ✨
+                  - generic [ref=f121e492]: Reformat
+                  - generic [ref=f121e493]: AI
+                  - button "Open page" [ref=f121e494]
+            - generic [ref=f121e495]:
+              - heading "Restricted access models" [level=2] [ref=f121e496]
+              - generic [ref=f121e497]:
+                - paragraph [ref=f121e498]:
+                  - text: Your workspace admin may enable the below optional LLMs which may retain your data.
+                  - button "See here" [ref=f121e499]
+                  - text: for more information.
+                - generic [ref=f121e500]:
+                  - generic [ref=f121e501]: ☀️ Fable 5
+                  - button "Toggle" [ref=f121e504]
+    - main [ref=f121e89]:
+      - generic [ref=f121e90]:
+        - generic [ref=f121e91]:
+          - heading "Library" [level=1] [ref=f121e92]
+          - button "New page" [ref=f121e94]
+        - generic [ref=f121e95]:
+          - button [ref=f121e96]
+          - button [ref=f121e101]
+          - button [ref=f121e105]
+          - button [ref=f121e112]
+          - button [ref=f121e117]
+          - generic [ref=f121e123]:
+            - button "Filter" [ref=f121e125]
+            - button "Search" [ref=f121e128]
+            - button "Settings" [ref=f121e132]
+        - generic [ref=f121e137]:
+          - button "Page name" [ref=f121e138]
+          - button "Created by" [ref=f121e142]
+          - button "Source" [ref=f121e147]
+          - button "Last edited time" [ref=f121e150]
+          - button "Last visited time" [ref=f121e154]
+        - generic [ref=f121e158]:
+          - generic [ref=f121e161]: Your favorite pages will appear here
+          - generic [ref=f121e162]: Add pages to your favorites for quick access from anywhere in your workspace
+    - button "Notion AI" [ref=f121e163]
+  - alert [ref=f121e167]
+  - button "Open Next.js Dev Tools" [ref=f121e201] [cursor=pointer]

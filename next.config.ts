@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* Cover images render via <Image unoptimized />, which bypasses the image
+     optimizer and its host allowlist, so no remotePatterns are needed. */
 };
 
 export default nextConfig;

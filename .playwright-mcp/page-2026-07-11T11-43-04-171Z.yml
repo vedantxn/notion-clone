@@ -1,0 +1,101 @@
+- generic [ref=f173e1]:
+  - generic [ref=f173e4]:
+    - generic [ref=f173e10]:
+      - link [ref=f173e12] [cursor=pointer]:
+        - /url: "#main"
+      - navigation "Sidebar":
+        - generic [ref=f173e16]:
+          - generic [ref=f173e19]:
+            - generic [ref=f173e20]:
+              - button "A Abhishek Sharma’s Space Close sidebar" [ref=f173e757] [cursor=pointer]:
+                - generic [ref=f173e26]:
+                  - img "A" [ref=f173e758]
+                  - generic [ref=f173e32]: Abhishek Sharma’s Space
+                - button "Close sidebar" [ref=f173e39]
+              - generic [ref=f173e44]:
+                - tablist "Sidebar navigation" [ref=f173e45]:
+                  - tab "Home" [ref=f173e48] [cursor=pointer]
+                  - tab "Chat" [ref=f173e54] [cursor=pointer]
+                  - tab "Meetings" [selected] [ref=f173e60] [cursor=pointer]
+                  - tab "Inbox" [ref=f173e70] [cursor=pointer]
+                - button "Search" [ref=f173e76] [cursor=pointer]
+            - tabpanel "Meetings" [ref=f173e80]:
+              - generic [ref=f173e82]:
+                - generic [ref=f173e83]:
+                  - button "Upcoming" [expanded] [ref=f173e84] [cursor=pointer]
+                  - generic [ref=f173e760]:
+                    - progressbar [ref=f173e761]
+                    - progressbar [ref=f173e762]
+                  - generic [ref=f173e763]:
+                    - progressbar [ref=f173e764]
+                    - progressbar [ref=f173e765]
+                  - generic [ref=f173e766]:
+                    - progressbar [ref=f173e767]
+                    - progressbar [ref=f173e768]
+                  - generic [ref=f173e769]:
+                    - progressbar [ref=f173e770]
+                    - progressbar [ref=f173e771]
+                  - generic [ref=f173e772]:
+                    - progressbar [ref=f173e773]
+                    - progressbar [ref=f173e774]
+                - generic [ref=f173e106]:
+                  - generic [ref=f173e107]: Today
+                  - button "New AI meeting note" [ref=f173e109] [cursor=pointer]
+            - generic [ref=f173e133]:
+              - button "New chat" [ref=f173e135] [cursor=pointer]:
+                - generic [ref=f173e140]:
+                  - text: New chat
+                  - generic [ref=f173e141]: ⌘O
+              - button "New page" [ref=f173e146] [cursor=pointer]
+          - separator "Resize with left and right arrow keys" [ref=f173e152]
+      - generic [ref=f173e153]:
+        - banner [ref=f173e154]:
+          - generic [ref=f173e155]:
+            - generic [ref=f173e156]:
+              - generic [ref=f173e157]: Home is getting an update in our new sidebar redesign. Opt in to keep your pages, Notion AI, and meetings within reach.
+              - button "Learn more" [ref=f173e162] [cursor=pointer]
+            - button "Dismiss" [ref=f173e164] [cursor=pointer]
+          - toolbar [ref=f173e169]:
+            - button "Open menu" [ref=f173e174] [cursor=pointer]
+        - main [ref=f173e177]:
+          - generic [ref=f173e180]:
+            - generic [ref=f173e183]:
+              - generic: Good afternoon
+              - generic: Welcome home
+            - generic [ref=f173e186]:
+              - generic [ref=f173e187]: Recently visited
+              - button "New page" [ref=f173e272] [cursor=pointer]
+        - region [ref=f173e573]
+      - button "ai" [ref=f173e578] [cursor=pointer]:
+        - img "Notion AI face" [ref=f173e584]
+    - generic:
+      - dialog [ref=f173e718]:
+        - generic [ref=f173e723]:
+          - generic [ref=f173e724]:
+            - button "Go back to previous step" [ref=f173e725] [cursor=pointer]
+            - button "Close" [ref=f173e728] [cursor=pointer]
+          - generic [ref=f173e731]:
+            - generic [ref=f173e732]:
+              - generic [ref=f173e733]: What is this space for?
+              - generic [ref=f173e734]: Just a few more steps to unlock your new workspace
+            - generic [ref=f173e738]:
+              - button "For work" [ref=f173e740] [cursor=pointer]:
+                - main [ref=f173e742]:
+                  - generic [ref=f173e743]: For work
+                  - paragraph [ref=f173e744]: Track projects, company goals, meeting notes
+              - button "For personal life" [active] [pressed] [ref=f173e746] [cursor=pointer]:
+                - main [ref=f173e748]:
+                  - generic [ref=f173e749]: For personal life
+                  - paragraph [ref=f173e750]: Write better, think more clearly, stay organized
+              - button "For school" [ref=f173e752] [cursor=pointer]:
+                - main [ref=f173e754]:
+                  - generic [ref=f173e755]: For school
+                  - paragraph [ref=f173e756]: Keep notes, research, and tasks in one place
+      - dialog [ref=f173e777]:
+        - status "Getting ready…" [ref=f173e779]:
+          - status [ref=f173e783]:
+            - generic [ref=f173e784]: Loading...
+    - status [ref=f173e7]
+    - alert [ref=f173e8]
+  - iframe [ref=f173e9]:
+    

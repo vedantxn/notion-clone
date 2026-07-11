@@ -7,6 +7,7 @@ import { useState, useRef } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
+import { useDebouncedSave } from "@/hooks/use-debounced-save"
 
 interface TitleProps {
     initialData: Doc<"documents">
@@ -21,6 +22,12 @@ export const Title = ({
 
     const [title, setTitle] = useState(initialData.title || "Untitled")
     const [isEditing, setIsEditing] = useState(false)
+
+    // Debounced save so the sidebar title doesn't write on every keystroke.
+    const { schedule: saveTitle } = useDebouncedSave<string>(
+        (value) => update({ id: initialData._id, title: value || "Untitled" }),
+        600
+    );
 
     const enableInput = () => {
         setIsEditing(true);
@@ -39,10 +46,7 @@ export const Title = ({
         e: React.ChangeEvent<HTMLInputElement>
     ) => {
         setTitle(e.target.value);
-        update({
-            id: initialData._id,
-            title: e.target.value || "Untitled"
-        });
+        saveTitle(e.target.value);
     };
 
     const onKeyDown = (

@@ -1,0 +1,54 @@
+- generic [active] [ref=f83e1]:
+  - region "Notifications alt+T"
+  - generic [ref=f83e2]:
+    - complementary [ref=f83e3]:
+      - button "🏠 Alex Morgan’s Space" [ref=f83e6]:
+        - generic [ref=f83e7]: 🏠
+        - generic [ref=f83e8]: Alex Morgan’s Space
+      - generic [ref=f83e12]:
+        - button "Home" [ref=f83e13]
+        - button "Chat" [ref=f83e17]
+        - button "Meetings" [ref=f83e20]
+        - button "Inbox" [ref=f83e24]
+        - button "Search" [ref=f83e28]
+      - generic [ref=f83e33]:
+        - generic [ref=f83e34]:
+          - generic [ref=f83e35]: Set up your workspace
+          - generic [ref=f83e36]: 🎋
+        - generic [ref=f83e39]: Agents
+        - button "New agent" [ref=f83e40]
+        - generic [ref=f83e44]:
+          - generic [ref=f83e45]: Private
+          - button "New page" [ref=f83e46]
+          - button "👋 Welcome to Notion" [ref=f83e52]:
+            - generic [ref=f83e53]: 👋
+            - generic [ref=f83e55]: Welcome to Notion
+          - button "✅ To Do List" [ref=f83e56]:
+            - generic [ref=f83e57]: ✅
+            - generic [ref=f83e59]: To Do List
+        - generic [ref=f83e60]:
+          - button "Library" [ref=f83e61]
+          - button "Help" [ref=f83e66]
+          - button "Trash" [ref=f83e74]
+      - generic [ref=f83e80]:
+        - button "New chat ⌘O" [ref=f83e81]:
+          - text: New chat
+          - generic [ref=f83e84]: ⌘O
+        - button [ref=f83e85]
+    - main [ref=f83e270]:
+      - generic [ref=f83e271]:
+        - generic [ref=f83e272]:
+          - generic [ref=f83e276]: To Do List
+          - button "Private" [ref=f83e281]
+        - generic [ref=f83e284]:
+          - generic [ref=f83e285]: Edited just now
+          - button "Share" [ref=f83e286]
+          - button [ref=f83e290]
+          - button [ref=f83e294]
+          - button [ref=f83e297]
+      - generic [ref=f83e302]:
+        - heading "To Do List" [level=1] [ref=f83e303]
+        - generic [ref=f83e304]: Press Enter to start writing, or type '/' for commands.
+    - button "Notion AI" [ref=f83e163]: 🎋
+  - alert [ref=f83e260]
+  - button "Open Next.js Dev Tools" [ref=f83e266] [cursor=pointer]

@@ -1,0 +1,154 @@
+- generic [ref=f10e1]:
+  - generic [ref=f10e4]:
+    - generic [ref=f10e6]:
+      - link [ref=f10e8] [cursor=pointer]:
+        - /url: "#main"
+      - navigation "Sidebar":
+        - generic [ref=f10e87]:
+          - generic [ref=f10e90]:
+            - generic [ref=f10e91]:
+              - button "🏠 Abhishek Sharma’s Space Close sidebar" [ref=f10e96] [cursor=pointer]:
+                - generic [ref=f10e97]:
+                  - generic [ref=f10e98]: 🏠
+                  - generic [ref=f10e103]: Abhishek Sharma’s Space
+                - button "Close sidebar" [ref=f10e110]
+              - generic [ref=f10e115]:
+                - tablist "Sidebar navigation" [ref=f10e116]:
+                  - tab "Home" [selected] [ref=f10e119] [cursor=pointer]
+                  - tab "Chat" [ref=f10e127] [cursor=pointer]
+                  - tab "Meetings" [ref=f10e133] [cursor=pointer]
+                  - tab "Inbox" [ref=f10e141] [cursor=pointer]
+                - button "Search" [ref=f10e147] [cursor=pointer]
+            - tabpanel "Home" [ref=f10e151]:
+              - generic [ref=f10e154]:
+                - button "Set up your workspace Dismiss setup guide 16.666666666666664" [ref=f10e157] [cursor=pointer]:
+                  - generic [ref=f10e158]:
+                    - generic [ref=f10e159]:
+                      - generic [ref=f10e160]: Set up your workspace
+                      - generic [ref=f10e161]:
+                        - generic:
+                          - button "Dismiss setup guide"
+                    - progressbar [ref=f10e163]:
+                      - generic [ref=f10e164]:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - img "Notion AI face"
+                              - img "duck accessory"
+                - generic [ref=f10e167]:
+                  - generic [ref=f10e168]:
+                    - generic [ref=f10e171] [cursor=pointer]:
+                      - button "Agents" [expanded] [ref=f10e172]
+                      - list "Agents" [ref=f10e178]:
+                        - button "New agent" [ref=f10e179]
+                    - generic [ref=f10e188] [cursor=pointer]:
+                      - button "Private" [expanded] [ref=f10e189]
+                      - tree "Private" [ref=f10e194]:
+                        - generic [ref=f10e196]:
+                          - treeitem "New page" [ref=f10e198]:
+                            - generic [ref=f10e199]:
+                              - img "Change page icon" [ref=f10e205]
+                              - generic [ref=f10e208]: New page
+                          - treeitem "Welcome to Notion" [ref=f10e211]:
+                            - generic [ref=f10e212]:
+                              - img "Change page icon" [ref=f10e220]: 👋
+                              - generic [ref=f10e221]: Welcome to Notion
+                          - treeitem "To Do List" [ref=f10e224]:
+                            - generic [ref=f10e225]:
+                              - img "Change page icon" [ref=f10e233]
+                              - generic [ref=f10e234]: To Do List
+                  - generic [ref=f10e237]:
+                    - button "Library" [ref=f10e239] [cursor=pointer]
+                    - button "What’s new, help, contact, more…" [ref=f10e248] [cursor=pointer]:
+                      - generic [ref=f10e249]:
+                        - generic [ref=f10e251]:
+                          - img "New"
+                        - generic [ref=f10e255]: Help
+                    - button "Trash" [ref=f10e258] [cursor=pointer]
+            - generic [ref=f10e266]:
+              - button "New chat" [ref=f10e268] [cursor=pointer]:
+                - generic [ref=f10e273]:
+                  - text: New chat
+                  - generic [ref=f10e274]: ⌘O
+              - button "New page" [ref=f10e279] [cursor=pointer]
+          - separator "Resize with left and right arrow keys" [ref=f10e285]
+      - generic [ref=f10e81]:
+        - banner [ref=f10e286]:
+          - toolbar [ref=f10e288]
+        - main [ref=f10e84]:
+          - generic [ref=f10e290]:
+            - generic [ref=f10e291]:
+              - heading "Library" [level=1] [ref=f10e292]
+              - button "New page" [ref=f10e293] [cursor=pointer]
+            - generic [ref=f10e294]:
+              - generic [ref=f10e297]:
+                - tablist [ref=f10e298]:
+                  - generic [ref=f10e300]:
+                    - tab "Recents" [active] [selected] [ref=f10e304] [cursor=pointer]
+                    - tab "Favorites" [ref=f10e312] [cursor=pointer]
+                    - tab "Shared" [ref=f10e319] [cursor=pointer]
+                    - tab "Private" [ref=f10e326] [cursor=pointer]
+                    - tab "AI Meeting Notes" [ref=f10e334] [cursor=pointer]
+                - generic [ref=f10e341]:
+                  - button "Filter" [ref=f10e345] [cursor=pointer]
+                  - button "Search" [ref=f10e349] [cursor=pointer]
+                  - button "Settings" [ref=f10e355] [cursor=pointer]
+              - generic [ref=f10e364]:
+                - generic [ref=f10e370]:
+                  - checkbox [ref=f10e377] [cursor=pointer]
+                  - generic [ref=f10e379]:
+                    - button "Page name" [ref=f10e384] [cursor=pointer]
+                    - button "Created by" [ref=f10e399] [cursor=pointer]
+                    - button "Source" [ref=f10e414] [cursor=pointer]
+                    - button "Last edited time" [ref=f10e429] [cursor=pointer]
+                    - button "Last visited time" [ref=f10e444] [cursor=pointer]
+                - generic [ref=f10e458]:
+                  - generic [ref=f10e462]:
+                    - checkbox [ref=f10e469] [cursor=pointer]
+                    - button "New page" [ref=f10e473]
+                    - generic [ref=f10e483]:
+                      - generic [ref=f10e484]: A
+                      - generic [ref=f10e489]: Abhishek Sharma
+                    - button [ref=f10e492]:
+                      - button "Private" [ref=f10e493] [cursor=pointer]
+                    - generic [ref=f10e499]: 1h ago
+                    - button "2m ago" [ref=f10e505]
+                  - generic [ref=f10e511]:
+                    - checkbox [ref=f10e518] [cursor=pointer]
+                    - button "👋 Welcome to Notion" [ref=f10e522]:
+                      - generic [ref=f10e523]:
+                        - button "👋" [ref=f10e525] [cursor=pointer]
+                        - generic [ref=f10e528]: Welcome to Notion
+                    - generic [ref=f10e536]:
+                      - generic [ref=f10e537]: A
+                      - generic [ref=f10e542]: Abhishek Sharma
+                    - button [ref=f10e545]:
+                      - button "Private" [ref=f10e546] [cursor=pointer]
+                    - generic [ref=f10e552]: 1h ago
+                    - button "2m ago" [ref=f10e558]
+                  - generic [ref=f10e564]:
+                    - checkbox [ref=f10e571] [cursor=pointer]
+                    - generic [ref=f10e572]:
+                      - button "Open" [ref=f10e575] [cursor=pointer]
+                      - button "To Do List" [ref=f10e579]:
+                        - generic [ref=f10e580]:
+                          - button [ref=f10e582] [cursor=pointer]
+                          - generic [ref=f10e585]: To Do List
+                    - generic [ref=f10e593]:
+                      - generic [ref=f10e594]: A
+                      - generic [ref=f10e599]: Abhishek Sharma
+                    - button [ref=f10e602]:
+                      - button "Private" [ref=f10e603] [cursor=pointer]
+                    - generic [ref=f10e609]: 1h ago
+                    - button "2m ago" [ref=f10e615]
+        - region [ref=f10e618]
+      - button "ai" [ref=f10e623] [cursor=pointer]:
+        - img "Notion AI face" [ref=f10e629]
+    - status [ref=f10e85]
+    - alert [ref=f10e86]
+  - iframe [ref=f10e630]:
+    
+  - generic: AI Meeting Notes

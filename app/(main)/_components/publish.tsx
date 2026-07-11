@@ -1,4 +1,4 @@
-"ues client";
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { Doc } from "@/convex/_generated/dataModel";
@@ -80,7 +80,7 @@ export const Publish = ({
   return (
     <Popover>
         <PopoverTrigger asChild>
-            <Button className="bg-trasparent text-black hover:text-black hover:bg-gray-100">
+            <Button className="bg-transparent text-black hover:text-black hover:bg-gray-100">
                 Publish 
                 {initialData.isPublished && ( 
                     <Globe
@@ -138,7 +138,7 @@ export const Publish = ({
                     <p className="text-sm font-medium mb-2">
                         Publish this page
                     </p>
-                    <span className="text=xs text-muted-foreground mb-4">
+                    <span className="text-xs text-muted-foreground mb-4">
                         Share your work with others
                     </span>
                     <Button

@@ -1,0 +1,67 @@
+- generic [active] [ref=f169e1]:
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=f169e267]:
+        - generic [ref=f169e271]: "Creating workspace: For work"
+  - generic [ref=f169e2]:
+    - complementary [ref=f169e3]:
+      - button "🏠 Alex Morgan’s Space" [ref=f169e6]:
+        - generic [ref=f169e7]: 🏠
+        - generic [ref=f169e8]: Alex Morgan’s Space
+      - generic [ref=f169e12]:
+        - button "Home" [ref=f169e13]
+        - button "Chat" [ref=f169e17]
+        - button "Meetings" [ref=f169e20]
+        - button "Inbox" [ref=f169e24]
+        - button "Search" [ref=f169e28]
+      - generic [ref=f169e33]:
+        - generic [ref=f169e34]:
+          - generic [ref=f169e35]: Set up your workspace
+          - generic [ref=f169e36]: 🎋
+        - generic [ref=f169e39]: Agents
+        - button "New agent" [ref=f169e40]
+        - generic [ref=f169e44]:
+          - generic [ref=f169e45]: Private
+          - button "New page" [ref=f169e46]
+          - button "👋 Welcome to Notion" [ref=f169e52]:
+            - generic [ref=f169e53]: 👋
+            - generic [ref=f169e55]: Welcome to Notion
+          - button "✅ To Do List" [ref=f169e56]:
+            - generic [ref=f169e57]: ✅
+            - generic [ref=f169e59]: To Do List
+        - generic [ref=f169e60]:
+          - button "Library" [ref=f169e61]
+          - button "Help" [ref=f169e66]
+          - button "Trash" [ref=f169e74]
+      - generic [ref=f169e80]:
+        - button "New chat ⌘O" [ref=f169e81]:
+          - text: New chat
+          - generic [ref=f169e84]: ⌘O
+        - button [ref=f169e85]
+    - main [ref=f169e89]:
+      - generic [ref=f169e90]:
+        - generic [ref=f169e91]:
+          - heading "Library" [level=1] [ref=f169e92]
+          - button "New page" [ref=f169e94]
+        - generic [ref=f169e95]:
+          - button [ref=f169e96]
+          - button [ref=f169e101]
+          - button [ref=f169e105]
+          - button [ref=f169e112]
+          - button [ref=f169e117]
+          - generic [ref=f169e123]:
+            - button "Filter" [ref=f169e125]
+            - button "Search" [ref=f169e128]
+            - button "Settings" [ref=f169e132]
+        - generic [ref=f169e137]:
+          - button "Page name" [ref=f169e138]
+          - button "Created by" [ref=f169e142]
+          - button "Source" [ref=f169e147]
+          - button "Last edited time" [ref=f169e150]
+          - button "Last visited time" [ref=f169e154]
+        - generic [ref=f169e158]:
+          - generic [ref=f169e161]: Your favorite pages will appear here
+          - generic [ref=f169e162]: Add pages to your favorites for quick access from anywhere in your workspace
+    - button "Notion AI" [ref=f169e163]
+  - alert [ref=f169e217]
+  - button "Open Next.js Dev Tools" [ref=f169e223] [cursor=pointer]

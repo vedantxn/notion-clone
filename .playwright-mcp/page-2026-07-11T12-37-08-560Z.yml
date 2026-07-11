@@ -1,0 +1,130 @@
+- generic [ref=f201e1]:
+  - region "Notifications alt+T"
+  - generic [ref=f201e2]:
+    - complementary [ref=f201e3]:
+      - button "🏠 Alex Morgan’s Space" [ref=f201e6]:
+        - generic [ref=f201e7]: 🏠
+        - generic [ref=f201e8]: Alex Morgan’s Space
+      - generic [ref=f201e12]:
+        - button "Home" [ref=f201e13]
+        - button "Chat" [ref=f201e17]
+        - button "Meetings" [ref=f201e20]
+        - button "Inbox" [ref=f201e24]
+        - button "Search" [ref=f201e28]
+      - generic [ref=f201e33]:
+        - generic [ref=f201e34]:
+          - generic [ref=f201e35]: Set up your workspace
+          - generic [ref=f201e36]: 🎋
+        - generic [ref=f201e39]: Agents
+        - button "New agent" [ref=f201e40]
+        - generic [ref=f201e44]:
+          - generic [ref=f201e45]: Private
+          - button "New page" [ref=f201e46]
+          - button "👋 Welcome to Notion" [ref=f201e52]:
+            - generic [ref=f201e53]: 👋
+            - generic [ref=f201e55]: Welcome to Notion
+          - button "✅ To Do List" [ref=f201e56]:
+            - generic [ref=f201e57]: ✅
+            - generic [ref=f201e59]: To Do List
+        - generic [ref=f201e60]:
+          - button "Library" [ref=f201e61]
+          - button "Help" [ref=f201e66]
+          - button "Trash" [ref=f201e74]
+      - generic [ref=f201e80]:
+        - button "New chat ⌘O" [ref=f201e81]:
+          - text: New chat
+          - generic [ref=f201e84]: ⌘O
+        - button [ref=f201e85]
+    - main [ref=f201e167]:
+      - generic [ref=f201e168]:
+        - generic [ref=f201e169]:
+          - generic [ref=f201e170]: 👋
+          - generic [ref=f201e171]: Welcome to Notion
+          - button "Private" [ref=f201e176]
+        - generic [ref=f201e179]:
+          - generic [ref=f201e180]: Edited just now
+          - button "Share" [ref=f201e181]
+          - button [ref=f201e185]
+          - button [ref=f201e189]
+          - button [ref=f201e192]
+      - generic [ref=f201e197]:
+        - generic [ref=f201e198]:
+          - generic [ref=f201e199]: 👋
+          - generic [ref=f201e200]:
+            - button "Add cover" [ref=f201e201]
+            - button "Add comment" [ref=f201e206]
+        - heading "Welcome to Notion" [level=1] [ref=f201e209]
+        - generic [ref=f201e210]:
+          - generic [ref=f201e212]:
+            - button "Toggle to-do" [ref=f201e213]
+            - generic [ref=f201e216]: Create an account with Notion
+          - generic [ref=f201e218]:
+            - button "Toggle to-do" [ref=f201e219]
+            - generic [ref=f201e220]:
+              - link "Download the desktop app" [ref=f201e221] [cursor=pointer]:
+                - /url: https://notion.so/dynamic-download/desktop
+              - text: to unlock offline mode and take Notion with you wherever you go
+          - generic [ref=f201e223]:
+            - button "Toggle to-do" [ref=f201e224]
+            - generic [ref=f201e225]: Start building with Notion Agent 👀. Tell it what you’re here to do, and Agent will create it for you in seconds.
+          - generic [ref=f201e226]:
+            - generic [ref=f201e227]:
+              - button "Toggle to-do" [ref=f201e228]
+              - generic [ref=f201e229]:
+                - text: Click anywhere below and type
+                - code [ref=f201e230]: /
+                - text: to see what you can create – headers, tables, to-do’s, etc.
+            - generic [ref=f201e233]:
+              - button "Toggle to-do" [ref=f201e234]
+              - generic [ref=f201e235]:
+                - text: Type
+                - code [ref=f201e236]: /page
+                - text: to add a
+                - strong [ref=f201e237]: new page
+                - text: and nest anything, anywhere
+          - generic [ref=f201e238]:
+            - generic [ref=f201e239]:
+              - button "Toggle to-do" [ref=f201e240]
+              - generic [ref=f201e241]:
+                - strong [ref=f201e242]: Find
+                - text: ","
+                - strong [ref=f201e243]: organize
+                - text: ", and"
+                - strong [ref=f201e244]: add new pages
+                - text: using the sidebar to the left 👈
+            - generic [ref=f201e245]:
+              - generic [ref=f201e247]:
+                - button "Toggle to-do" [ref=f201e248]
+                - generic [ref=f201e249]:
+                  - text: Check out the
+                  - strong [ref=f201e250]: To Do List
+                  - text: we added for you with more tips and tricks to best use Notion
+              - generic [ref=f201e251]:
+                - generic [ref=f201e252]:
+                  - button "Toggle to-do" [ref=f201e253]
+                  - generic [ref=f201e254]:
+                    - text: Make a new page and type
+                    - code [ref=f201e255]: /meet
+                    - text: to capture meeting notes and thoughts effortlessly
+                - generic [ref=f201e258]:
+                  - button "Toggle to-do" [ref=f201e259]
+                  - generic [ref=f201e260]:
+                    - text: Afterwards, find all your meetings in one place in the
+                    - link "Meetings tab" [ref=f201e261] [cursor=pointer]:
+                      - /url: https://www.notion.so/meet
+          - generic [ref=f201e262]:
+            - generic [ref=f201e263]:
+              - button "Collapse" [active] [ref=f201e278]
+              - generic [ref=f201e267]: This is a toggle block. Click the little triangle to see a few more useful tips!
+            - generic [ref=f201e279]:
+              - generic [ref=f201e282]:
+                - text: Click
+                - strong [ref=f201e283]: Marketplace
+                - text: in your sidebar to try setups from our incredible community
+              - generic [ref=f201e286]:
+                - text: Check out
+                - strong [ref=f201e287]: Notion Academy
+                - text: to level up your Notion knowledge through guided courses (and earn badges while you’re at it!)
+    - button "Notion AI" [ref=f201e163]
+  - alert [ref=f201e268]
+  - button "Open Next.js Dev Tools" [ref=f201e274] [cursor=pointer]

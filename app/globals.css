@@ -121,6 +121,19 @@
   }
 }
 
+/* ---- BlockNote editor: align with the document title & tidy spacing ---- */
+/* The title uses a 54px left inset on desktop / 24px on mobile; keep the
+   editor content flush with it so the page reads like a single column. */
+.bn-editor {
+  padding-inline: 54px;
+  padding-top: 4px;
+}
+@media (max-width: 767px) {
+  .bn-editor {
+    padding-inline: 24px;
+  }
+}
+
 html, body, :root {
   height: 100%;
 }

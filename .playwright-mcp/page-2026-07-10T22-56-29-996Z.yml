@@ -1,0 +1,50 @@
+- generic [ref=f71e1]:
+  - region "Notifications alt+T"
+  - generic [ref=f71e2]:
+    - complementary [ref=f71e3]:
+      - button "🏠 Alex Morgan’s Space" [ref=f71e6]:
+        - generic [ref=f71e7]: 🏠
+        - generic [ref=f71e8]: Alex Morgan’s Space
+      - generic [ref=f71e12]:
+        - button "Home" [ref=f71e13]
+        - button "Chat" [ref=f71e17]
+        - button "Meetings" [ref=f71e20]
+        - button "Inbox" [ref=f71e24]
+        - button "Search" [ref=f71e28]
+      - generic [ref=f71e164]:
+        - generic [ref=f71e165]: Upcoming
+        - button "31 Connect your calendar See all your events and start meeting notes for them." [ref=f71e167]:
+          - generic [ref=f71e168]: "31"
+          - generic [ref=f71e170]:
+            - generic [ref=f71e171]: Connect your calendar
+            - generic [ref=f71e172]: See all your events and start meeting notes for them.
+        - button "Brainstorm 8 – 9 AM" [ref=f71e173]:
+          - generic [ref=f71e176]: Brainstorm
+          - generic [ref=f71e177]: 8 – 9 AM
+        - button "Project overview 9 – 10 AM" [ref=f71e178]:
+          - generic [ref=f71e181]: Project overview
+          - generic [ref=f71e182]: 9 – 10 AM
+        - generic [ref=f71e183]:
+          - generic [ref=f71e184]: Today
+          - button "New AI meeting note Take detailed notes in your meetings without needing to type" [active] [ref=f71e186]:
+            - generic [ref=f71e189]:
+              - generic [ref=f71e190]: New AI meeting note
+              - generic [ref=f71e191]: Take detailed notes in your meetings without needing to type
+          - button "Meeting @Today 4:26" [ref=f71e212]
+          - button "Ideas session" [ref=f71e192]
+          - button "Podcast transcription" [ref=f71e197]
+      - generic [ref=f71e80]:
+        - button "New chat ⌘O" [ref=f71e81]:
+          - text: New chat
+          - generic [ref=f71e84]: ⌘O
+        - button [ref=f71e85]
+    - main [ref=f71e217]:
+      - generic [ref=f71e218]:
+        - heading "Meeting @Today 4:26" [level=1] [ref=f71e219]
+        - generic [ref=f71e220]:
+          - generic [ref=f71e225]: Recording
+          - generic [ref=f71e226]: AI is taking notes…
+        - paragraph [ref=f71e227]: Notes and transcript will appear here as your meeting is recorded.
+    - button "Notion AI" [ref=f71e163]: 🎋
+  - alert [ref=f71e202]
+  - button "Open Next.js Dev Tools" [ref=f71e208] [cursor=pointer]

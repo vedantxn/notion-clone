@@ -1,0 +1,92 @@
+[     203ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16383
+[ 1205377ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[ 1205483ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_61dcf9ba._.js:33
+[ 1205499ms] [LOG] [Fast Refresh] done in 200ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[ 1206041ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/notion-library:0
+[ 1206083ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16383
+[ 1206178ms] Error: AtSign is not defined
+    at [project]/components/notion-library/sidebar-panels.tsx [app-client] (ecmascript) (http://localhost:3000/_next/static/chunks/_da52b461._.js:1708:217)
+    at http://localhost:3000/_next/static/chunks/_93808211._.js:722:27
+    at runModuleExecutionHooks (http://localhost:3000/_next/static/chunks/_93808211._.js:768:9)
+    at instantiateModule (http://localhost:3000/_next/static/chunks/_93808211._.js:720:9)
+    at getOrInstantiateModuleFromParent (http://localhost:3000/_next/static/chunks/_93808211._.js:653:12)
+    at esmImport (http://localhost:3000/_next/static/chunks/_93808211._.js:143:20)
+    at [project]/components/notion-library/sidebar.tsx [app-client] (ecmascript) (http://localhost:3000/_next/static/chunks/_da52b461._.js:2107:182)
+    at http://localhost:3000/_next/static/chunks/_93808211._.js:722:27
+    at runModuleExecutionHooks (http://localhost:3000/_next/static/chunks/_93808211._.js:768:9)
+    at instantiateModule (http://localhost:3000/_next/static/chunks/_93808211._.js:720:9)
+    at getOrInstantiateModuleFromParent (http://localhost:3000/_next/static/chunks/_93808211._.js:653:12)
+    at esmImport (http://localhost:3000/_next/static/chunks/_93808211._.js:143:20)
+    at [project]/app/notion-library/page.tsx [app-client] (ecmascript) (http://localhost:3000/_next/static/chunks/_da52b461._.js:3819:172)
+    at http://localhost:3000/_next/static/chunks/_93808211._.js:722:27
+    at runModuleExecutionHooks (http://localhost:3000/_next/static/chunks/_93808211._.js:768:9)
+    at instantiateModule (http://localhost:3000/_next/static/chunks/_93808211._.js:720:9)
+    at getOrInstantiateModuleFromParent (http://localhost:3000/_next/static/chunks/_93808211._.js:653:12)
+    at commonJsRequire (http://localhost:3000/_next/static/chunks/_93808211._.js:158:20)
+    at requireModule (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16556:86)
+    at initializeModuleChunk (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:17104:25)
+    at resolveModuleChunk (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:17073:43)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:17447:24
+    at InnerLayoutRouter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_1a6ee436._.js:356:55)
+    at OuterLayoutRouter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_1a6ee436._.js:504:73)
+[ 1206236ms] [LOG] [Fast Refresh] done in NaNms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[ 1209402ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__9d126714._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/notion-library:0
+[ 1299313ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[ 1299390ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_61dcf9ba._.js:33
+[ 1299391ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:15317
+[ 1299477ms] [LOG] [Fast Refresh] done in 178ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[ 1299760ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/notion-library:0
+[ 1299808ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16383
+[ 1299851ms] Error: AtSign is not defined
+    at [project]/components/notion-library/sidebar-panels.tsx [app-client] (ecmascript) (http://localhost:3000/_next/static/chunks/_da52b461._.js:1708:217)
+    at http://localhost:3000/_next/static/chunks/_93808211._.js:722:27
+    at runModuleExecutionHooks (http://localhost:3000/_next/static/chunks/_93808211._.js:768:9)
+    at instantiateModule (http://localhost:3000/_next/static/chunks/_93808211._.js:720:9)
+    at getOrInstantiateModuleFromParent (http://localhost:3000/_next/static/chunks/_93808211._.js:653:12)
+    at esmImport (http://localhost:3000/_next/static/chunks/_93808211._.js:143:20)
+    at [project]/components/notion-library/sidebar.tsx [app-client] (ecmascript) (http://localhost:3000/_next/static/chunks/_da52b461._.js:1891:182)
+    at http://localhost:3000/_next/static/chunks/_93808211._.js:722:27
+    at runModuleExecutionHooks (http://localhost:3000/_next/static/chunks/_93808211._.js:768:9)
+    at instantiateModule (http://localhost:3000/_next/static/chunks/_93808211._.js:720:9)
+    at getOrInstantiateModuleFromParent (http://localhost:3000/_next/static/chunks/_93808211._.js:653:12)
+    at esmImport (http://localhost:3000/_next/static/chunks/_93808211._.js:143:20)
+    at [project]/app/notion-library/page.tsx [app-client] (ecmascript) (http://localhost:3000/_next/static/chunks/_da52b461._.js:3603:172)
+    at http://localhost:3000/_next/static/chunks/_93808211._.js:722:27
+    at runModuleExecutionHooks (http://localhost:3000/_next/static/chunks/_93808211._.js:768:9)
+    at instantiateModule (http://localhost:3000/_next/static/chunks/_93808211._.js:720:9)
+    at getOrInstantiateModuleFromParent (http://localhost:3000/_next/static/chunks/_93808211._.js:653:12)
+    at commonJsRequire (http://localhost:3000/_next/static/chunks/_93808211._.js:158:20)
+    at requireModule (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16556:86)
+    at initializeModuleChunk (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:17104:25)
+    at resolveModuleChunk (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:17073:43)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:17447:24
+    at InnerLayoutRouter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_1a6ee436._.js:356:55)
+    at OuterLayoutRouter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_1a6ee436._.js:504:73)
+[ 1299930ms] [LOG] [Fast Refresh] done in NaNms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[ 1303096ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__9d126714._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/notion-library:0
+[ 1321769ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14983
+[ 1321802ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_61dcf9ba._.js:33
+[ 1321802ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:15317
+[ 1321819ms] [LOG] [Fast Refresh] done in 133ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js:14847
+[ 1322101ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16383

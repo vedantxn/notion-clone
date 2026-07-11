@@ -1,0 +1,241 @@
+- generic [ref=f180e1]:
+  - generic [ref=f180e4]:
+    - generic [ref=f180e10]:
+      - link [ref=f180e12] [cursor=pointer]:
+        - /url: "#main"
+      - navigation "Sidebar":
+        - generic [ref=f180e16]:
+          - generic [ref=f180e19]:
+            - generic [ref=f180e20]:
+              - button "A Abhishek Sharma’s Space Close sidebar" [ref=f180e25] [cursor=pointer]:
+                - generic [ref=f180e26]:
+                  - img "A" [ref=f180e30]
+                  - generic [ref=f180e32]: Abhishek Sharma’s Space
+                - button "Close sidebar" [ref=f180e39]
+              - generic [ref=f180e44]:
+                - tablist "Sidebar navigation" [ref=f180e45]:
+                  - tab "Home" [selected] [ref=f180e48] [cursor=pointer]
+                  - tab "Chat" [ref=f180e54] [cursor=pointer]
+                  - tab "Meetings" [ref=f180e60] [cursor=pointer]
+                  - tab "Inbox" [ref=f180e70] [cursor=pointer]
+                - button "Search" [ref=f180e76] [cursor=pointer]
+            - tabpanel "Home" [ref=f180e481]:
+              - generic [ref=f180e484]:
+                - button "Set up your workspace Dismiss setup guide 0" [ref=f180e487] [cursor=pointer]:
+                  - generic [ref=f180e488]:
+                    - generic [ref=f180e489]:
+                      - generic [ref=f180e490]: Set up your workspace
+                      - generic [ref=f180e491]:
+                        - generic:
+                          - button "Dismiss setup guide"
+                    - progressbar [ref=f180e493]:
+                      - generic [ref=f180e494]:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - img "Notion AI face"
+                              - img "duck accessory"
+                - generic [ref=f180e495]:
+                  - generic [ref=f180e496]:
+                    - generic [ref=f180e499] [cursor=pointer]:
+                      - button "Agents" [expanded] [ref=f180e500]
+                      - list "Agents" [ref=f180e506]:
+                        - button "New agent" [ref=f180e507]
+                    - generic [ref=f180e516] [cursor=pointer]:
+                      - button "Private" [expanded] [ref=f180e517]
+                      - tree "Private" [ref=f180e522]:
+                        - generic [ref=f180e523]:
+                          - generic [ref=f180e524]:
+                            - treeitem "Getting Started" [ref=f180e526]:
+                              - generic [ref=f180e527]:
+                                - img "Change page icon" [ref=f180e535]: 👋
+                                - generic [ref=f180e536]: Getting Started
+                            - treeitem "To Do List" [ref=f180e539]:
+                              - generic [ref=f180e540]:
+                                - img "Change page icon" [ref=f180e548]
+                                - generic [ref=f180e549]: To Do List
+                          - button "Add new" [ref=f180e551]
+                  - generic [ref=f180e558]:
+                    - button "Library" [ref=f180e560] [cursor=pointer]
+                    - button "Help, contact, more…" [ref=f180e569] [cursor=pointer]:
+                      - generic [ref=f180e570]: Help
+                    - button "Trash" [ref=f180e580] [cursor=pointer]
+            - generic [ref=f180e118]:
+              - button "New chat" [ref=f180e120] [cursor=pointer]:
+                - generic [ref=f180e125]:
+                  - text: New chat
+                  - generic [ref=f180e126]: ⌘O
+              - button "New page" [ref=f180e131] [cursor=pointer]
+          - separator "Resize with left and right arrow keys" [ref=f180e137]
+      - generic [ref=f180e138]:
+        - banner [ref=f180e139]:
+          - generic [ref=f180e140]:
+            - generic [ref=f180e141]:
+              - generic [ref=f180e142]: Home is getting an update in our new sidebar redesign. Opt in to keep your pages, Notion AI, and meetings within reach.
+              - button "Learn more" [ref=f180e147] [cursor=pointer]
+            - button "Dismiss" [ref=f180e149] [cursor=pointer]
+          - toolbar [ref=f180e154]:
+            - button "Open menu" [ref=f180e159] [cursor=pointer]
+        - main [ref=f180e162]:
+          - generic [ref=f180e165]:
+            - generic [ref=f180e168]:
+              - generic: Good afternoon
+              - generic: Welcome home
+            - generic [ref=f180e171]:
+              - generic [ref=f180e172]: Recently visited
+              - generic [ref=f180e184]:
+                - link "👋 Getting Started A 6m ago" [ref=f180e186] [cursor=pointer]:
+                  - /url: /p/Getting-Started-39a910a8999480cf97d0ecf4f9a4eba7?pvs=55
+                  - generic [ref=f180e187]: 👋
+                  - generic [ref=f180e191]:
+                    - generic [ref=f180e192]: Getting Started
+                    - generic [ref=f180e194]:
+                      - generic [ref=f180e195]: A
+                      - generic [ref=f180e199]: 6m ago
+                - button "New page" [ref=f180e201] [cursor=pointer]
+            - generic [ref=f180e214]:
+              - generic [ref=f180e215]: Learn
+              - generic [ref=f180e227]:
+                - button "What is a block? 2m read" [ref=f180e229] [cursor=pointer]:
+                  - generic [ref=f180e231]:
+                    - generic [ref=f180e232]:
+                      - generic [ref=f180e233]: What is a block?
+                      - generic [ref=f180e234]: 2m read
+                    - checkbox [ref=f180e240]
+                - button "Create your first page 2m watch" [ref=f180e242] [cursor=pointer]:
+                  - generic [ref=f180e244]:
+                    - generic [ref=f180e245]:
+                      - generic [ref=f180e246]: Create your first page
+                      - generic [ref=f180e247]: 2m watch
+                    - checkbox [ref=f180e254]
+                - button "Create a subpage 2m read" [ref=f180e256] [cursor=pointer]:
+                  - generic [ref=f180e258]:
+                    - generic [ref=f180e259]:
+                      - generic [ref=f180e260]: Create a subpage
+                      - generic [ref=f180e261]: 2m read
+                    - checkbox [ref=f180e267]
+                - button "Customize & style your content 9m read" [ref=f180e269] [cursor=pointer]:
+                  - generic [ref=f180e271]:
+                    - generic [ref=f180e272]:
+                      - generic [ref=f180e273]: Customize & style your content
+                      - generic [ref=f180e274]: 9m read
+                    - checkbox [ref=f180e280]
+                - button "What is a database? 2m read" [ref=f180e282] [cursor=pointer]:
+                  - generic [ref=f180e284]:
+                    - generic [ref=f180e285]:
+                      - generic [ref=f180e286]: What is a database?
+                      - generic [ref=f180e287]: 2m read
+                    - checkbox [ref=f180e293]
+                - button "Create a database 3m read" [ref=f180e295] [cursor=pointer]:
+                  - generic [ref=f180e297]:
+                    - generic [ref=f180e298]:
+                      - generic [ref=f180e299]: Create a database
+                      - generic [ref=f180e300]: 3m read
+                    - checkbox [ref=f180e306]
+                - button "Start with a template 4m watch" [ref=f180e308] [cursor=pointer]:
+                  - generic [ref=f180e310]:
+                    - generic [ref=f180e311]:
+                      - generic [ref=f180e312]: Start with a template
+                      - generic [ref=f180e313]: 4m watch
+                    - checkbox [ref=f180e320]
+                - button "Share your work 2m read" [ref=f180e322] [cursor=pointer]:
+                  - generic [ref=f180e324]:
+                    - generic [ref=f180e325]:
+                      - generic [ref=f180e326]: Share your work
+                      - generic [ref=f180e327]: 2m read
+                    - checkbox [ref=f180e333]
+                - button "Student guide 8m watch" [ref=f180e335] [cursor=pointer]:
+                  - generic [ref=f180e337]:
+                    - generic [ref=f180e338]:
+                      - generic [ref=f180e339]: Student guide
+                      - generic [ref=f180e340]: 8m watch
+                    - checkbox [ref=f180e347]
+            - generic [ref=f180e349]:
+              - generic [ref=f180e350]: Upcoming events
+              - generic [ref=f180e359]:
+                - generic [ref=f180e361]:
+                  - generic [ref=f180e364]:
+                    - generic [ref=f180e365]: Connect AI Meeting Notes with your Calendar events
+                    - generic [ref=f180e366]: Join calls, transcribe audio, and summarize meetings all in Notion.
+                  - button "Connect Notion Calendar" [ref=f180e368] [cursor=pointer]
+                - generic [ref=f180e370]:
+                  - generic [ref=f180e371]:
+                    - generic [ref=f180e372]:
+                      - generic [ref=f180e373]: Today
+                      - generic [ref=f180e374]: Jul 11
+                    - generic [ref=f180e379]:
+                      - generic [ref=f180e380]:
+                        - generic [ref=f180e381]: Team standup
+                        - generic [ref=f180e382]: 9 AM ⸱ Office
+                      - generic [ref=f180e383]: Join and take notes
+                  - generic [ref=f180e389]:
+                    - generic [ref=f180e390]:
+                      - generic [ref=f180e391]: Sun
+                      - generic [ref=f180e392]: Jul 12
+                    - generic [ref=f180e398]:
+                      - generic [ref=f180e399]: Project check-in
+                      - generic [ref=f180e400]: 10 AM ⸱ Office
+            - generic [ref=f180e402]:
+              - generic [ref=f180e403]: Featured templates
+              - generic [ref=f180e415]:
+                - button "Student dashboard By Notion" [ref=f180e417] [cursor=pointer]:
+                  - generic [ref=f180e420]:
+                    - generic [ref=f180e421]: Student dashboard
+                    - generic [ref=f180e422]: By Notion
+                - button "To-do List By Notion" [ref=f180e426] [cursor=pointer]:
+                  - generic [ref=f180e428]:
+                    - generic [ref=f180e429]: To-do List
+                    - generic [ref=f180e430]: By Notion
+                - button "Class Notes By Notion" [ref=f180e434] [cursor=pointer]:
+                  - generic [ref=f180e436]:
+                    - generic [ref=f180e437]: Class Notes
+                    - generic [ref=f180e438]: By Notion
+                - button "Grade calculator By Notion" [ref=f180e442] [cursor=pointer]:
+                  - generic [ref=f180e445]:
+                    - generic [ref=f180e446]: Grade calculator
+                    - generic [ref=f180e447]: By Notion
+                - button "Club Homepage By Notion" [ref=f180e451] [cursor=pointer]:
+                  - generic [ref=f180e453]:
+                    - generic [ref=f180e454]: Club Homepage
+                    - generic [ref=f180e455]: By Notion
+                - button "Resume By Notion" [ref=f180e459] [cursor=pointer]:
+                  - generic [ref=f180e461]:
+                    - generic [ref=f180e462]: Resume
+                    - generic [ref=f180e463]: By Notion
+        - region [ref=f180e466]
+      - button "ai" [ref=f180e471] [cursor=pointer]:
+        - img "Notion AI face" [ref=f180e477]
+    - dialog [ref=f180e589]:
+      - generic [ref=f180e594]:
+        - generic [ref=f180e595]:
+          - generic [ref=f180e596]:
+            - generic [ref=f180e597]: Use 14 days of free Notion AI and more!
+            - generic [ref=f180e598]:
+              - generic [ref=f180e606]:
+                - generic [ref=f180e607]: Today
+                - generic [ref=f180e608]: Full access to Notion AI and the best features in our Business Plan
+              - generic [ref=f180e617]:
+                - generic [ref=f180e618]: Day 10
+                - generic [ref=f180e619]: We’ll remind you of your trial ending
+              - generic [ref=f180e627]:
+                - generic [ref=f180e628]: Day 14
+                - generic [ref=f180e629]: You’ll review charges and decide
+          - generic [ref=f180e630]:
+            - button "Start free trial" [active] [ref=f180e632] [cursor=pointer]
+            - button "Maybe later" [ref=f180e634] [cursor=pointer]
+        - generic [ref=f180e636]:
+          - generic [ref=f180e637]:
+            - generic [ref=f180e638]: Custom Agents automate work for your team
+            - img "Custom Agents logo" [ref=f180e640]
+          - generic [ref=f180e641]:
+            - generic [ref=f180e642]: Eliminate manual work with Notion AI
+            - generic [ref=f180e643]: Ask AI anything…
+          - generic [ref=f180e649]: Never miss a detail with AI Meeting Notes
+          - generic [ref=f180e681]: Answers from Slack, Github and more
+    - status [ref=f180e7]
+    - alert [ref=f180e8]
+  - iframe [ref=f180e9]:
+    

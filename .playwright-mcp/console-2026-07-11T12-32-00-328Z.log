@@ -1,0 +1,68 @@
+[     273ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/:0
+[     345ms] [INFO] 2026-07-11T12:32:00.672Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     446ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-626e48b309bd5ba3.js:0
+[     709ms] [INFO] 2026-07-11T12:32:01.037Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     929ms] [INFO] 2026-07-11T12:32:01.257Z [error] statsig: initialize {error: Object, data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     930ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.so/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-56e3c8e504680cd6.js:37
+[     973ms] [INFO] 2026-07-11T12:32:01.300Z [info] syncRecordValuesBatched: missingSpacePointerForNotionUserRequest {actor: Object, data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[    1341ms] [INFO] 2026-07-11T12:32:01.668Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[    1343ms] [INFO] 2026-07-11T12:32:01.670Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[    1365ms] [INFO] 2026-07-11T12:32:01.693Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[    1460ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[    1667ms] [INFO] 2026-07-11T12:32:01.994Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1693ms] [INFO] 2026-07-11T12:32:02.021Z [info] pageError: pageError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1738ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1738ms] [INFO] 2026-07-11T12:32:02.065Z [error] eventTrailApiHelpers: trackFailure {error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1749ms] [INFO] 2026-07-11T12:32:02.077Z [info] syncRecordValuesBatched: recordPointerMissingSpaceId {actor: Object, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1833ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://app.notion.com/api/v3/recordPageExit:0
+[    1835ms] [ERROR] HttpRequestError: Received HTTP 400
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2048ms] [INFO] 2026-07-11T12:32:02.376Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2071ms] [INFO] 2026-07-11T12:32:02.398Z [error] appActions: publicPageMissingSpaceId {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2110ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://app.notion.com/api/v3/recordPageVisit:0
+[    2185ms] [ERROR] HttpRequestError: Received HTTP 400
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async s (https://app.notion.com/_assets/actions-01f0614a66acf52d.js:1:7956)
+    at async Module.n (https://app.notion.com/_assets/actions-01f0614a66acf52d.js:1:5729)
+    at async p (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:182:239351) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2379ms] [INFO] 2026-07-11T12:32:02.707Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2466ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://app.notion.com/api/v3/recordPageExit:0
+[    2526ms] [ERROR] HttpRequestError: Received HTTP 400
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2824ms] [INFO] 2026-07-11T12:32:03.152Z [info] messageStoreInternals: messageStoreEnd {team: no-team-specified, error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2826ms] [INFO] 2026-07-11T12:32:03.153Z [error] messageStore.internals.sendRequest: MessageStoreRequestFailed {team: editor, error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2836ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://msgstore.app.notion.com/primus-v8/?sessionId=b95766d3-a781-44be-88d8-c09394ef25ff&_primuscb=PzHASiN&EIO=4&transport=polling&t=PzHAT4d&b64=1&sid=EK3N68U6Ls3arVmbBaKb:0
+[  145473ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://app.notion.com/api/v3/etClient:0
+[  145476ms] [ERROR] Amplitude Logger [Error]: Failed to fetch (app.notion.com) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[  145477ms] [WARNING] Amplitude Logger [Warn]: {code: 0, error: "Status 'failed' provided for 1 events"} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472

@@ -1,0 +1,100 @@
+[     313ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/:0
+[     384ms] [INFO] 2026-07-11T14:56:19.365Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     486ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.so/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-56e3c8e504680cd6.js:37
+[     544ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-626e48b309bd5ba3.js:0
+[     609ms] [INFO] 2026-07-11T14:56:19.590Z [info] syncRecordValuesBatched: missingSpacePointerForNotionUserRequest {actor: Object, data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     750ms] [INFO] 2026-07-11T14:56:19.732Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     843ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://app.notion.com/f/refresh:0
+[     844ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://app.notion.com/api/v3/ping:0
+[    1098ms] [ERROR] HttpRequestError: Received HTTP 502
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async D (https://app.notion.com/_assets/mainApp-56e3c8e504680cd6.js:1:45063) @ https://app.notion.com/_assets/handleHttpFailure-d88af19ff518fb0e.js:0
+[    1335ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1335ms] [INFO] 2026-07-11T14:56:20.317Z [error] eventTrailApiHelpers: trackFailure {error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1339ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1433ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://app.notion.com/api/v3/getPasskeyMigrationStatus:0
+[    1434ms] [ERROR] HttpRequestError: Received HTTP 502
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async https://app.notion.com/_assets/59995-6554b8ccd35e59d8.js:1:10117 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1522ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://app.notion.com/api/v3/detectPageLanguage:0
+[    1522ms] [ERROR] HttpRequestError: Received HTTP 502
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async c (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:182:908731) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1523ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://app.notion.com/api/v3/getTrustedDomainsForSpace:0
+[    1524ms] [ERROR] HttpRequestError: Received HTTP 502
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async a (https://app.notion.com/_assets/23402-55180559bb0cb6a8.js:4:17821) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1586ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://app.notion.com/api/v3/scheduleSetupPeopleCollection:0
+[    1589ms] [ERROR] HttpRequestError: Received HTTP 502
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async r (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:12478) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1891ms] [INFO] 2026-07-11T14:56:20.872Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1961ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[    3106ms] [ERROR] Failed to load resource: the server responded with a status of 503 () @ https://app.notion.com/api/v3/getAllUpgradeRequestsForSpace:0
+[    3108ms] [ERROR] HttpRequestError: Received HTTP 503
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async https://app.notion.com/_assets/48370-3e31333d1b5f1063.js:1:7933
+    at async l.fetchFn (https://app.notion.com/_assets/96163-f8a5bf74164446c2.js:1:24737)
+    at async l.fetch (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:167826) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    4258ms] [ERROR] Failed to load resource: the server responded with a status of 503 () @ https://app.notion.com/api/v3/getEmailDomainSettings:0
+[    4262ms] [ERROR] HttpRequestError: Received HTTP 503
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async o (https://app.notion.com/_assets/13881-e310d84d22f292bb.js:1:122374)
+    at async Object.notion_mail_launch_2_callout (https://app.notion.com/_assets/callouts-e0a0f2e7b55ceaf4.js:1:33648)
+    at async f (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:7:94156)
+    at async M (https://app.notion.com/_assets/callouts-e0a0f2e7b55ceaf4.js:1:51330)
+    at async R (https://app.notion.com/_assets/callouts-e0a0f2e7b55ceaf4.js:1:54461)
+    at async Module.V (https://app.notion.com/_assets/callouts-e0a0f2e7b55ceaf4.js:1:57895)
+    at async n (https://app.notion.com/_assets/GlobalInAppMessageListener-854d4e512db2c967.js:1:2530) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    4298ms] [ERROR] Failed to load resource: the server responded with a status of 503 () @ https://app.notion.com/api/v3/getTrustedDomainsForSpace:0
+[    4298ms] [ERROR] HttpRequestError: Received HTTP 503
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async a (https://app.notion.com/_assets/23402-55180559bb0cb6a8.js:4:17821)
+    at async listener (https://app.notion.com/_assets/23402-55180559bb0cb6a8.js:1:12659) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    7426ms] [INFO] 2026-07-11T14:56:26.407Z [info] premiumFeatureFramework: getPremiumFeatureAvailability {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472

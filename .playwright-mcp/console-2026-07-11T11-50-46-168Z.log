@@ -1,0 +1,42 @@
+[     196ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/home?spaceId=5df4fa69ff158181b9b50003b401470c:0
+[     354ms] [INFO] 2026-07-11T11:50:46.521Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     391ms] [WARNING]   WARN  [Statsig] Creating multiple Statsig clients with the same SDK key can lead to unexpected behavior. Multi-instance support requires different SDK keys. @ https://app.notion.com/_assets/99974-53a5f46c103d8b67.js:0
+[     453ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.so/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-56e3c8e504680cd6.js:37
+[     644ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-626e48b309bd5ba3.js:0
+[     668ms] [INFO] 2026-07-11T11:50:46.836Z [info] syncRecordValuesBatched: missingSpacePointerForNotionUserRequest {actor: Object, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[     777ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[     778ms] [INFO] 2026-07-11T11:50:46.945Z [error] eventTrailApiHelpers: trackFailure {error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1600ms] [INFO] 2026-07-11T11:50:47.768Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1605ms] [INFO] 2026-07-11T11:50:47.772Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1660ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[    1718ms] [INFO] 2026-07-11T11:50:47.886Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2056ms] [INFO] 2026-07-11T11:50:48.223Z [info] pageError: pageError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2069ms] [INFO] 2026-07-11T11:50:48.236Z [info] onRoleChange: pageNeedsRefetch {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2081ms] [INFO] 2026-07-11T11:50:48.248Z [info] getAppRenderState: rapidIsPageLoadedButCantReadToggleDetected {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2120ms] [INFO] 2026-07-11T11:50:48.287Z [error] deleteOPFSAndRefetchPage: deleteOPFSAndRefetchPageFailed {data: Object, error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2182ms] [WARNING] [Sprig] - Disregarding empty attribute / value provided @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2265ms] [INFO] 2026-07-11T11:50:48.433Z [info] syncRecordValuesBatched: recordPointerMissingSpaceId {actor: Object, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2618ms] [INFO] 2026-07-11T11:50:48.785Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[  127489ms] [INFO] 2026-07-11T11:52:53.655Z [info] HCaptchaProvider: hcaptchaWidgetRender {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472

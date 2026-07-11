@@ -75,7 +75,7 @@ export const TrashBox = () => {
                 <Input 
                     value={Search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="h-7 p-x-2 focus-visible:ring-transparent bg-secondary"
+                    className="h-7 px-2 focus-visible:ring-transparent bg-secondary"
                     placeholder="Filter by page title..."
                 />
             </div>
@@ -96,11 +96,11 @@ export const TrashBox = () => {
                             {document.title}
                         </span>
                         
-                        <div className="flex itmes-center">
+                        <div className="flex items-center">
                             <div 
                               onClick={(e) => onRestore(e, document._id)}
                               role="button"
-                              className="rounnded-sm p-2 hover:bg-neutral-200"
+                              className="rounded-sm p-2 hover:bg-neutral-200"
                             >
                                 <Undo className="h-4 w-4 text-muted-foreground"/>
                             </div>

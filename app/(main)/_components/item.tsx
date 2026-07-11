@@ -19,7 +19,7 @@ import { DropdownMenu,
          DropdownMenuItem, 
          DropdownMenuSeparator, 
          DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { useUser } from "@clerk/clerk-react";
+import { useUser } from "@/lib/fake-clerk";
 
 interface ItemProps {
     id?: Id<"documents">;
@@ -115,7 +115,7 @@ export const Item = ({
             )}
         >
             {!!id && (
-                <div className="h-full rounded-sm hover:bg-neutral-300 mr-1" onClick={handleExpand}>
+                <div className="h-full rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 mr-1 transition" onClick={handleExpand}>
                     <ChevronIcon className="h-4 w-4 shrink-0 text-muted-foreground/50" />
                 </div>
                     )
@@ -126,15 +126,15 @@ export const Item = ({
                     {documentIcon}
                 </div>
             ) : (
-            <IconComponent 
-                className="shrik-0 h-[18px] mr-2 text-muted-foreground"
+            <IconComponent
+                className="shrink-0 h-[18px] w-[18px] mr-2 text-muted-foreground"
             />
             )}
             <span className="truncate">
                 {label}
             </span>
             {isSearch && (
-                <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded-border bg-muted px-1.5 text-mono text-[10px] font-medium text-muted-foreground opacity-100">
+                <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
                     <span className="text-xs">Ctrl</span>K
                 </kbd>
             )}
@@ -145,7 +145,7 @@ export const Item = ({
                       <DropdownMenuTrigger asChild 
                       onClick={(e) => e.stopPropagation()}>
                         <div role="button"
-                             className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300">
+                             className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 transition">
                             <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
                         </div>
                       </DropdownMenuTrigger>
@@ -172,7 +172,7 @@ export const Item = ({
                   
                   </DropdownMenu>
 
-                    <div role="button" onClick={onCreate} className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300">
+                    <div role="button" onClick={onCreate} className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 transition">
                         <Plus className="h-4 w-4 text-muted-foreground" />
                     </div>
                 </div>
@@ -188,7 +188,7 @@ Item.Skeleton = function ItemSkeleton({ level } : {level?: number }) {
     return (
         <div 
         style={{paddingLeft: level ? `${(level * 12) + 25}px`: "12px"}}
-        className="flex gap-x-2 py=[3px]">
+        className="flex gap-x-2 py-[3px]">
             <Skeleton className="h-4 w-4"/>
             <Skeleton className="h-4 w-[30%]"/>
 

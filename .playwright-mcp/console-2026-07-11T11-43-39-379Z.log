@@ -1,0 +1,133 @@
+[     319ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/home?spaceId=5df4fa69ff158181b9b50003b401470c:0
+[     409ms] [INFO] 2026-07-11T11:43:39.787Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:6
+[     444ms] [WARNING]   WARN  [Statsig] Creating multiple Statsig clients with the same SDK key can lead to unexpected behavior. Multi-instance support requires different SDK keys. @ https://app.notion.com/_assets/99974-53a5f46c103d8b67.js:0
+[     482ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.so/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-56e3c8e504680cd6.js:37
+[     643ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-626e48b309bd5ba3.js:0
+[     692ms] [INFO] 2026-07-11T11:43:40.071Z [info] syncRecordValuesBatched: missingSpacePointerForNotionUserRequest {actor: Object, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[     833ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[     833ms] [INFO] 2026-07-11T11:43:40.212Z [error] eventTrailApiHelpers: trackFailure {error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1075ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[    1554ms] [INFO] 2026-07-11T11:43:40.932Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1558ms] [INFO] 2026-07-11T11:43:40.936Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1647ms] [INFO] 2026-07-11T11:43:41.026Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    1672ms] [WARNING] [Sprig] - Disregarding empty attribute / value provided @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2111ms] [INFO] 2026-07-11T11:43:41.490Z [info] pageError: pageError {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2125ms] [INFO] 2026-07-11T11:43:41.503Z [info] onRoleChange: pageNeedsRefetch {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2134ms] [INFO] 2026-07-11T11:43:41.512Z [info] getAppRenderState: rapidIsPageLoadedButCantReadToggleDetected {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2172ms] [INFO] 2026-07-11T11:43:41.550Z [error] deleteOPFSAndRefetchPage: deleteOPFSAndRefetchPageFailed {data: Object, error: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2278ms] [INFO] 2026-07-11T11:43:41.656Z [info] syncRecordValuesBatched: recordPointerMissingSpaceId {actor: Object, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[    2470ms] [INFO] 2026-07-11T11:43:41.848Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   20880ms] [INFO] 2026-07-11T11:44:00.258Z [info] onboardingHelpers: loadOnboardingData {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   21259ms] [INFO] 2026-07-11T11:44:00.638Z [info] onboardingHelpers: loadOnboardingData {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   21264ms] [INFO] 2026-07-11T11:44:00.642Z [info] onboardingHelpers: loadOnboardingData {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   22105ms] [INFO] 2026-07-11T11:44:01.483Z [info] onboardingHelpers: loadOnboardingData {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   32904ms] [INFO] 2026-07-11T11:44:12.283Z [info] transcriptionReadApiMembershipHelpers: transcriptionReadApiDeferredForMembership {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   32909ms] [INFO] 2026-07-11T11:44:12.287Z [warning] getSubscriptionDataStore: allowedCrossSpaceSubscriptionDataStoreRead {spaceId: 904910a8-9994-8101-82c0-00038d0b866f, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   33403ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://app.notion.com/api/v3/getUserHomePages:0
+[   33406ms] [ERROR] HttpRequestError: Received HTTP 400
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async https://app.notion.com/_assets/AppComponents-500849b4038f5f61.js:1:183139
+    at async https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:7:192069 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34771ms] [LOG] block id = 39a910a8-9994-809c-b20c-ccdcce154e56 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34773ms] [LOG] block id = 39a910a8-9994-8050-8bea-f5ba2a3c9d30 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34774ms] [LOG] block id = 39a910a8-9994-808b-abc9-f0e2c129b3d8 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34776ms] [LOG] block id = 39a910a8-9994-80a2-884f-f92a8c13de76 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34776ms] [LOG] block id = 39a910a8-9994-802b-9a28-def524321196 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34779ms] [LOG] block id = 39a910a8-9994-801f-b7e3-d33c071ce0ac @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34780ms] [LOG] block id = 39a910a8-9994-803b-acc6-d9821ed3dfdd @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34782ms] [LOG] block id = 39a910a8-9994-80d9-af68-eea7ce4a7ea7 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34783ms] [LOG] block id = 39a910a8-9994-80c4-a2b4-eaf37180f4c3 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34784ms] [LOG] block id = 39a910a8-9994-80c4-a2b4-eaf37180f4c3 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34785ms] [LOG] block id = 39a910a8-9994-805b-9097-fb772a5fa7cc @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34786ms] [LOG] block id = 39a910a8-9994-801b-a647-c9358db92f63 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34787ms] [LOG] block id = 39a910a8-9994-80bb-bf7c-ebaaa9c6aa4f @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34788ms] [LOG] block id = 39a910a8-9994-8091-a24b-ce5e0586b4bf @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34789ms] [LOG] block id = 39a910a8-9994-80ba-9b09-e5620ef1a09b @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34789ms] [LOG] block id = 39a910a8-9994-80ea-ace2-e095e740e3fc @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34790ms] [LOG] block id = 39a910a8-9994-8024-b6ae-db54df8b7d5c @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34791ms] [LOG] block id = 39a910a8-9994-8029-bbc7-d9304abfe398 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34791ms] [LOG] block id = 39a910a8-9994-8079-b60d-f0ebd19cd19f @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34791ms] [LOG] block id = 39a910a8-9994-8079-b60d-f0ebd19cd19f @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34792ms] [LOG] block id = 39a910a8-9994-8072-8509-fb3a8e7f148a @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34793ms] [LOG] block id = 39a910a8-9994-805f-b134-c98ce6933193 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34793ms] [LOG] block id = 39a910a8-9994-800b-81ff-e542cf7878cd @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34794ms] [LOG] block id = 39a910a8-9994-800b-81ff-e542cf7878cd @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34794ms] [LOG] block id = 39a910a8-9994-805c-816e-f0dcc9deb436 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34796ms] [LOG] block id = 39a910a8-9994-8065-af3b-ec09b7ed136d @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34796ms] [LOG] block id = 39a910a8-9994-8065-af3b-ec09b7ed136d @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34797ms] [LOG] block id = 39a910a8-9994-8070-b4b0-c6c95b0c34bc @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34797ms] [LOG] block id = 39a910a8-9994-8070-b4b0-c6c95b0c34bc @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34798ms] [LOG] block id = 39a910a8-9994-8009-84de-f64fdba785a7 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34798ms] [LOG] block id = 39a910a8-9994-8011-ad36-fa588b807b3b @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34800ms] [LOG] block id = 39a910a8-9994-8011-ad36-fa588b807b3b @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34801ms] [LOG] block id = 39a910a8-9994-80e6-90e3-db02c3112ec7 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34802ms] [LOG] block id = 39a910a8-9994-8003-a4c3-ce34d50267a5 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34802ms] [LOG] block id = 39a910a8-9994-809f-844c-c51ff9bf0800 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34803ms] [LOG] block id = 39a910a8-9994-80b7-bb02-f2bd63e52de8 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34803ms] [LOG] block id = 39a910a8-9994-80b7-bb02-f2bd63e52de8 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34803ms] [LOG] block id = 39a910a8-9994-805f-bf88-e4131a87ce86 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34804ms] [LOG] block id = 39a910a8-9994-8030-9467-fafabc739731 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34804ms] [LOG] block id = 39a910a8-9994-802a-a135-c3c03fdb7d52 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34805ms] [LOG] block id = 39a910a8-9994-802a-a135-c3c03fdb7d52 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34805ms] [LOG] block id = 39a910a8-9994-80b7-8d4b-f2b933638427 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34806ms] [LOG] block id = 39a910a8-9994-80cc-9f59-cade3920527a @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34806ms] [LOG] block id = 39a910a8-9994-80cc-9f59-cade3920527a @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34806ms] [LOG] block id = 39a910a8-9994-80f2-823f-f4c17fcfdfba @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   34810ms] [INFO] 2026-07-11T11:44:14.189Z [info] localDuplicate: local_duplicate_across_spaces {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35363ms] [LOG] block id = 39a910a8-9994-80cf-97d0-ecf4f9a4eba7 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35366ms] [LOG] block id = 39a910a8-9994-8085-b9a2-e078bc533ead @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35367ms] [LOG] block id = 39a910a8-9994-80a0-a8a0-c62102b8972d @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35368ms] [LOG] block id = 39a910a8-9994-80a0-a8a0-c62102b8972d @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35368ms] [LOG] block id = 39a910a8-9994-80a0-a8a0-c62102b8972d @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35369ms] [LOG] block id = 39a910a8-9994-8030-b633-f96a32492b7d @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35369ms] [LOG] block id = 39a910a8-9994-8030-b633-f96a32492b7d @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35369ms] [LOG] block id = 39a910a8-9994-8030-b633-f96a32492b7d @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35370ms] [LOG] block id = 39a910a8-9994-8030-b633-f96a32492b7d @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35370ms] [LOG] block id = 39a910a8-9994-809e-b199-e987293677d5 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35370ms] [LOG] block id = 39a910a8-9994-809e-b199-e987293677d5 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35373ms] [LOG] block id = 39a910a8-9994-8066-b6c9-d6f4a83fd35b @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35375ms] [LOG] block id = 39a910a8-9994-8065-9c48-d6b9c42cdf32 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35376ms] [LOG] block id = 39a910a8-9994-8065-9c48-d6b9c42cdf32 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35377ms] [LOG] block id = 39a910a8-9994-8065-9c48-d6b9c42cdf32 @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35378ms] [LOG] block id = 39a910a8-9994-8009-a123-d22c3bd44ceb @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35378ms] [LOG] block id = 39a910a8-9994-8009-a123-d22c3bd44ceb @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35379ms] [LOG] block id = 39a910a8-9994-8009-a123-d22c3bd44ceb @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35380ms] [LOG] block id = 39a910a8-9994-8009-a123-d22c3bd44ceb @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35382ms] [LOG] block id = 39a910a8-9994-8055-9247-eda4fde8832e @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35383ms] [LOG] block id = 39a910a8-9994-8055-9247-eda4fde8832e @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35384ms] [LOG] block id = 39a910a8-9994-8055-9247-eda4fde8832e @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35384ms] [INFO] 2026-07-11T11:44:14.763Z [info] localDuplicate: local_duplicate_across_spaces {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   35507ms] [INFO] 2026-07-11T11:44:14.886Z [warning] getShouldUseEdgeCache: edgeCacheStoreDataNotReady {spaceId: 904910a8-9994-8101-82c0-00038d0b866f, data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   36081ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://app.notion.com/api/v3/detectPageLanguage:0
+[   36082ms] [ERROR] HttpRequestError: Received HTTP 404
+    at d (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:120983)
+    at async m (https://app.notion.com/_assets/ClientFramework-f8c45cf9dbe3683f.js:1:122849)
+    at async r (https://app.notion.com/_assets/app-8bb4e193d7a95ea2.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:1:9689)
+    at async c (https://app.notion.com/_assets/UISpacePermissionGroupToken-12951900084881b6.js:182:908731) @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472
+[   40136ms] [INFO] 2026-07-11T11:44:19.514Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/4975-e801568a4e1be5ff.js:472

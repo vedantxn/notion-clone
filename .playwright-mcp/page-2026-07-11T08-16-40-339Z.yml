@@ -1,0 +1,283 @@
+- generic [ref=f134e1]:
+  - generic [ref=f134e4]:
+    - generic [ref=f134e10]:
+      - link [ref=f134e12] [cursor=pointer]:
+        - /url: "#main"
+      - navigation "Sidebar":
+        - generic [ref=f134e16]:
+          - generic [ref=f134e19]:
+            - generic [ref=f134e20]:
+              - button "🏠 Abhishek Sharma’s Space Close sidebar" [ref=f134e25] [cursor=pointer]:
+                - generic [ref=f134e26]:
+                  - generic [ref=f134e27]: 🏠
+                  - generic [ref=f134e32]: Abhishek Sharma’s Space
+                - button "Close sidebar" [ref=f134e39]
+              - generic [ref=f134e44]:
+                - tablist "Sidebar navigation" [ref=f134e45]:
+                  - tab "Home" [ref=f134e48] [cursor=pointer]
+                  - tab "Chat" [ref=f134e54] [cursor=pointer]
+                  - tab "Meetings" [selected] [ref=f134e60] [cursor=pointer]
+                  - tab "Inbox" [ref=f134e70] [cursor=pointer]
+                - button "Search" [ref=f134e76] [cursor=pointer]
+            - tabpanel "Meetings" [ref=f134e80]:
+              - generic [ref=f134e82]:
+                - generic [ref=f134e83]:
+                  - button "Upcoming" [expanded] [ref=f134e84] [cursor=pointer]
+                  - generic [ref=f134e88]:
+                    - button "Connect your calendar See all your events and start meeting notes for them." [ref=f134e90] [cursor=pointer]:
+                      - generic [ref=f134e102]:
+                        - text: Connect your calendar
+                        - generic [ref=f134e103]: See all your events and start meeting notes for them.
+                    - generic:
+                      - button "Brainstorm 8 – 9 AM":
+                        - generic:
+                          - generic:
+                            - generic: Brainstorm
+                            - generic: 8 – 9 AM
+                      - button "Project overview 9 – 10 AM":
+                        - generic:
+                          - generic:
+                            - generic: Project overview
+                            - generic: 9 – 10 AM
+                - generic [ref=f134e106]:
+                  - generic [ref=f134e107]: Today
+                  - button "New AI meeting note" [ref=f134e109] [cursor=pointer]
+                  - tree [ref=f134e115]:
+                    - treeitem "Meeting @Today" [ref=f134e119] [cursor=pointer]
+            - generic [ref=f134e133]:
+              - button "New chat" [ref=f134e135] [cursor=pointer]:
+                - generic [ref=f134e140]:
+                  - text: New chat
+                  - generic [ref=f134e141]: ⌘O
+              - button "New page" [ref=f134e146] [cursor=pointer]
+          - separator "Resize with left and right arrow keys" [ref=f134e152]
+      - generic [ref=f134e153]:
+        - banner [ref=f134e154]:
+          - generic [ref=f134e155]:
+            - generic [ref=f134e156]:
+              - generic [ref=f134e157]: Home is getting an update in our new sidebar redesign. Opt in to keep your pages, Notion AI, and meetings within reach.
+              - button "Learn more" [ref=f134e162] [cursor=pointer]
+            - button "Dismiss" [ref=f134e164] [cursor=pointer]
+          - toolbar [ref=f134e169]:
+            - button "Open menu" [ref=f134e174] [cursor=pointer]
+        - main [ref=f134e177]:
+          - generic [ref=f134e180]:
+            - generic [ref=f134e183]:
+              - generic: Good afternoon
+              - generic: Welcome home
+            - generic [ref=f134e186]:
+              - generic [ref=f134e187]: Recently visited
+              - generic [ref=f134e199]:
+                - link "@Today 4:07 AM A 9h ago" [ref=f134e201] [cursor=pointer]:
+                  - /url: /p/3994fa69ff1580c4a25febf53bb7972e?pvs=55
+                  - generic [ref=f134e212]:
+                    - generic [ref=f134e213]: "@Today 4:07 AM"
+                    - generic [ref=f134e215]:
+                      - generic [ref=f134e216]: A
+                      - generic [ref=f134e220]: 9h ago
+                - link "New page A 13h ago" [ref=f134e222] [cursor=pointer]:
+                  - /url: /p/3994fa69ff1580e2896eea18f645ffce?pvs=55
+                  - generic [ref=f134e232]:
+                    - generic [ref=f134e233]: New page
+                    - generic [ref=f134e235]:
+                      - generic [ref=f134e236]: A
+                      - generic [ref=f134e240]: 13h ago
+                - link "👋 Welcome to Notion A 13h ago" [ref=f134e242] [cursor=pointer]:
+                  - /url: /p/Welcome-to-Notion-3994fa69ff1580a98db5ef6767408aee?pvs=55
+                  - generic [ref=f134e243]: 👋
+                  - generic [ref=f134e247]:
+                    - generic [ref=f134e248]: Welcome to Notion
+                    - generic [ref=f134e250]:
+                      - generic [ref=f134e251]: A
+                      - generic [ref=f134e255]: 13h ago
+                - link "To Do List A 13h ago" [ref=f134e257] [cursor=pointer]:
+                  - /url: /p/To-Do-List-3994fa69ff158066a408f30e673afc99?pvs=55
+                  - generic [ref=f134e262]:
+                    - generic [ref=f134e263]: To Do List
+                    - generic [ref=f134e265]:
+                      - generic [ref=f134e266]: A
+                      - generic [ref=f134e270]: 13h ago
+                - button "New page" [ref=f134e272] [cursor=pointer]
+            - generic [ref=f134e285]:
+              - generic [ref=f134e286]: Learn
+              - generic [ref=f134e298]:
+                - button "What is a block? 2m read" [ref=f134e300] [cursor=pointer]:
+                  - generic [ref=f134e302]:
+                    - generic [ref=f134e303]:
+                      - generic [ref=f134e304]: What is a block?
+                      - generic [ref=f134e305]: 2m read
+                    - checkbox [ref=f134e311]
+                - button "Create your first page 2m watch" [ref=f134e313] [cursor=pointer]:
+                  - generic [ref=f134e315]:
+                    - generic [ref=f134e316]:
+                      - generic [ref=f134e317]: Create your first page
+                      - generic [ref=f134e318]: 2m watch
+                    - checkbox [ref=f134e325]
+                - button "Create a subpage 2m read" [ref=f134e327] [cursor=pointer]:
+                  - generic [ref=f134e329]:
+                    - generic [ref=f134e330]:
+                      - generic [ref=f134e331]: Create a subpage
+                      - generic [ref=f134e332]: 2m read
+                    - checkbox [ref=f134e338]
+                - button "Customize & style your content 9m read" [ref=f134e340] [cursor=pointer]:
+                  - generic [ref=f134e342]:
+                    - generic [ref=f134e343]:
+                      - generic [ref=f134e344]: Customize & style your content
+                      - generic [ref=f134e345]: 9m read
+                    - checkbox [ref=f134e351]
+                - button "What is a database? 2m read" [ref=f134e353] [cursor=pointer]:
+                  - generic [ref=f134e355]:
+                    - generic [ref=f134e356]:
+                      - generic [ref=f134e357]: What is a database?
+                      - generic [ref=f134e358]: 2m read
+                    - checkbox [ref=f134e364]
+                - button "Create a database 3m read" [ref=f134e366] [cursor=pointer]:
+                  - generic [ref=f134e368]:
+                    - generic [ref=f134e369]:
+                      - generic [ref=f134e370]: Create a database
+                      - generic [ref=f134e371]: 3m read
+                    - checkbox [ref=f134e377]
+                - button "Start with a template 4m watch" [ref=f134e379] [cursor=pointer]:
+                  - generic [ref=f134e381]:
+                    - generic [ref=f134e382]:
+                      - generic [ref=f134e383]: Start with a template
+                      - generic [ref=f134e384]: 4m watch
+                    - checkbox [ref=f134e391]
+                - button "Share your work 2m read" [ref=f134e393] [cursor=pointer]:
+                  - generic [ref=f134e395]:
+                    - generic [ref=f134e396]:
+                      - generic [ref=f134e397]: Share your work
+                      - generic [ref=f134e398]: 2m read
+                    - checkbox [ref=f134e404]
+            - generic [ref=f134e406]:
+              - generic [ref=f134e407]: Upcoming events
+              - generic [ref=f134e416]:
+                - generic [ref=f134e418]:
+                  - generic [ref=f134e421]:
+                    - generic [ref=f134e422]: Connect AI Meeting Notes with your Calendar events
+                    - generic [ref=f134e423]: Join calls, transcribe audio, and summarize meetings all in Notion.
+                  - button "Connect Notion Calendar" [ref=f134e425] [cursor=pointer]
+                - generic [ref=f134e427]:
+                  - generic [ref=f134e428]:
+                    - generic [ref=f134e429]:
+                      - generic [ref=f134e430]: Today
+                      - generic [ref=f134e431]: Jul 11
+                    - generic [ref=f134e436]:
+                      - generic [ref=f134e437]:
+                        - generic [ref=f134e438]: Team standup
+                        - generic [ref=f134e439]: 9 AM ⸱ Office
+                      - generic [ref=f134e440]: Join and take notes
+                  - generic [ref=f134e446]:
+                    - generic [ref=f134e447]:
+                      - generic [ref=f134e448]: Sun
+                      - generic [ref=f134e449]: Jul 12
+                    - generic [ref=f134e455]:
+                      - generic [ref=f134e456]: Project check-in
+                      - generic [ref=f134e457]: 10 AM ⸱ Office
+            - generic [ref=f134e462]:
+              - generic [ref=f134e463]: Home views
+              - generic [ref=f134e474]:
+                - generic [ref=f134e476]:
+                  - generic [ref=f134e479]: Pin a database view to quickly access it from Home.
+                  - button "Select database" [ref=f134e482] [cursor=pointer]
+                - generic [ref=f134e484]:
+                  - generic [ref=f134e485]:
+                    - generic [ref=f134e486]: Activity
+                    - generic [ref=f134e487]: Status
+                  - generic [ref=f134e488]:
+                    - generic [ref=f134e490]: Wake up and freshen up
+                    - generic [ref=f134e491]: Done
+                  - generic [ref=f134e492]:
+                    - generic [ref=f134e494]: Have breakfast
+                    - generic [ref=f134e495]: In progress
+                  - generic [ref=f134e496]:
+                    - generic [ref=f134e498]: Work or study
+                    - generic [ref=f134e499]: Not started
+                  - generic [ref=f134e500]:
+                    - generic [ref=f134e502]: Have lunch
+                    - generic [ref=f134e503]: Not started
+                  - generic [ref=f134e504]:
+                    - generic [ref=f134e506]: Exercise
+                    - generic [ref=f134e507]: Not started
+            - generic [ref=f134e509]:
+              - generic [ref=f134e510]: Featured templates
+              - generic [ref=f134e522]:
+                - button "Life Wiki By Notion" [ref=f134e524] [cursor=pointer]:
+                  - generic [ref=f134e526]:
+                    - generic [ref=f134e527]: Life Wiki
+                    - generic [ref=f134e528]: By Notion
+                - button "Journal By Notion" [ref=f134e532] [cursor=pointer]:
+                  - generic [ref=f134e535]:
+                    - generic [ref=f134e536]: Journal
+                    - generic [ref=f134e537]: By Notion
+                - button "To-do List By Notion" [ref=f134e541] [cursor=pointer]:
+                  - generic [ref=f134e543]:
+                    - generic [ref=f134e544]: To-do List
+                    - generic [ref=f134e545]: By Notion
+                - button "Simple Budget By Notion" [ref=f134e549] [cursor=pointer]:
+                  - generic [ref=f134e551]:
+                    - generic [ref=f134e552]: Simple Budget
+                    - generic [ref=f134e553]: By Notion
+                - button "Travel planner By Notion" [ref=f134e557] [cursor=pointer]:
+                  - generic [ref=f134e559]:
+                    - generic [ref=f134e560]: Travel planner
+                    - generic [ref=f134e561]: By Notion
+                - button "Personal Mood Board By Notion" [ref=f134e565] [cursor=pointer]:
+                  - generic [ref=f134e568]:
+                    - generic [ref=f134e569]: Personal Mood Board
+                    - generic [ref=f134e570]: By Notion
+        - region [ref=f134e573]
+      - button "ai" [ref=f134e578] [cursor=pointer]:
+        - img "Notion AI face" [ref=f134e584]
+    - dialog "Settings & members" [ref=f134e683]:
+      - generic [ref=f134e684]:
+        - tablist [ref=f134e688]:
+          - generic [ref=f134e689]:
+            - generic [ref=f134e690]: Account
+            - tab "Abhishek Sharma Abhishek Sharma" [ref=f134e691] [cursor=pointer]:
+              - generic [ref=f134e692]:
+                - generic "Abhishek Sharma" [ref=f134e695]: A
+                - generic [ref=f134e700]: Abhishek Sharma
+            - tab "Preferences" [ref=f134e701] [cursor=pointer]
+            - tab "Notifications" [ref=f134e708] [cursor=pointer]
+            - tab "Mail & Calendar" [ref=f134e714] [cursor=pointer]
+          - generic [ref=f134e720]:
+            - generic [ref=f134e721]: Workspace
+            - tab "General" [ref=f134e722] [cursor=pointer]
+            - tab "People" [ref=f134e729] [cursor=pointer]
+            - tab "Import" [ref=f134e735] [cursor=pointer]
+          - generic [ref=f134e741]:
+            - generic [ref=f134e742]: Features
+            - tab "Notion AI" [ref=f134e743] [cursor=pointer]
+            - tab "Connections" [ref=f134e750] [cursor=pointer]
+            - tab "Notion MCP" [ref=f134e756] [cursor=pointer]
+            - tab "Public pages" [ref=f134e762] [cursor=pointer]
+            - tab "Emoji" [active] [selected] [ref=f134e768] [cursor=pointer]
+          - generic [ref=f134e775]:
+            - generic [ref=f134e776]: Admin
+            - tab "Teamspaces" [ref=f134e777] [cursor=pointer]
+          - generic [ref=f134e784]:
+            - generic [ref=f134e785]: Access & billing
+            - tab "Upgrade plan" [ref=f134e786] [cursor=pointer]
+        - tabpanel "Emoji" [ref=f134e1006]:
+          - generic [ref=f134e800]:
+            - banner [ref=f134e801]:
+              - generic [ref=f134e802]:
+                - generic [ref=f134e803]: Emoji
+                - generic [ref=f134e805]: See all workspace emojis and add new ones
+            - generic [ref=f134e1007]:
+              - generic [ref=f134e1008]:
+                - generic [ref=f134e1010]:
+                  - generic [ref=f134e1011]: Limit custom emoji creation to workspace owners
+                  - generic [ref=f134e1013]: Any existing emojis can still be edited or deleted by the person who added them
+                - switch "Limit custom emoji creation to workspace owners" [ref=f134e1019] [cursor=pointer]
+              - generic:
+                - separator
+              - generic [ref=f134e1020]:
+                - generic [ref=f134e1024]: This workspace doesn’t have any custom emojis yet. Add your first emoji to get started.
+                - button "Add emoji" [ref=f134e1025] [cursor=pointer]
+          - button "Close" [ref=f134e1003] [cursor=pointer]
+    - status [ref=f134e7]
+    - alert [ref=f134e8]
+  - iframe [ref=f134e9]:
+    
