@@ -27,7 +27,7 @@ export const Heading = () => {
 
             {isAuthenticated && !isLoading && (
                 <Button className="h-4, w-4, ml-2 hover:bg-slate-100 hover:text-black" asChild>
-                    <Link href="/documents">
+                    <Link href="/notion-library">
                         Enter Paperly <ArrowRight/>
                    </Link>
                 </Button>

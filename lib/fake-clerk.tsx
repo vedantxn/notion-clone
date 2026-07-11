@@ -39,7 +39,7 @@ export const ClerkProvider = ({ children }: { children: ReactNode }) => <>{child
 export const SignInButton = ({ children }: { children?: ReactNode; mode?: string }) => {
     const router = useRouter();
     return (
-        <span role="button" onClick={() => router.push("/documents")}>
+        <span role="button" onClick={() => router.push("/notion-library")}>
             {children}
         </span>
     );

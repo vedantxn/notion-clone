@@ -7,21 +7,40 @@ import { NotionAiMark } from "./icons";
 
 /* ------------ shared primitives ------------ */
 /** A string state that persists to localStorage (survives reloads). */
+function canUseLocalStorage() {
+  if (typeof window === "undefined") return false;
+  try {
+    const storage = window.localStorage;
+    return (
+      storage !== null &&
+      typeof storage.getItem === "function" &&
+      typeof storage.setItem === "function"
+    );
+  } catch {
+    return false;
+  }
+}
+
 function usePersisted(key: string, initial: string) {
-  const [val, setVal] = useState<string>(() => {
-    if (typeof window !== "undefined") {
-      try {
-        const v = localStorage.getItem(key);
-        if (v !== null) return v;
-      } catch {}
-    }
-    return initial;
-  });
+  const [val, setVal] = useState<string>(initial);
+
   useEffect(() => {
+    if (!canUseLocalStorage()) return;
     try {
-      localStorage.setItem(key, val);
+      const saved = window.localStorage.getItem(key);
+      if (saved !== null) {
+        setVal(saved);
+      }
+    } catch {}
+  }, [key]);
+
+  useEffect(() => {
+    if (!canUseLocalStorage()) return;
+    try {
+      window.localStorage.setItem(key, val);
     } catch {}
   }, [key, val]);
+
   return [val, setVal] as const;
 }
 

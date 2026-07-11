@@ -56,32 +56,47 @@ function defaultBlocks(title: string): Block[] {
   return [{ id: uid(), type: "text", text: "" }];
 }
 
-function load(title: string): DocData {
-  if (typeof window !== "undefined") {
-    try {
-      const raw = localStorage.getItem(STORE_PREFIX + title);
-      if (raw) {
-        const saved = JSON.parse(raw) as DocData;
-        // "New page" is Notion's untitled default — keep the title empty so the placeholder shows.
-        if (saved.title === "New page") saved.title = "";
-        return saved;
-      }
-    } catch {}
+function canUseLocalStorage() {
+  if (typeof window === "undefined") return false;
+  try {
+    const storage = window.localStorage;
+    return (
+      storage !== null &&
+      typeof storage.getItem === "function" &&
+      typeof storage.setItem === "function"
+    );
+  } catch {
+    return false;
   }
-  // A brand-new page has an empty title so the faded "New page" placeholder shows.
+}
+
+function load(title: string): DocData {
   return { title: title === "New page" ? "" : title, blocks: defaultBlocks(title) };
 }
 
 export function PageEditor({ pageTitle, fullWidth }: { pageTitle: string; fullWidth?: boolean }) {
   const [data, setData] = useState<DocData>(() => load(pageTitle));
+
+  useEffect(() => {
+    if (!canUseLocalStorage()) return;
+    try {
+      const raw = window.localStorage.getItem(STORE_PREFIX + pageTitle);
+      if (raw) {
+        const saved = JSON.parse(raw) as DocData;
+        if (saved.title === "New page") saved.title = "";
+        setData(saved);
+      }
+    } catch {}
+  }, [pageTitle]);
   const [slashFor, setSlashFor] = useState<string | null>(null);
   const [focusId, setFocusId] = useState<string | null>(null);
 
   // persist (debounced) whenever data changes
   useEffect(() => {
+    if (!canUseLocalStorage()) return;
     const t = setTimeout(() => {
       try {
-        localStorage.setItem(STORE_PREFIX + pageTitle, JSON.stringify(data));
+        window.localStorage.setItem(STORE_PREFIX + pageTitle, JSON.stringify(data));
       } catch {}
     }, 250);
     return () => clearTimeout(t);

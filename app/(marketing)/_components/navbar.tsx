@@ -38,7 +38,7 @@ export const Navbar = () => {
                 {isAuthenticated && !isLoading && (
                     <>
                     <Button className="hover:bg-gray-100 hover:text-black">
-                        <Link href="/documents">
+                        <Link href="/notion-library">
                             My Pages
                         </Link>
                     </Button>

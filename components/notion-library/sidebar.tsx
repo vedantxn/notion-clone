@@ -4,8 +4,6 @@ import { useState, useLayoutEffect } from "react";
 import { toast } from "sonner";
 import {
   Home,
-  MessageSquare,
-  MonitorPlay,
   Inbox,
   Search,
   Plus,
@@ -32,7 +30,7 @@ import {
   ArrowDown,
   EyeOff,
   Settings2,
-  PanelLeftClose,
+  ChevronsLeft,
   PenSquare,
   Sparkles,
   Settings,
@@ -211,9 +209,9 @@ export function Sidebar({
         <button
           onClick={onCollapse}
           aria-label="Close sidebar"
-          className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-[#5F5E59] opacity-0 transition hover:bg-black/[0.06] group-hover/ws:opacity-100"
+          className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-[#5F5E59] opacity-100 transition hover:bg-black/[0.06]"
         >
-          <PanelLeftClose className="h-[18px] w-[18px]" strokeWidth={1.8} />
+          <ChevronsLeft className="h-[18px] w-[18px]" strokeWidth={1.9} />
         </button>
       </div>
 
@@ -229,13 +227,13 @@ export function Sidebar({
           label="Chat"
           active={tab === "chat"}
           onClick={() => setTab("chat")}
-          icon={<MessageSquare className="h-[18px] w-[18px]" strokeWidth={1.9} />}
+          icon={<ChatBubbleIcon className="h-[18px] w-[18px]" />}
         />
         <TopTab
           label="Meetings"
           active={tab === "meetings"}
           onClick={() => setTab("meetings")}
-          icon={<MonitorPlay className="h-[18px] w-[18px]" strokeWidth={1.9} />}
+          icon={<PaperMicrophoneIcon className="h-[18px] w-[18px]" />}
         />
         <TopTab
           label="Inbox"
@@ -488,6 +486,34 @@ function TopTab({
       {icon}
       {active && label}
     </button>
+  );
+}
+
+function ChatBubbleIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 20 20"
+      className={className}
+      fill="currentColor"
+    >
+      <path d="M16.938 9.353c0-2.97-2.539-5.54-6.545-5.697L10 3.648c-4.232 0-6.938 2.639-6.938 5.705 0 1.438.583 2.752 1.617 3.76a.63.63 0 0 1 .18.546 7.3 7.3 0 0 1-.89 2.528c1.108-.13 2.12-.614 3.01-1.344l.063-.044a.63.63 0 0 1 .505-.073 9 9 0 0 0 2.454.333l.392-.007c4.006-.158 6.545-2.728 6.545-5.699m1.25 0c0 3.803-3.234 6.766-7.747 6.948l-.44.008a10.2 10.2 0 0 1-2.485-.299c-1.349 1.022-2.985 1.62-4.826 1.428a.625.625 0 0 1-.406-1.033c.712-.817 1.096-1.737 1.284-2.642-1.116-1.197-1.756-2.733-1.756-4.41 0-3.925 3.447-6.955 8.189-6.955l.44.009c4.512.181 7.747 3.143 7.747 6.946" />
+    </svg>
+  );
+}
+
+function PaperMicrophoneIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 20 20"
+      className={className}
+      fill="currentColor"
+    >
+      <path d="M16.958 13.771a.625.625 0 0 1 1.028.71 4.8 4.8 0 0 1-3.326 2.033v.997h2.21a.625.625 0 0 1 0 1.25H11.2a.625.625 0 1 1 0-1.25h2.21v-.997a4.8 4.8 0 0 1-3.326-2.032.626.626 0 0 1 1.029-.711 3.55 3.55 0 0 0 2.922 1.535 3.55 3.55 0 0 0 2.923-1.535" />
+      <path d="M12.535 1.239c1.174 0 2.125.951 2.125 2.125v3.032a4 4 0 0 0-.447-.053l-.178-.005q-.32 0-.625.058V3.364a.875.875 0 0 0-.875-.875h-7.5a.875.875 0 0 0-.875.875v11c0 .483.392.875.875.875h4.054c.331.47.728.891 1.178 1.25H5.035a2.125 2.125 0 0 1-2.125-2.125v-11c0-1.174.951-2.125 2.125-2.125z" />
+      <path d="M14.035 7.588a2.2 2.2 0 0 1 2.2 2.2v2.52a2.2 2.2 0 0 1-4.4 0v-2.52a2.2 2.2 0 0 1 2.2-2.2m0 1.25a.95.95 0 0 0-.95.95v2.52a.95.95 0 0 0 1.9 0v-2.52a.95.95 0 0 0-.95-.95M9 6.902a.55.55 0 0 1 0 1.1H6.285a.55.55 0 0 1 0-1.1zm2.285-2.5a.55.55 0 1 1 0 1.1h-5a.55.55 0 0 1 0-1.1z" />
+    </svg>
   );
 }
 
