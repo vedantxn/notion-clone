@@ -1385,31 +1385,30 @@ function TemplateButton({
   );
 }
 
-// Notion-style hover preview for a Suggested template, positioned to the left
-// of the hovered row (reuses the light gallery-card mini-preview styling).
+// Notion-style hover preview for a Suggested template — a dark tooltip card
+// positioned to the left of the hovered row, with the template's mini preview
+// and its tagline underneath.
 function SuggestedHoverPreview({ tplKey, anchor }: { tplKey: TemplatePreviewKey; anchor: DOMRect }) {
   const t = GALLERY_TEMPLATES.find((g) => g.key === tplKey);
   if (!t) return null;
-  const c = GALLERY_TINTS[t.tint];
-  const width = 284;
+  const width = 300;
   const left = Math.max(8, anchor.left - width - 12);
-  const top = Math.min(anchor.top, window.innerHeight - 210);
+  const top = Math.min(anchor.top, window.innerHeight - 220);
 
   return (
     <div
-      className={`pointer-events-none fixed z-[80] flex w-[284px] flex-col overflow-hidden rounded-xl border ${c.border} ${c.bg} shadow-[0_10px_30px_rgba(0,0,0,0.18)]`}
+      className="pointer-events-none fixed z-[80] flex w-[300px] flex-col overflow-hidden rounded-xl border border-white/[0.08] bg-[#252525] shadow-[0_16px_40px_rgba(0,0,0,0.5)]"
       style={{ left, top }}
     >
-      <div className="px-4 pb-2 pt-3.5">
-        <div className={`text-[13.5px] font-medium leading-5 ${c.text}`}>{t.title}</div>
-        <div className={`mt-0.5 text-[12px] font-normal leading-4 opacity-70 ${c.text}`}>{t.description}</div>
+      <div className="flex items-center gap-2 px-4 pt-3.5 text-[13.5px] font-semibold leading-5 text-white/95">
+        <span className="flex items-center [&_svg]:h-3.5 [&_svg]:w-3.5">{t.previewIcon}</span>
+        {t.title}
       </div>
-      <div className="ml-4 rounded-t-[6px] bg-white pl-3 pr-0 pt-3">
-        <div className="mb-2.5 flex items-center gap-1.5 text-[12px] font-medium leading-none text-[#2C2C2B]">
-          {t.previewIcon}
-          {t.title}
-        </div>
-        <GalleryMiniTable columns={t.columns} rows={t.rows} />
+      <div className="px-4 pt-3">
+        <GalleryMiniTable columns={t.columns} rows={t.rows} dark />
+      </div>
+      <div className="px-4 pb-3.5 pt-3 text-[12.5px] font-normal leading-4 text-white/45">
+        {t.description}
       </div>
     </div>
   );
@@ -1615,6 +1614,25 @@ const CHIP_DOT: Record<keyof typeof CHIP_TONES, string> = {
   red: "bg-[#C4544F]",
   orange: "bg-[#C1783A]",
   yellow: "bg-[#C0932F]",
+};
+
+// Dark-theme status chips for the Suggested hover preview card.
+const DARK_CHIP_TONES: Record<keyof typeof CHIP_TONES, string> = {
+  gray: "bg-[rgba(255,255,255,0.11)] text-[#C9C8C6]",
+  blue: "bg-[rgba(35,131,226,0.30)] text-[#A6C9EF]",
+  green: "bg-[rgba(45,153,100,0.30)] text-[#8FD1AB]",
+  red: "bg-[rgba(211,79,75,0.30)] text-[#ECA9A6]",
+  orange: "bg-[rgba(216,154,46,0.30)] text-[#E6C589]",
+  yellow: "bg-[rgba(203,148,51,0.30)] text-[#DEC788]",
+};
+
+const DARK_CHIP_DOT: Record<keyof typeof CHIP_TONES, string> = {
+  gray: "bg-[#9B9A97]",
+  blue: "bg-[#5A9BDD]",
+  green: "bg-[#4F9E71]",
+  red: "bg-[#D66C68]",
+  orange: "bg-[#CE8B47]",
+  yellow: "bg-[#CDA144]",
 };
 
 type GalleryTint = "green" | "blue" | "red" | "orange" | "yellow" | "neutral";
@@ -1948,14 +1966,16 @@ function GalleryTemplateCard({
 function GalleryMiniTable({
   columns,
   rows,
+  dark,
 }: {
   columns: string[];
   rows: GalleryCell[][];
+  dark?: boolean;
 }) {
   return (
     <div>
       {columns.some((c) => c) && (
-        <div className="grid grid-cols-3 gap-x-2 pb-1.5 text-[9px] font-medium text-[#7D7A75]">
+        <div className={`grid grid-cols-3 gap-x-2 pb-1.5 text-[9px] font-medium ${dark ? "text-white/35" : "text-[#7D7A75]"}`}>
           {columns.map((c, i) => (
             <span key={i} className="truncate">{c}</span>
           ))}
@@ -1965,7 +1985,7 @@ function GalleryMiniTable({
         {rows.map((row, ri) => (
           <div key={ri} className="grid grid-cols-3 items-center gap-x-2">
             {row.map((cell, ci) => (
-              <GalleryMiniCell key={ci} cell={cell} />
+              <GalleryMiniCell key={ci} cell={cell} dark={dark} />
             ))}
           </div>
         ))}
@@ -1974,16 +1994,19 @@ function GalleryMiniTable({
   );
 }
 
-function GalleryMiniCell({ cell }: { cell: GalleryCell }) {
+function GalleryMiniCell({ cell, dark }: { cell: GalleryCell; dark?: boolean }) {
   if (cell === "empty") return <span />;
-  if (cell === "line") return <span className="h-1.5 w-[56px] rounded-full bg-[rgba(42,28,0,0.08)]" />;
+  if (cell === "line")
+    return <span className={`h-1.5 w-[56px] rounded-full ${dark ? "bg-white/[0.13]" : "bg-[rgba(42,28,0,0.08)]"}`} />;
   if (cell === "avatar")
-    return <span className="h-3.5 w-3.5 rounded-full bg-[#E3E2DF]" />;
+    return <span className={`h-3.5 w-3.5 rounded-full ${dark ? "bg-white/25" : "bg-[#E3E2DF]"}`} />;
+  const tones = dark ? DARK_CHIP_TONES : CHIP_TONES;
+  const dots = dark ? DARK_CHIP_DOT : CHIP_DOT;
   return (
     <span
-      className={`flex h-[13px] w-fit items-center gap-1 rounded-[6px] pl-[5px] pr-[7px] text-[8px] font-medium leading-none ${CHIP_TONES[cell.tone]}`}
+      className={`flex h-[13px] w-fit items-center gap-1 rounded-[6px] pl-[5px] pr-[7px] text-[8px] font-medium leading-none ${tones[cell.tone]}`}
     >
-      <span className={`h-[5px] w-[5px] shrink-0 rounded-full ${CHIP_DOT[cell.tone]}`} />
+      <span className={`h-[5px] w-[5px] shrink-0 rounded-full ${dots[cell.tone]}`} />
       <span className="truncate">{cell.label}</span>
     </span>
   );
