@@ -406,6 +406,7 @@ export function MainPanel({ initialTab = "favorites", favorites }: { initialTab?
               {(close) => (
                 <CollectionSettingsMenu
                   sortLabel={(sortRules[0]?.field ?? "Page name") + ((sortRules[0]?.direction ?? "asc") === "asc" ? " ↑" : " ↓")}
+                  groupLabel={groupLabelFor(selectedGroup)}
                   layout={layout}
                   hiddenCols={hiddenCols}
                   onToggleCol={toggleCol}
@@ -899,14 +900,7 @@ export function MainPanel({ initialTab = "favorites", favorites }: { initialTab?
             if (groupId === "none") {
               toast("Grouping removed");
             } else {
-              let displayLabel = groupId;
-              if (groupId === "page_name") displayLabel = "Page name";
-              else if (groupId === "created_by") displayLabel = "Created by";
-              else if (groupId === "created_time") displayLabel = "Created time";
-              else if (groupId === "last_edited_by") displayLabel = "Last edited by";
-              else if (groupId === "last_edited_time") displayLabel = "Last edited time";
-              else if (groupId === "last_visited_time") displayLabel = "Last visited time";
-              toast(`Grouped by ${displayLabel}`);
+              toast(`Grouped by ${groupLabelFor(groupId)}`);
             }
           }}
           dateBy={groupDateBy}
@@ -1415,8 +1409,23 @@ function ToolbarBtn({ children, onClick, active, label }: { children: React.Reac
 
 const OPTIONAL_COLS = ["Created by", "Source", "Last edited time", "Last visited time"];
 
+// Maps a group field id to its human label (empty when ungrouped).
+function groupLabelFor(groupId: string): string {
+  switch (groupId) {
+    case "page_name": return "Page name";
+    case "created_by": return "Created by";
+    case "created_time": return "Created time";
+    case "last_edited_by": return "Last edited by";
+    case "last_edited_time": return "Last edited time";
+    case "last_visited_time": return "Last visited time";
+    case "source": return "Source";
+    default: return "";
+  }
+}
+
 function CollectionSettingsMenu({
   sortLabel,
+  groupLabel,
   layout,
   hiddenCols,
   onToggleCol,
@@ -1428,6 +1437,7 @@ function CollectionSettingsMenu({
   onAddFilter,
 }: {
   sortLabel: string;
+  groupLabel: string;
   layout: LayoutKind;
   hiddenCols: Set<string>;
   onToggleCol: (label: string) => void;
@@ -1536,6 +1546,7 @@ function CollectionSettingsMenu({
       <SettingsMenuRow
         icon={<SquareGridBelowLinesIcon className="h-5 w-5" />}
         label="Group"
+        value={groupLabel}
         onClick={onGroup}
       />
       <MenuSeparator />
