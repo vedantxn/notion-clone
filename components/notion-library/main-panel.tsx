@@ -115,6 +115,16 @@ export function MainPanel({ initialTab = "favorites", favorites }: { initialTab?
       else next.add(label);
       return next;
     });
+
+  // Click a table column header to sort by it (toggling direction).
+  const sortByField = (field: string) => {
+    setSortRules((prev) => {
+      const cur = prev[0];
+      const nextDir = cur && cur.field === field && cur.direction === "asc" ? "desc" : "asc";
+      setSortDirection(nextDir);
+      return [{ id: cur?.id ?? "1", field, direction: nextDir }];
+    });
+  };
   const [search, setSearch] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [sortPanelOpen, setSortPanelOpen] = useState(false);
@@ -216,6 +226,7 @@ export function MainPanel({ initialTab = "favorites", favorites }: { initialTab?
     const dir = (rule?.direction ?? (sortDirection === "asc" ? "asc" : "desc")) === "asc" ? 1 : -1;
     let cmp: number;
     if (field === "Created by") cmp = a.createdBy.localeCompare(b.createdBy);
+    else if (field === "Source") cmp = a.source.localeCompare(b.source);
     else if (field === "Created time" || field === "Last edited time") cmp = ageRank(a.lastEdited) - ageRank(b.lastEdited);
     else if (field === "Last visited time") cmp = ageRank(a.lastVisited) - ageRank(b.lastVisited);
     else cmp = a.title.localeCompare(b.title);
@@ -762,7 +773,7 @@ export function MainPanel({ initialTab = "favorites", favorites }: { initialTab?
           ) : (
           <div className="mt-2 overflow-x-auto">
             <div className="min-w-[1180px]">
-              {selectedGroup === "none" && <TableHeader hiddenCols={hiddenCols} />}
+              {selectedGroup === "none" && <TableHeader hiddenCols={hiddenCols} onSortField={sortByField} />}
               <div className="pb-16 space-y-4">
                 {selectedGroup === "none" ? (
                   rows.map((r) => (
@@ -800,7 +811,7 @@ export function MainPanel({ initialTab = "favorites", favorites }: { initialTab?
                         {/* Group Rows */}
                         {!isCollapsed && (
                           <div className="pl-4 border-l border-black/[0.04] space-y-1">
-                            <TableHeader hiddenCols={hiddenCols} />
+                            <TableHeader hiddenCols={hiddenCols} onSortField={sortByField} />
                             <div className="space-y-0.5">
                               {groupRows.map((r) => (
                                 <Row key={r.id} row={r} hiddenCols={hiddenCols} />
@@ -820,7 +831,7 @@ export function MainPanel({ initialTab = "favorites", favorites }: { initialTab?
           <>
             <div className="mt-2 overflow-x-auto">
               <div className="min-w-[1180px]">
-                <TableHeader hiddenCols={hiddenCols} />
+                <TableHeader hiddenCols={hiddenCols} onSortField={sortByField} />
               </div>
             </div>
             <div className="flex flex-col items-center pt-[140px] text-center">
@@ -921,14 +932,14 @@ export function MainPanel({ initialTab = "favorites", favorites }: { initialTab?
   );
 }
 
-function TableHeader({ hiddenCols }: { hiddenCols: Set<string> }) {
+function TableHeader({ hiddenCols, onSortField }: { hiddenCols: Set<string>; onSortField: (field: string) => void }) {
   return (
     <div className="flex items-center border-b border-black/[0.08] text-[14px] text-[#7D7A75]">
-      <HeaderCell className="flex-1" icon={<FileText className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Page name")}>Page name</HeaderCell>
-      {!hiddenCols.has("Created by") && <HeaderCell className={COL.by} icon={<UserCircle2 className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Created by")}>Created by</HeaderCell>}
-      {!hiddenCols.has("Source") && <HeaderCell className={COL.src} icon={<Navigation className="h-4 w-4 -rotate-45" strokeWidth={1.8} />} onClick={() => toast("Sort by Source")}>Source</HeaderCell>}
-      {!hiddenCols.has("Last edited time") && <HeaderCell className={COL.edited} icon={<Clock className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Last edited time")}>Last edited time</HeaderCell>}
-      {!hiddenCols.has("Last visited time") && <HeaderCell className={COL.visited} icon={<Clock className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Last visited time")}>Last visited time</HeaderCell>}
+      <HeaderCell className="flex-1" icon={<FileText className="h-4 w-4" strokeWidth={1.8} />} onClick={() => onSortField("Page name")}>Page name</HeaderCell>
+      {!hiddenCols.has("Created by") && <HeaderCell className={COL.by} icon={<UserCircle2 className="h-4 w-4" strokeWidth={1.8} />} onClick={() => onSortField("Created by")}>Created by</HeaderCell>}
+      {!hiddenCols.has("Source") && <HeaderCell className={COL.src} icon={<Navigation className="h-4 w-4 -rotate-45" strokeWidth={1.8} />} onClick={() => onSortField("Source")}>Source</HeaderCell>}
+      {!hiddenCols.has("Last edited time") && <HeaderCell className={COL.edited} icon={<Clock className="h-4 w-4" strokeWidth={1.8} />} onClick={() => onSortField("Last edited time")}>Last edited time</HeaderCell>}
+      {!hiddenCols.has("Last visited time") && <HeaderCell className={COL.visited} icon={<Clock className="h-4 w-4" strokeWidth={1.8} />} onClick={() => onSortField("Last visited time")}>Last visited time</HeaderCell>}
     </div>
   );
 }
