@@ -378,6 +378,7 @@ export function DatabasePage({ fullWidth }: { fullWidth?: boolean }) {
               </h3>
               
               <TemplateButton
+                previewKey="tasks"
                 icon={
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#E2F5EC] text-[#0F7B48]">
                     <Check className="h-3.5 w-3.5" strokeWidth={3} />
@@ -388,6 +389,7 @@ export function DatabasePage({ fullWidth }: { fullWidth?: boolean }) {
               />
 
               <TemplateButton
+                previewKey="projects"
                 icon={
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#E5F1FD] text-[#2383E2]">
                     <IterateIcon />
@@ -398,6 +400,7 @@ export function DatabasePage({ fullWidth }: { fullWidth?: boolean }) {
               />
 
               <TemplateButton
+                previewKey="docs"
                 icon={
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#FCE8E6] text-[#E5484D]">
                     <FileText className="h-3.5 w-3.5" strokeWidth={2.5} />
@@ -1248,22 +1251,62 @@ function PropertyTypeMenu({
 }
 
 function TemplateButton({
+  previewKey,
   icon,
   label,
   onSelect,
 }: {
+  previewKey: TemplatePreviewKey;
   icon: React.ReactNode;
   label: string;
   onSelect: () => void;
 }) {
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const [rect, setRect] = useState<DOMRect | null>(null);
   return (
-    <button
-      onClick={onSelect}
-      className="mx-1.5 flex items-center rounded-md p-1.5 text-left text-[14px] hover:bg-black/[0.055]"
+    <>
+      <button
+        ref={btnRef}
+        onClick={onSelect}
+        onMouseEnter={() => setRect(btnRef.current?.getBoundingClientRect() ?? null)}
+        onMouseLeave={() => setRect(null)}
+        className="mx-1.5 flex items-center rounded-md p-1.5 text-left text-[14px] hover:bg-black/[0.055]"
+      >
+        {icon}
+        <span className="truncate text-[14px] leading-5 text-[#2C2C2B]">{label}</span>
+      </button>
+      {rect && <SuggestedHoverPreview tplKey={previewKey} anchor={rect} />}
+    </>
+  );
+}
+
+// Notion-style hover preview for a Suggested template, positioned to the left
+// of the hovered row (reuses the light gallery-card mini-preview styling).
+function SuggestedHoverPreview({ tplKey, anchor }: { tplKey: TemplatePreviewKey; anchor: DOMRect }) {
+  const t = GALLERY_TEMPLATES.find((g) => g.key === tplKey);
+  if (!t) return null;
+  const c = GALLERY_TINTS[t.tint];
+  const width = 284;
+  const left = Math.max(8, anchor.left - width - 12);
+  const top = Math.min(anchor.top, window.innerHeight - 210);
+
+  return (
+    <div
+      className={`pointer-events-none fixed z-[80] flex w-[284px] flex-col overflow-hidden rounded-xl border ${c.border} ${c.bg} shadow-[0_10px_30px_rgba(0,0,0,0.18)]`}
+      style={{ left, top }}
     >
-      {icon}
-      <span className="truncate text-[14px] leading-5 text-[#2C2C2B]">{label}</span>
-    </button>
+      <div className="px-4 pb-2 pt-3.5">
+        <div className={`text-[13.5px] font-medium leading-5 ${c.text}`}>{t.title}</div>
+        <div className={`mt-0.5 text-[12px] font-normal leading-4 opacity-70 ${c.text}`}>{t.description}</div>
+      </div>
+      <div className="ml-4 rounded-t-[6px] bg-white pl-3 pr-0 pt-3">
+        <div className="mb-2.5 flex items-center gap-1.5 text-[12px] font-medium leading-none text-[#2C2C2B]">
+          {t.previewIcon}
+          {t.title}
+        </div>
+        <GalleryMiniTable columns={t.columns} rows={t.rows} />
+      </div>
+    </div>
   );
 }
 
