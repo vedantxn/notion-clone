@@ -162,6 +162,82 @@ const RELATION_PAGES: { title: string; icon: React.ReactNode }[] = [
   { title: "Project roadmap", icon: <FileText className="h-3.5 w-3.5 text-[#91918E]" strokeWidth={1.8} /> },
 ];
 
+// Built-in "Suggested" templates. Applying one populates the grid with real
+// columns (properties + options) and seed rows, instead of just previewing.
+function buildTemplateSpec(key: TemplatePreviewKey): {
+  properties: DatabaseProperty[];
+  rows: { name: string; values: Record<string, CellValue> }[];
+} {
+  const opt = (propId: string, i: number, name: string, color: number): SelectOption => ({
+    id: `${propId}-o${i}`,
+    name,
+    color,
+  });
+  const statusProp = (): DatabaseProperty => ({
+    id: "tpl-status",
+    name: "Status",
+    type: "status",
+    options: [
+      opt("tpl-status", 0, "Not started", 0),
+      opt("tpl-status", 1, "In progress", 4),
+      opt("tpl-status", 2, "Done", 3),
+    ],
+  });
+  const priorityProp = (): DatabaseProperty => ({
+    id: "tpl-priority",
+    name: "Priority",
+    type: "select",
+    options: [
+      opt("tpl-priority", 0, "Low", 0),
+      opt("tpl-priority", 1, "Medium", 2),
+      opt("tpl-priority", 2, "High", 7),
+    ],
+  });
+
+  if (key === "tasks") {
+    return {
+      properties: [statusProp(), priorityProp(), { id: "tpl-assignee", name: "Assignee", type: "person" }],
+      rows: [
+        { name: "Improve website copy", values: { "tpl-status": "Done", "tpl-priority": "Medium", "tpl-assignee": "Alex Morgan" } },
+        { name: "Update help center & FAQ", values: { "tpl-status": "In progress", "tpl-priority": "High", "tpl-assignee": "Abhishek Sharma" } },
+        { name: "Publish release notes", values: { "tpl-status": "Not started", "tpl-priority": "Low" } },
+      ],
+    };
+  }
+
+  if (key === "projects") {
+    return {
+      properties: [statusProp(), priorityProp(), { id: "tpl-owner", name: "Owner", type: "person" }],
+      rows: [
+        { name: "Quarterly sales planning", values: { "tpl-status": "Not started", "tpl-priority": "Medium", "tpl-owner": "Alex Morgan" } },
+        { name: "Public launch of iOS app", values: { "tpl-status": "In progress", "tpl-priority": "High", "tpl-owner": "Abhishek Sharma" } },
+      ],
+    };
+  }
+
+  // docs
+  return {
+    properties: [
+      {
+        id: "tpl-category",
+        name: "Category",
+        type: "select",
+        options: [
+          opt("tpl-category", 0, "Strategy doc", 4),
+          opt("tpl-category", 1, "Proposal", 2),
+          opt("tpl-category", 2, "Customer research", 5),
+        ],
+      },
+      { id: "tpl-created-by", name: "Created by", type: "person" },
+    ],
+    rows: [
+      { name: "Company mission and strategy", values: { "tpl-category": "Strategy doc", "tpl-created-by": "Alex Morgan" } },
+      { name: "Proposal for new year campaign", values: { "tpl-category": "Proposal", "tpl-created-by": "Abhishek Sharma" } },
+      { name: "Customer feedback report", values: { "tpl-category": "Customer research", "tpl-created-by": "Alex Morgan" } },
+    ],
+  };
+}
+
 let propIdCounter = 0;
 let optIdCounter = 0;
 
@@ -173,7 +249,31 @@ export function DatabasePage({ fullWidth }: { fullWidth?: boolean }) {
   const [properties, setProperties] = useState<DatabaseProperty[]>([]);
   const [addPropOpen, setAddPropOpen] = useState(false);
   const [cells, setCells] = useState<Record<string, CellValue>>({});
+  const [rowNames, setRowNames] = useState<Record<string, string>>({});
   const addBtnRef = useRef<HTMLButtonElement>(null);
+
+  const setRowName = (rowId: string, name: string) =>
+    setRowNames((prev) => ({ ...prev, [rowId]: name }));
+
+  // Populate the empty grid from a Suggested template.
+  const applyTemplate = (key: TemplatePreviewKey) => {
+    const spec = buildTemplateSpec(key);
+    const nextCells: Record<string, CellValue> = {};
+    const nextNames: Record<string, string> = {};
+    spec.rows.forEach((row, i) => {
+      const rowId = ROW_IDS[i];
+      if (!rowId) return;
+      nextNames[rowId] = row.name;
+      for (const [pid, val] of Object.entries(row.values)) nextCells[`${rowId}:${pid}`] = val;
+    });
+    setProperties(spec.properties);
+    setCells(nextCells);
+    setRowNames(nextNames);
+    setCustomizingTemplate(null);
+    setGalleryOpen(false);
+    setPanelOpen(false);
+    toast(`Created ${TEMPLATE_PREVIEWS[key].title} database`);
+  };
 
   const addProperty = (type: PropertyTypeKey) => {
     const def = PROPERTY_TYPE_MAP[type];
@@ -272,14 +372,15 @@ export function DatabasePage({ fullWidth }: { fullWidth?: boolean }) {
                     for (const p of properties) rowValues[p.name] = cells[`${rowId}:${p.id}`];
                     return (
                     <div key={rowId} className="flex h-12 hover:bg-black/[0.02]">
-                      {r === 0 ? (
-                        <div className="flex w-[320px] shrink-0 cursor-pointer items-center gap-1.5 border-r border-black/[0.08] px-4 text-[#9B9A97]">
-                          <Plus className="h-4 w-4" />
-                          <span>New page</span>
-                        </div>
-                      ) : (
-                        <div className="w-[320px] shrink-0 border-r border-black/[0.08]"></div>
-                      )}
+                      <div className="flex w-[320px] shrink-0 items-center gap-1.5 border-r border-black/[0.08] px-4">
+                        {r === 0 && !rowNames[rowId] && <Plus className="h-4 w-4 shrink-0 text-[#9B9A97]" />}
+                        <input
+                          value={rowNames[rowId] ?? ""}
+                          onChange={(e) => setRowName(rowId, e.target.value)}
+                          placeholder={r === 0 ? "New page" : ""}
+                          className="h-full w-full bg-transparent text-[14px] text-[#2C2C2B] outline-none placeholder:text-[#9B9A97]"
+                        />
+                      </div>
                       {properties.map((prop) => (
                         <EditableCell
                           key={prop.id}
@@ -352,7 +453,10 @@ export function DatabasePage({ fullWidth }: { fullWidth?: boolean }) {
             {/* Options */}
             <div className="flex flex-col text-[14px] text-[#2C2C2B]">
               <button
-                onClick={() => toast("Created empty database")}
+                onClick={() => {
+                  setPanelOpen(false);
+                  toast("Created empty data source");
+                }}
                 className="mx-1.5 flex items-center rounded-md p-1.5 text-left hover:bg-black/[0.04]"
               >
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-black/[0.035] text-[#5F5E59]">
@@ -449,6 +553,7 @@ export function DatabasePage({ fullWidth }: { fullWidth?: boolean }) {
         <TemplateCustomizeModal
           templateKey={customizingTemplate}
           onClose={() => setCustomizingTemplate(null)}
+          onConfirm={applyTemplate}
         />
       )}
       {addPropOpen && (
@@ -1313,9 +1418,11 @@ function SuggestedHoverPreview({ tplKey, anchor }: { tplKey: TemplatePreviewKey;
 function TemplateCustomizeModal({
   templateKey,
   onClose,
+  onConfirm,
 }: {
   templateKey: TemplatePreviewKey;
   onClose: () => void;
+  onConfirm: (key: TemplatePreviewKey) => void;
 }) {
   const preview = TEMPLATE_PREVIEWS[templateKey];
   const isProjects = templateKey === "projects";
@@ -1369,10 +1476,7 @@ function TemplateCustomizeModal({
           </div>
 
           <button
-            onClick={() => {
-              toast(`Started from ${preview.title}`);
-              onClose();
-            }}
+            onClick={() => onConfirm(templateKey)}
             className="mt-auto h-11 rounded-lg bg-[#2383E2] text-[18px] font-semibold text-white hover:bg-[#1a73d0]"
           >
             Get started
