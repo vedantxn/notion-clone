@@ -1397,10 +1397,10 @@ function SuggestedHoverPreview({ tplKey, anchor }: { tplKey: TemplatePreviewKey;
 
   return (
     <div
-      className="pointer-events-none fixed z-[80] flex w-[316px] flex-col overflow-hidden rounded-xl border border-white/[0.08] bg-[#252525] shadow-[0_16px_40px_rgba(0,0,0,0.5)]"
+      className="pointer-events-none fixed z-[80] flex w-[316px] flex-col overflow-hidden rounded-xl border border-black/[0.08] bg-white shadow-[0_12px_32px_rgba(15,15,15,0.16)]"
       style={{ left, top }}
     >
-      <div className="flex items-center gap-2 px-4 pt-3.5 text-[14px] font-semibold leading-5 text-white/95">
+      <div className="flex items-center gap-2 px-4 pt-3.5 text-[14px] font-semibold leading-5 text-[#2C2C2B]">
         <span className="flex items-center">{t.previewIcon}</span>
         {t.title}
       </div>
@@ -1408,15 +1408,15 @@ function SuggestedHoverPreview({ tplKey, anchor }: { tplKey: TemplatePreviewKey;
       <div className="pl-4 pt-3.5">
         <SuggestedPreviewGrid columns={t.columns} rows={t.rows} />
       </div>
-      <div className="px-4 pb-3.5 pt-3.5 text-[13px] font-normal leading-4 text-white/45">
+      <div className="px-4 pb-3.5 pt-3.5 text-[13px] font-normal leading-4 text-[#9B9A97]">
         {t.description}
       </div>
     </div>
   );
 }
 
-// Larger mini table for the dark hover card. Rendered wider than the card so
-// the rightmost (person) column clips at the edge, and status chips truncate —
+// Larger mini table for the hover card. Rendered wider than the card so the
+// rightmost (person) column clips at the edge, and status chips truncate —
 // the "peek into the template" look from Notion.
 const PREVIEW_COLS = "grid grid-cols-[1fr_82px_58px] gap-x-3";
 
@@ -1424,7 +1424,7 @@ function SuggestedPreviewGrid({ columns, rows }: { columns: string[]; rows: Gall
   return (
     <div className="w-[340px]">
       {columns.some((c) => c) && (
-        <div className={`${PREVIEW_COLS} pb-2.5 text-[11px] font-medium text-white/35`}>
+        <div className={`${PREVIEW_COLS} pb-2.5 text-[11px] font-medium text-[#9B9A97]`}>
           {columns.map((c, i) => (
             <span key={i} className="truncate">{c}</span>
           ))}
@@ -1445,13 +1445,13 @@ function SuggestedPreviewGrid({ columns, rows }: { columns: string[]; rows: Gall
 
 function PreviewCell({ cell }: { cell: GalleryCell }) {
   if (cell === "empty") return <span />;
-  if (cell === "line") return <span className="h-2 w-[72px] rounded-full bg-white/[0.14]" />;
-  if (cell === "avatar") return <span className="h-4 w-4 rounded-full bg-white/25" />;
+  if (cell === "line") return <span className="h-2 w-[72px] rounded-full bg-[rgba(42,28,0,0.09)]" />;
+  if (cell === "avatar") return <span className="h-4 w-4 rounded-full bg-[#E3E2DF]" />;
   return (
     <span
-      className={`flex h-[19px] max-w-full items-center gap-1.5 rounded-full px-2 text-[10.5px] font-medium leading-none ${DARK_CHIP_TONES[cell.tone]}`}
+      className={`flex h-[19px] max-w-full items-center gap-1.5 rounded-full px-2 text-[10.5px] font-medium leading-none ${CHIP_TONES[cell.tone]}`}
     >
-      <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${DARK_CHIP_DOT[cell.tone]}`} />
+      <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${CHIP_DOT[cell.tone]}`} />
       <span className="truncate">{cell.label}</span>
     </span>
   );
@@ -1657,26 +1657,6 @@ const CHIP_DOT: Record<keyof typeof CHIP_TONES, string> = {
   red: "bg-[#C4544F]",
   orange: "bg-[#C1783A]",
   yellow: "bg-[#C0932F]",
-};
-
-// Dark-theme status chips for the Suggested hover preview card — solid pill
-// fills with light text, matching Notion's dark-mode select options.
-const DARK_CHIP_TONES: Record<keyof typeof CHIP_TONES, string> = {
-  gray: "bg-[rgba(255,255,255,0.13)] text-[#CFCECC]",
-  blue: "bg-[#2C5A87] text-[#D4E6F8]",
-  green: "bg-[#1F5138] text-[#CDE6D6]",
-  red: "bg-[#5E2E2C] text-[#F0CBC8]",
-  orange: "bg-[#5C4423] text-[#EBD3A9]",
-  yellow: "bg-[#544521] text-[#E5D19A]",
-};
-
-const DARK_CHIP_DOT: Record<keyof typeof CHIP_TONES, string> = {
-  gray: "bg-[#A6A5A2]",
-  blue: "bg-[#5B9BD8]",
-  green: "bg-[#4FA574]",
-  red: "bg-[#D97873]",
-  orange: "bg-[#D19A4E]",
-  yellow: "bg-[#D3AC4C]",
 };
 
 type GalleryTint = "green" | "blue" | "red" | "orange" | "yellow" | "neutral";
