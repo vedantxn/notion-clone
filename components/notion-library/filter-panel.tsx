@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 import { ChevronLeft, X, Plus, RotateCcw, MoreHorizontal, FileText, ChevronDown, Trash2, User, Globe, SlidersHorizontal, Clock } from "lucide-react";
 
 export type FilterRule = 
@@ -237,7 +238,7 @@ export function FilterPanel({
           </button>
 
           <button
-            onClick={() => {}}
+            onClick={() => toast("Filter options")}
             className="flex h-9 w-full items-center gap-2.5 rounded-md px-2 text-left text-[14px] text-[#37352F] hover:bg-black/[0.04] active:bg-black/[0.08] transition-colors"
           >
             <MoreHorizontal className="h-4 w-4 text-[#5F5E59]" strokeWidth={2} />

@@ -23,6 +23,7 @@ interface SortPanelProps {
   onAddSort: (rule: SortRule) => void;
   onRemoveSort: (id: string) => void;
   onUpdateSort: (id: string, direction: "asc" | "desc") => void;
+  onUpdateField: (id: string, field: string) => void;
 }
 
 export function SortPanel({
@@ -31,6 +32,7 @@ export function SortPanel({
   onAddSort,
   onRemoveSort,
   onUpdateSort,
+  onUpdateField,
 }: SortPanelProps) {
   return (
     <div className="fixed inset-0 z-50" onClick={onClose}>
@@ -68,6 +70,7 @@ export function SortPanel({
                 onUpdateDirection={(direction) =>
                   onUpdateSort(rule.id, direction)
                 }
+                onUpdateField={(field) => onUpdateField(rule.id, field)}
                 onRemove={() => onRemoveSort(rule.id)}
               />
             ))}
@@ -113,10 +116,12 @@ export function SortPanel({
 function SortRuleItem({
   rule,
   onUpdateDirection,
+  onUpdateField,
   onRemove,
 }: {
   rule: SortRule;
   onUpdateDirection: (direction: "asc" | "desc") => void;
+  onUpdateField: (field: string) => void;
   onRemove: () => void;
 }) {
   const [fieldOpen, setFieldOpen] = useState(false);
@@ -158,8 +163,8 @@ function SortRuleItem({
               <button
                 key={field}
                 onClick={() => {
+                  onUpdateField(field);
                   setFieldOpen(false);
-                  // Update field would require a separate handler
                 }}
                 className={`w-full px-3 py-2 text-left text-[14px] hover:bg-black/[0.03] first:rounded-t-md last:rounded-b-md ${
                   field === rule.field ? "bg-black/[0.06] text-[#2C2C2B]" : "text-[#5F5E59]"

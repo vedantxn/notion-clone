@@ -84,6 +84,16 @@ const ROWS: PageRow[] = [
   { id: "todo", icon: <span className="text-[15px] leading-none">✅</span>, title: "To Do List", createdBy: "Alex Morgan", source: "Private", lastEdited: "1d ago", lastVisited: "1d ago", status: "Done", day: 25, span: 3, expandable: true },
 ];
 
+// Convert a relative time label ("3h ago", "1d ago", "Just now") into minutes-ago
+// so time-based columns can be sorted.
+function ageRank(label: string): number {
+  const m = label.match(/(\d+)\s*(m|h|d|w)/i);
+  if (!m) return 0;
+  const n = parseInt(m[1], 10);
+  const unit = m[2].toLowerCase();
+  return unit === "m" ? n : unit === "h" ? n * 60 : unit === "d" ? n * 1440 : n * 10080;
+}
+
 const TAB_ROWS: Record<TabKey, PageRow[]> = {
   recents: ROWS,
   private: ROWS,
@@ -97,6 +107,14 @@ const COL = { by: "w-[200px]", src: "w-[200px]", edited: "w-[200px]", visited: "
 export function MainPanel({ initialTab = "favorites" }: { initialTab?: TabKey }) {
   const [active, setActive] = useState<TabKey>(initialTab);
   const [layout, setLayout] = useState<LayoutKind>("table");
+  const [hiddenCols, setHiddenCols] = useState<Set<string>>(new Set());
+  const toggleCol = (label: string) =>
+    setHiddenCols((cur) => {
+      const next = new Set(cur);
+      if (next.has(label)) next.delete(label);
+      else next.add(label);
+      return next;
+    });
   const [search, setSearch] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [sortPanelOpen, setSortPanelOpen] = useState(false);
@@ -189,8 +207,15 @@ export function MainPanel({ initialTab = "favorites" }: { initialTab?: TabKey })
   }
 
   const rows = [...filteredRows].sort((a, b) => {
-    const result = a.title.localeCompare(b.title);
-    return sortDirection === "asc" ? result : -result;
+    const rule = sortRules[0];
+    const field = rule?.field ?? "Page name";
+    const dir = (rule?.direction ?? (sortDirection === "asc" ? "asc" : "desc")) === "asc" ? 1 : -1;
+    let cmp: number;
+    if (field === "Created by") cmp = a.createdBy.localeCompare(b.createdBy);
+    else if (field === "Created time" || field === "Last edited time") cmp = ageRank(a.lastEdited) - ageRank(b.lastEdited);
+    else if (field === "Last visited time") cmp = ageRank(a.lastVisited) - ageRank(b.lastVisited);
+    else cmp = a.title.localeCompare(b.title);
+    return cmp * dir;
   });
 
   // Grouping helpers
@@ -365,8 +390,10 @@ export function MainPanel({ initialTab = "favorites" }: { initialTab?: TabKey })
             >
               {(close) => (
                 <CollectionSettingsMenu
-                  sortLabel={sortDirection === "asc" ? "Title A to Z" : "Title Z to A"}
+                  sortLabel={(sortRules[0]?.field ?? "Page name") + ((sortRules[0]?.direction ?? "asc") === "asc" ? " ↑" : " ↓")}
                   layout={layout}
+                  hiddenCols={hiddenCols}
+                  onToggleCol={toggleCol}
                   onLayout={(next) => {
                     setLayout(next);
                     close();
@@ -731,11 +758,11 @@ export function MainPanel({ initialTab = "favorites" }: { initialTab?: TabKey })
           ) : (
           <div className="mt-2 overflow-x-auto">
             <div className="min-w-[1180px]">
-              {selectedGroup === "none" && <TableHeader />}
+              {selectedGroup === "none" && <TableHeader hiddenCols={hiddenCols} />}
               <div className="pb-16 space-y-4">
                 {selectedGroup === "none" ? (
                   rows.map((r) => (
-                    <Row key={r.id} row={r} />
+                    <Row key={r.id} row={r} hiddenCols={hiddenCols} />
                   ))
                 ) : (
                   groupNames.map((groupName) => {
@@ -769,10 +796,10 @@ export function MainPanel({ initialTab = "favorites" }: { initialTab?: TabKey })
                         {/* Group Rows */}
                         {!isCollapsed && (
                           <div className="pl-4 border-l border-black/[0.04] space-y-1">
-                            <TableHeader />
+                            <TableHeader hiddenCols={hiddenCols} />
                             <div className="space-y-0.5">
                               {groupRows.map((r) => (
-                                <Row key={r.id} row={r} />
+                                <Row key={r.id} row={r} hiddenCols={hiddenCols} />
                               ))}
                             </div>
                           </div>
@@ -789,7 +816,7 @@ export function MainPanel({ initialTab = "favorites" }: { initialTab?: TabKey })
           <>
             <div className="mt-2 overflow-x-auto">
               <div className="min-w-[1180px]">
-                <TableHeader />
+                <TableHeader hiddenCols={hiddenCols} />
               </div>
             </div>
             <div className="flex flex-col items-center pt-[140px] text-center">
@@ -838,10 +865,12 @@ export function MainPanel({ initialTab = "favorites" }: { initialTab?: TabKey })
           onClose={() => setSortPanelOpen(false)}
           onAddSort={(rule) => setSortRules([...sortRules, rule])}
           onRemoveSort={(id) => setSortRules(sortRules.filter((r) => r.id !== id))}
-          onUpdateSort={(id, direction) =>
-            setSortRules(
-              sortRules.map((r) => (r.id === id ? { ...r, direction } : r))
-            )
+          onUpdateSort={(id, direction) => {
+            setSortRules(sortRules.map((r) => (r.id === id ? { ...r, direction } : r)));
+            setSortDirection(direction);
+          }}
+          onUpdateField={(id, field) =>
+            setSortRules(sortRules.map((r) => (r.id === id ? { ...r, field } : r)))
           }
         />
       )}
@@ -888,19 +917,19 @@ export function MainPanel({ initialTab = "favorites" }: { initialTab?: TabKey })
   );
 }
 
-function TableHeader() {
+function TableHeader({ hiddenCols }: { hiddenCols: Set<string> }) {
   return (
     <div className="flex items-center border-b border-black/[0.08] text-[14px] text-[#7D7A75]">
       <HeaderCell className="flex-1" icon={<FileText className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Page name")}>Page name</HeaderCell>
-      <HeaderCell className={COL.by} icon={<UserCircle2 className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Created by")}>Created by</HeaderCell>
-      <HeaderCell className={COL.src} icon={<Navigation className="h-4 w-4 -rotate-45" strokeWidth={1.8} />} onClick={() => toast("Sort by Source")}>Source</HeaderCell>
-      <HeaderCell className={COL.edited} icon={<Clock className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Last edited time")}>Last edited time</HeaderCell>
-      <HeaderCell className={COL.visited} icon={<Clock className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Last visited time")}>Last visited time</HeaderCell>
+      {!hiddenCols.has("Created by") && <HeaderCell className={COL.by} icon={<UserCircle2 className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Created by")}>Created by</HeaderCell>}
+      {!hiddenCols.has("Source") && <HeaderCell className={COL.src} icon={<Navigation className="h-4 w-4 -rotate-45" strokeWidth={1.8} />} onClick={() => toast("Sort by Source")}>Source</HeaderCell>}
+      {!hiddenCols.has("Last edited time") && <HeaderCell className={COL.edited} icon={<Clock className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Last edited time")}>Last edited time</HeaderCell>}
+      {!hiddenCols.has("Last visited time") && <HeaderCell className={COL.visited} icon={<Clock className="h-4 w-4" strokeWidth={1.8} />} onClick={() => toast("Sort by Last visited time")}>Last visited time</HeaderCell>}
     </div>
   );
 }
 
-function Row({ row }: { row: PageRow }) {
+function Row({ row, hiddenCols }: { row: PageRow; hiddenCols: Set<string> }) {
   const [expanded, setExpanded] = useState(false);
   return (
     <div
@@ -921,16 +950,20 @@ function Row({ row }: { row: PageRow }) {
         <span className="flex h-[18px] w-[18px] items-center justify-center">{row.icon}</span>
         <span className="truncate font-medium text-[#5F5E59]">{row.title}</span>
       </div>
-      <div className={"flex items-center gap-1.5 " + COL.by}>
-        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#E3E2E0] text-[10px] font-medium text-[#5F5E59]">A</span>
-        <span className="truncate font-normal text-[#2C2C2B]">{row.createdBy}</span>
-      </div>
-      <div className={"flex items-center gap-1.5 " + COL.src}>
-        <Lock className="h-3.5 w-3.5 text-[#91918E]" strokeWidth={1.8} />
-        <span className="font-medium text-[#2C2C2B]">{row.source}</span>
-      </div>
-      <div className={"flex items-center font-normal text-[#2C2C2B] " + COL.edited}>{row.lastEdited}</div>
-      <div className={"flex items-center font-normal text-[#2C2C2B] " + COL.visited}>{row.lastVisited}</div>
+      {!hiddenCols.has("Created by") && (
+        <div className={"flex items-center gap-1.5 " + COL.by}>
+          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#E3E2E0] text-[10px] font-medium text-[#5F5E59]">A</span>
+          <span className="truncate font-normal text-[#2C2C2B]">{row.createdBy}</span>
+        </div>
+      )}
+      {!hiddenCols.has("Source") && (
+        <div className={"flex items-center gap-1.5 " + COL.src}>
+          <Lock className="h-3.5 w-3.5 text-[#91918E]" strokeWidth={1.8} />
+          <span className="font-medium text-[#2C2C2B]">{row.source}</span>
+        </div>
+      )}
+      {!hiddenCols.has("Last edited time") && <div className={"flex items-center font-normal text-[#2C2C2B] " + COL.edited}>{row.lastEdited}</div>}
+      {!hiddenCols.has("Last visited time") && <div className={"flex items-center font-normal text-[#2C2C2B] " + COL.visited}>{row.lastVisited}</div>}
     </div>
   );
 }
@@ -1365,9 +1398,13 @@ function ToolbarBtn({ children, onClick, active, label }: { children: React.Reac
   );
 }
 
+const OPTIONAL_COLS = ["Created by", "Source", "Last edited time", "Last visited time"];
+
 function CollectionSettingsMenu({
   sortLabel,
   layout,
+  hiddenCols,
+  onToggleCol,
   onLayout,
   onSort,
   onGroup,
@@ -1377,6 +1414,8 @@ function CollectionSettingsMenu({
 }: {
   sortLabel: string;
   layout: LayoutKind;
+  hiddenCols: Set<string>;
+  onToggleCol: (label: string) => void;
   onLayout: (next: LayoutKind) => void;
   onSort: () => void;
   onGroup: () => void;
@@ -1385,21 +1424,11 @@ function CollectionSettingsMenu({
   onAddFilter: (fieldName: string) => void;
 }) {
   const [view, setView] = useState<"main" | "visibility" | "filter">("main");
-  const [hidden, setHidden] = useState<Set<string>>(new Set(["Last visited time", "Created time", "Created by", "Last edited by", "Source"]));
   const [filterQuery, setFilterQuery] = useState("");
 
-  const toggleVisibility = (label: string) => {
-    setHidden((current) => {
-      const next = new Set(current);
-      if (next.has(label)) next.delete(label);
-      else next.add(label);
-      return next;
-    });
-  };
-
   if (view === "visibility") {
-    const shown = ["Page name", "Last edited time"].filter((label) => !hidden.has(label));
-    const hiddenItems = ["Last visited time", "Created time", "Created by", "Last edited by", "Source"].filter((label) => hidden.has(label));
+    const shown = ["Page name", ...OPTIONAL_COLS.filter((label) => !hiddenCols.has(label))];
+    const hiddenItems = OPTIONAL_COLS.filter((label) => hiddenCols.has(label));
 
     return (
       <div className="w-full py-1">
@@ -1414,15 +1443,15 @@ function CollectionSettingsMenu({
           title="Shown in table"
           action="Hide all"
           items={shown}
-          hidden={hidden}
-          onToggle={toggleVisibility}
+          hidden={hiddenCols}
+          onToggle={onToggleCol}
         />
         <PropertySection
           title="Hidden in table"
           action="Show all"
           items={hiddenItems}
-          hidden={hidden}
-          onToggle={toggleVisibility}
+          hidden={hiddenCols}
+          onToggle={onToggleCol}
         />
       </div>
     );
@@ -1475,7 +1504,7 @@ function CollectionSettingsMenu({
       <SettingsMenuRow
         icon={<Eye className="h-5 w-5" strokeWidth={1.7} />}
         label="Property visibility"
-        value="2"
+        value={String(1 + OPTIONAL_COLS.filter((c) => !hiddenCols.has(c)).length)}
         onClick={() => setView("visibility")}
       />
       <SettingsMenuRow
@@ -1624,7 +1653,7 @@ function PropertySection({
       <div className="flex h-[23px] items-center justify-between px-2 text-[12px] text-[#9B9A97]">
         <span>{title}</span>
         <button
-          onClick={() => toast(action)}
+          onClick={() => items.filter((i) => i !== "Page name").forEach(onToggle)}
           className="rounded px-1.5 py-0.5 text-[12px] text-[#2383E2] transition-colors hover:bg-[#2383E2]/10"
         >
           {action}
