@@ -1290,7 +1290,7 @@ function TemplateCustomizeModal({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative flex h-[calc(100vh-170px)] max-h-[780px] min-h-[560px] w-[min(1330px,calc(100vw-220px))] overflow-hidden rounded-xl bg-[#FCFCFB] text-[#2C2C2B] shadow-[0_24px_48px_rgba(25,25,25,0.24),0_4px_12px_rgba(25,25,25,0.14),0_0_0_1px_rgba(42,28,0,0.07)]"
+        className="relative flex max-h-[calc(100vh-64px)] w-[min(1180px,calc(100vw-160px))] overflow-hidden rounded-xl bg-[#FCFCFB] text-[#2C2C2B] shadow-[0_24px_48px_rgba(25,25,25,0.24),0_4px_12px_rgba(25,25,25,0.14),0_0_0_1px_rgba(42,28,0,0.07)]"
       >
         <button
           onClick={onClose}
@@ -1299,10 +1299,10 @@ function TemplateCustomizeModal({
           <X className="h-5 w-5" />
         </button>
 
-        <div className="flex w-[490px] shrink-0 flex-col px-9 pb-8 pt-[124px]">
+        <div className="flex w-[460px] shrink-0 flex-col px-9 pb-8 pt-[76px]">
           <div>
-            <h2 className="text-[29px] font-bold leading-tight text-[#2C2C2B]">Customize {preview.title}</h2>
-            <p className="mt-2 text-[18px] font-medium text-[#7D7A75]">Select features to turn on or off</p>
+            <h2 className="text-[27px] font-bold leading-tight text-[#2C2C2B]">Customize {preview.title}</h2>
+            <p className="mt-2 text-[17px] font-medium text-[#7D7A75]">Select features to turn on or off</p>
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2.5">
@@ -1336,8 +1336,8 @@ function TemplateCustomizeModal({
           </button>
         </div>
 
-        <div className="flex flex-1 items-stretch py-8 pr-8">
-          <div className="flex flex-1 flex-col rounded-xl border border-black/[0.08] bg-white px-14 py-14 shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+        <div className="flex flex-1 items-stretch py-6 pr-6">
+          <div className="flex flex-1 flex-col rounded-xl border border-black/[0.08] bg-white px-12 py-10 shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
             <div className="flex items-center gap-4">
               {templateKey === "tasks" ? (
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2D9964] text-white">
