@@ -16,9 +16,12 @@ import {
   SlidersHorizontal,
   ChevronDown,
   Plus,
+  ArrowUp,
+  ArrowDown,
 } from "lucide-react";
 
-type Task = { id: string; name: string; due: "Today" | "Tomorrow"; done?: boolean };
+type Due = "Today" | "Tomorrow";
+type Task = { id: string; name: string; due: Due; done?: boolean };
 
 const INITIAL: Task[] = [
   { id: "t1", name: "Check the box to mark items as done", due: "Today", done: true },
@@ -30,11 +33,26 @@ const INITIAL: Task[] = [
   { id: "t7", name: "Click me to learn how to see your content your way", due: "Tomorrow" },
 ];
 
+const DUE_OPTIONS: Due[] = ["Today", "Tomorrow"];
+const DUE_RANK: Record<Due, number> = { Today: 0, Tomorrow: 1 };
+
+type SortField = "manual" | "name" | "due";
+type SortDir = "asc" | "desc";
+type DueFilter = "all" | Due;
+
 let seq = 100;
 
 export function TodoListPage({ fullWidth }: { fullWidth?: boolean }) {
   const [tasks, setTasks] = useState<Task[]>(INITIAL);
   const [view, setView] = useState<"todo" | "done">("todo");
+
+  // Toolbar state
+  const [menu, setMenu] = useState<"filter" | "sort" | null>(null);
+  const [dueFilter, setDueFilter] = useState<DueFilter>("all");
+  const [hideCompleted, setHideCompleted] = useState(false);
+  const [sortField, setSortField] = useState<SortField>("manual");
+  const [sortDir, setSortDir] = useState<SortDir>("asc");
+  const [openDueId, setOpenDueId] = useState<string | null>(null);
 
   const toggle = (id: string) =>
     setTasks((prev) => prev.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
@@ -48,7 +66,26 @@ export function TodoListPage({ fullWidth }: { fullWidth?: boolean }) {
   const rename = (id: string, name: string) =>
     setTasks((prev) => prev.map((t) => (t.id === id ? { ...t, name } : t)));
 
-  const visible = view === "done" ? tasks.filter((t) => t.done) : tasks;
+  const setDue = (id: string, due: Due) =>
+    setTasks((prev) => prev.map((t) => (t.id === id ? { ...t, due } : t)));
+
+  // Derived list: view → filters → sort
+  let visible = view === "done" ? tasks.filter((t) => t.done) : tasks;
+  if (dueFilter !== "all") visible = visible.filter((t) => t.due === dueFilter);
+  if (hideCompleted && view !== "done") visible = visible.filter((t) => !t.done);
+  if (sortField !== "manual") {
+    const dir = sortDir === "asc" ? 1 : -1;
+    visible = [...visible].sort((a, b) => {
+      const cmp =
+        sortField === "name"
+          ? a.name.localeCompare(b.name)
+          : DUE_RANK[a.due] - DUE_RANK[b.due];
+      return cmp * dir;
+    });
+  }
+
+  const filterActive = dueFilter !== "all" || (hideCompleted && view !== "done");
+  const sortActive = sortField !== "manual";
 
   return (
     <div className={"mx-auto w-full px-16 pt-14 pb-24 " + (fullWidth ? "max-w-full" : "max-w-[900px]")}>
@@ -70,13 +107,114 @@ export function TodoListPage({ fullWidth }: { fullWidth?: boolean }) {
         </div>
 
         <div className="flex items-center gap-0.5 text-[#5F5E59]">
-          <TbIcon label="Filter"><ListFilter className="h-[18px] w-[18px]" strokeWidth={1.8} /></TbIcon>
-          <TbIcon label="Sort"><ArrowUpDown className="h-[18px] w-[18px]" strokeWidth={1.8} /></TbIcon>
-          <TbIcon label="Automations"><Zap className="h-[18px] w-[18px]" strokeWidth={1.8} /></TbIcon>
-          <TbIcon label="Notion AI"><Sparkles className="h-[18px] w-[18px]" strokeWidth={1.8} /></TbIcon>
-          <TbIcon label="Search"><Search className="h-[18px] w-[18px]" strokeWidth={1.8} /></TbIcon>
-          <TbIcon label="Open as full page"><Maximize2 className="h-[18px] w-[18px]" strokeWidth={1.8} /></TbIcon>
-          <TbIcon label="Options"><SlidersHorizontal className="h-[18px] w-[18px]" strokeWidth={1.8} /></TbIcon>
+          {/* Filter */}
+          <div className="relative">
+            <TbIcon
+              label="Filter"
+              active={menu === "filter" || filterActive}
+              onClick={() => setMenu((m) => (m === "filter" ? null : "filter"))}
+            >
+              <ListFilter className="h-[18px] w-[18px]" strokeWidth={1.8} />
+            </TbIcon>
+            {menu === "filter" && (
+              <div className="absolute right-0 top-8 z-50 mt-1 w-[240px] rounded-lg border border-black/[0.08] bg-white p-2 text-[14px] text-[#37352F] shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+                <div className="px-2 pb-1 pt-1 text-[12px] font-medium text-[#9B9A97]">Due</div>
+                {(["all", "Today", "Tomorrow"] as DueFilter[]).map((opt) => (
+                  <button
+                    key={opt}
+                    onClick={() => setDueFilter(opt)}
+                    className="flex w-full items-center justify-between rounded-md px-2 py-1.5 text-left hover:bg-black/[0.04]"
+                  >
+                    <span>{opt === "all" ? "All" : opt}</span>
+                    {dueFilter === opt && <Check className="h-4 w-4 text-[#2383E2]" strokeWidth={2.4} />}
+                  </button>
+                ))}
+                <div className="my-1 border-t border-black/[0.06]" />
+                <button
+                  onClick={() => setHideCompleted((v) => !v)}
+                  className="flex w-full items-center justify-between rounded-md px-2 py-1.5 text-left hover:bg-black/[0.04]"
+                >
+                  <span>Hide completed</span>
+                  <span
+                    className={
+                      "flex h-4 w-4 items-center justify-center rounded-[3px] border " +
+                      (hideCompleted ? "border-[#2383E2] bg-[#2383E2] text-white" : "border-[#C6C4C0]")
+                    }
+                  >
+                    {hideCompleted && <Check className="h-3 w-3" strokeWidth={3} />}
+                  </span>
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Sort */}
+          <div className="relative">
+            <TbIcon
+              label="Sort"
+              active={menu === "sort" || sortActive}
+              onClick={() => setMenu((m) => (m === "sort" ? null : "sort"))}
+            >
+              <ArrowUpDown className="h-[18px] w-[18px]" strokeWidth={1.8} />
+            </TbIcon>
+            {menu === "sort" && (
+              <div className="absolute right-0 top-8 z-50 mt-1 w-[240px] rounded-lg border border-black/[0.08] bg-white p-2 text-[14px] text-[#37352F] shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+                <div className="px-2 pb-1 pt-1 text-[12px] font-medium text-[#9B9A97]">Sort by</div>
+                {([
+                  { key: "manual", label: "Manual" },
+                  { key: "name", label: "Task name" },
+                  { key: "due", label: "Due date" },
+                ] as { key: SortField; label: string }[]).map((opt) => (
+                  <button
+                    key={opt.key}
+                    onClick={() => setSortField(opt.key)}
+                    className="flex w-full items-center justify-between rounded-md px-2 py-1.5 text-left hover:bg-black/[0.04]"
+                  >
+                    <span>{opt.label}</span>
+                    {sortField === opt.key && <Check className="h-4 w-4 text-[#2383E2]" strokeWidth={2.4} />}
+                  </button>
+                ))}
+                {sortField !== "manual" && (
+                  <>
+                    <div className="my-1 border-t border-black/[0.06]" />
+                    <button
+                      onClick={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+                      className="flex w-full items-center justify-between rounded-md px-2 py-1.5 text-left hover:bg-black/[0.04]"
+                    >
+                      <span>Direction</span>
+                      <span className="flex items-center gap-1 text-[13px] text-[#5F5E59]">
+                        {sortDir === "asc" ? (
+                          <>
+                            Ascending <ArrowUp className="h-3.5 w-3.5" strokeWidth={2} />
+                          </>
+                        ) : (
+                          <>
+                            Descending <ArrowDown className="h-3.5 w-3.5" strokeWidth={2} />
+                          </>
+                        )}
+                      </span>
+                    </button>
+                  </>
+                )}
+              </div>
+            )}
+          </div>
+
+          <TbIcon label="Automations" onClick={() => toast("Automations")}>
+            <Zap className="h-[18px] w-[18px]" strokeWidth={1.8} />
+          </TbIcon>
+          <TbIcon label="Notion AI" onClick={() => toast("Notion AI")}>
+            <Sparkles className="h-[18px] w-[18px]" strokeWidth={1.8} />
+          </TbIcon>
+          <TbIcon label="Search" onClick={() => toast("Search")}>
+            <Search className="h-[18px] w-[18px]" strokeWidth={1.8} />
+          </TbIcon>
+          <TbIcon label="Open as full page" onClick={() => toast("Open as full page")}>
+            <Maximize2 className="h-[18px] w-[18px]" strokeWidth={1.8} />
+          </TbIcon>
+          <TbIcon label="Options" onClick={() => toast("Options")}>
+            <SlidersHorizontal className="h-[18px] w-[18px]" strokeWidth={1.8} />
+          </TbIcon>
           <div className="ml-1.5 flex h-7 items-stretch overflow-hidden rounded-md bg-[#2383E2] text-white">
             <button onClick={addTask} className="flex items-center px-2.5 text-[13px] font-medium hover:bg-[#1a73d0]">
               New
@@ -114,12 +252,31 @@ export function TodoListPage({ fullWidth }: { fullWidth?: boolean }) {
                 (t.done ? "text-[#9B9A97]" : "text-[#2C2C2B]")
               }
             />
-            <button
-              onClick={() => toast(t.due)}
-              className="shrink-0 rounded px-1.5 py-0.5 text-[14px] text-[#5F5E59] opacity-90 hover:bg-black/[0.04]"
-            >
-              {t.due}
-            </button>
+            <div className="relative shrink-0">
+              <button
+                onClick={() => setOpenDueId((id) => (id === t.id ? null : t.id))}
+                className="rounded px-1.5 py-0.5 text-[14px] text-[#5F5E59] opacity-90 hover:bg-black/[0.04]"
+              >
+                {t.due}
+              </button>
+              {openDueId === t.id && (
+                <div className="absolute right-0 top-7 z-50 w-[150px] rounded-lg border border-black/[0.08] bg-white p-1 text-[14px] text-[#37352F] shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+                  {DUE_OPTIONS.map((opt) => (
+                    <button
+                      key={opt}
+                      onClick={() => {
+                        setDue(t.id, opt);
+                        setOpenDueId(null);
+                      }}
+                      className="flex w-full items-center justify-between rounded-md px-2 py-1.5 text-left hover:bg-black/[0.04]"
+                    >
+                      <span>{opt}</span>
+                      {t.due === opt && <Check className="h-4 w-4 text-[#2383E2]" strokeWidth={2.4} />}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         ))}
 
@@ -132,6 +289,17 @@ export function TodoListPage({ fullWidth }: { fullWidth?: boolean }) {
           New task
         </button>
       </div>
+
+      {/* Click-away backdrop for open popovers */}
+      {(menu || openDueId) && (
+        <div
+          className="fixed inset-0 z-40"
+          onClick={() => {
+            setMenu(null);
+            setOpenDueId(null);
+          }}
+        />
+      )}
     </div>
   );
 }
@@ -161,12 +329,25 @@ function ViewTab({
   );
 }
 
-function TbIcon({ label, children }: { label: string; children: React.ReactNode }) {
+function TbIcon({
+  label,
+  children,
+  onClick,
+  active,
+}: {
+  label: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+  active?: boolean;
+}) {
   return (
     <button
-      onClick={() => toast(label)}
+      onClick={onClick ?? (() => toast(label))}
       aria-label={label}
-      className="flex h-7 w-7 items-center justify-center rounded-md hover:bg-black/[0.05]"
+      className={
+        "relative flex h-7 w-7 items-center justify-center rounded-md hover:bg-black/[0.05] " +
+        (active ? "bg-black/[0.06] text-[#2C2C2B]" : "")
+      }
     >
       {children}
     </button>
