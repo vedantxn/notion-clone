@@ -1,6 +1,6 @@
 "use client";
 
-import { useUser,SignOutButton } from "@/lib/fake-clerk";
+import { useUser,SignOutButton } from "@clerk/clerk-react";
 import { ChevronsLeftRight } from "lucide-react";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { DropdownMenu,

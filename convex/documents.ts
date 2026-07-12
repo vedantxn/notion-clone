@@ -2,14 +2,10 @@ import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 import { Doc, Id} from "./_generated/dataModel";
 
-// LOCAL PREVIEW BYPASS — no Clerk/JWT auth. Every request is treated as this
-// single fake user so the app is usable without signing in. Revert before deploy.
-const LOCAL_PREVIEW_USER_ID = "local-preview-user";
-
 export const archive = mutation({
     args: {id: v.id("documents")},
     handler: async (ctx, args) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -64,7 +60,7 @@ export const getSidebar = query({
         parentDocument: v.optional(v.id("documents"))
     },
     handler: async (ctx, args) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -94,7 +90,7 @@ export const create = mutation ({
         parentDocument: v.optional(v.id("documents")),
     },
     handler:async (ctx, args) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -116,7 +112,7 @@ export const create = mutation ({
 
 export const getTrash = query({
     handler: async (ctx) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -143,7 +139,7 @@ export const restore = mutation({
     
     args: { id: v.id("documents") },
     handler: async (ctx, args) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -207,7 +203,7 @@ export const restore = mutation({
 export const remove = mutation({
     args: { id: v.id("documents") },
     handler: async (ctx, args) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -251,7 +247,7 @@ export const remove = mutation({
 
 export const getSearch = query({
     handler: async (ctx) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -277,7 +273,7 @@ export const getSearch = query({
 export const getById = query({
     args: { documentId: v.id("documents") },
     handler: async (ctx, args) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
         
         const document = await ctx.db.get(args.documentId);
 
@@ -313,7 +309,7 @@ export const update = mutation({
         isPublished: v.optional(v.boolean()),
     },
     handler: async (ctx, args) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -344,7 +340,7 @@ export const update = mutation({
 export const removeIcon = mutation({
     args: { id: v.id("documents") },
     handler: async (ctx, args) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");
@@ -373,7 +369,7 @@ export const removeIcon = mutation({
 export const removeCover = mutation({
     args: { id: v.id("documents") },
     handler: async (ctx, args) => {
-        const identity: { subject: string } | null = { subject: LOCAL_PREVIEW_USER_ID };
+        const identity = await ctx.auth.getUserIdentity();
 
         if (!identity) {
             throw new Error("Not authenticated");

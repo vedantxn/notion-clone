@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Spinner } from "@/components/spinner";
 import Link from "next/link";
-import { SignInButton } from "@/lib/fake-clerk";
+import { SignInButton } from "@clerk/clerk-react";
+import { useConvexAuth } from "convex/react";
 
 export const Heading = () => {
 
-    const { isAuthenticated, isLoading } = { isAuthenticated: true, isLoading: false }; // LOCAL PREVIEW BYPASS
+    const { isAuthenticated, isLoading } = useConvexAuth();
 
     return (
         <div className="max-w-3xl space-y-4">

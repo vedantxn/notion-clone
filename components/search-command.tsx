@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { File } from "lucide-react";
 import { useQuery } from "convex/react";
 import { useRouter } from "next/navigation";
-import { useUser } from "@/lib/fake-clerk";
+import { useUser } from "@clerk/clerk-react";
 
 import {
     CommandDialog,
